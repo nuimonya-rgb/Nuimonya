@@ -4,3 +4,37 @@
   height: auto;
   object-fit: contain;
 }
+  
+
+  header .brand img {
+    width: 45px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  header .brand {
+    font-size: 18px;
+  }
+
+  header .brand small {
+    font-size: 10px;
+  }
+@media (max-width: 600px) {
+  header .brand {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 16px;
+  }
+
+  header .brand img {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  header .brand small {
+    font-size: 9px;
+  }
+}
