@@ -14,3 +14,8 @@
 .brand .kamon{width:40px;height:40px}
 .brand-name{font-size:18px}
 }
+
+/* ===== 売れた商品（SOLD）===== */
+.card .photo{position:relative}
+.sold-badge{position:absolute;top:12px;left:12px;padding:6px 12px;background:#282722;color:#fff;font:11px/1 Arial,sans-serif;letter-spacing:.15em}
+.card.is-sold .photo img{opacity:.6}
