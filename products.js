@@ -438,8 +438,9 @@ const products = [
     "price": 12,
     "category": "Outlet",
     "images": [
+      "Images/28-oct3-49.jpg",
       "Images/ChatGPT Image Oct 8, 2026, 02_23_33 PM.jpg"
-      ],
+    ],
     "description": "Front pocket with lace.",
     "size": "Width 28 cm · Height 30 cm · Depth 7 cm · Handle length 54 cm"
   },
