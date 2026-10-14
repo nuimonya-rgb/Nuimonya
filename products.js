@@ -72,8 +72,8 @@ const products = [
     "description": "Handmade baguette bag with a drawstring opening. Choose your pattern.",
     "size": "Height 70 cm · Width 20 cm · Depth 10 cm",
     "variants": [
-      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.jpg", "size": "Height 70 cm · Width 20 cm · Depth 10 cm"},
-      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.jpg", "size": "Height 60 cm · Width 20 cm · Depth 10 cm"}
+      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.jpg", "images": ["Images/added-bag-1.jpg"], "size": "Height 70 cm · Width 20 cm · Depth 10 cm"},
+      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.jpg", "images": ["Images/added-bag-4.jpg", "Images/added-bag-3.jpg", "Images/added-bag-9.jpg"], "size": "Height 60 cm · Width 20 cm · Depth 10 cm"}
     ]
   },
   {
