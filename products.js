@@ -326,20 +326,21 @@ const products = [
   },
   {
     "id": "p17",
-    "name": "Crane Bodycross bag",
+    "name": "Koi Bodycross bag",
     "price": 65,
     "category": "Bags",
     "images": [
       "Images/17-58.jpg",
       "Images/17-59.jpg",
-      "Images/17-60.jpg"
+      "Images/17-60.jpg",
+      "Images/beauty_1766071035280.JPEG"
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm"
   },
   {
     "id": "p18",
-    "name": "Koi Bodycross bag",
+    "name": "Crane Bodycross bag",
     "price": 65,
     "category": "Bags",
     "images": [
