@@ -520,5 +520,36 @@ const products = [
       {"name": "Silver with Purple Floral", "image": "Images/beauty_1764930926064.JPEG", "images": ["Images/beauty_1764930926064.JPEG", "Images/beauty_1764931461165.JPEG"]},
       {"name": "Emerald Green with Floral", "image": "Images/beauty_1764789523711.JPEG", "images": ["Images/beauty_1764789523711.JPEG", "Images/beauty_1764789570866 (1).JPEG", "Images/beauty_1764789587234.JPEG"]}
     ]
+  },
+  {
+    "id": "p48",
+    "name": "Mini Leather Boot Necklace",
+    "price": 7,
+    "category": "Others",
+    "images": ["Images/IMG_6475 (1).jpeg"],
+    "description": "Necklace with a handmade mini leather boot.",
+    "size": ""
+  },
+  {
+    "id": "p49",
+    "name": "Shoulder Strap",
+    "price": 15,
+    "category": "Others",
+    "images": ["Images/IMG_6476のコピー.jpeg"],
+    "description": "Bag shoulder strap with antique gold hardware. Choose your material.",
+    "size": "",
+    "variants": [
+      {"name": "Faux Leather", "price": 15, "image": "Images/IMG_6476のコピー.jpeg"},
+      {"name": "Cotton", "price": 10, "image": "Images/IMG_6476のコピー.jpeg"}
+    ]
+  },
+  {
+    "id": "p50",
+    "name": "Glasses / Smartphone Case",
+    "price": 15,
+    "category": "Others",
+    "images": ["Images/IMG_6478.jpeg", "Images/IMG_6479.jpeg"],
+    "description": "Japanese fabric case for glasses or a smartphone.",
+    "size": "Width 9 cm · Height 19 cm"
   }
 ];
