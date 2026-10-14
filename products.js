@@ -251,7 +251,8 @@ const products = [
     "price": 20,
     "category": "Others",
     "images": [
-      "Images/11-37.jpg"
+      "Images/11-37.jpg",
+      "Images/ChatGPT Image Oct 8, 2026, 01_50_26 PM.jpg"
     ],
     "description": "Japanese wrapping cloth.",
     "size": "70 × 70 cm"
