@@ -450,5 +450,26 @@ const products = [
     ],
     "description": "Goldfish print tote bag with an interior bottle holder and key hook.",
     "size": "Width 42 cm · Height 39 cm · Depth 18 cm · Handle length 55 cm"
+  },
+  {
+    "id": "p43",
+    "name": "Ikebana/Bonsai Tools Roll Case",
+    "price": 30,
+    "category": "Others",
+    "images": [
+      "Images/21-oct3-01.jpg",
+      "Images/ChatGPT Image Oct 8, 2026, 02_28_39 PM.jpg",
+      "Images/ChatGPT Image Oct 8, 2026, 02_28_41 PM.jpg",
+      "Images/ChatGPT Image Oct 8, 2026, 02_28_31 PM.jpg",
+      "Images/ChatGPT Image Oct 8, 2026, 02_29_01 PM (1).jpg",
+      "Images/ChatGPT Image Oct 8, 2026, 02_29_11 PM.jpg"
+    ],
+    "description": "Roll case for ikebana and bonsai tools with 10 pockets. Pocket widths from left: 5, 5, 5, 5, 5, 5, 10, 8, 5, 5 cm. Choose your pattern.",
+    "size": "60 cm × 27 cm",
+    "variants": [
+      {"name": "Denim & Wave Print", "image": "Images/21-oct3-01.jpg", "images": ["Images/21-oct3-01.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_28_39 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_28_41 PM.jpg"]},
+      {"name": "Denim & White Print", "image": "Images/ChatGPT Image Oct 8, 2026, 02_28_31 PM.jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_28_31 PM.jpg"]},
+      {"name": "Grey Floral", "image": "Images/ChatGPT Image Oct 8, 2026, 02_29_01 PM (1).jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_29_01 PM (1).jpg", "Images/ChatGPT Image Oct 8, 2026, 02_29_11 PM.jpg"]}
+    ]
   }
 ];
