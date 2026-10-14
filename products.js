@@ -567,5 +567,18 @@ const products = [
     ],
     "description": "Tartan handbag with a faux fur trim and leather handles.",
     "size": "Width 33 cm · Height 20 cm · Depth 10 cm · Leather handle length 32 cm"
+  },
+  {
+    "id": "p52",
+    "name": "Fluffy Smartphone Case / Pouch",
+    "price": 7,
+    "category": "Outlet",
+    "images": ["Images/IMG_6491.jpeg", "Images/IMG_6490.jpeg"],
+    "description": "Floral smartphone case or pouch with a fluffy lining and wrist strap. Choose your pattern.",
+    "size": "Width 9 cm · Height 10 cm · Depth 2 cm",
+    "variants": [
+      {"name": "Pink with Floral Pattern", "image": "Images/IMG_6491.jpeg"},
+      {"name": "Emerald Green with Red Floral Pattern", "image": "Images/IMG_6490.jpeg"}
+    ]
   }
 ];
