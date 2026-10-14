@@ -471,5 +471,27 @@ const products = [
       {"name": "Denim & White Print", "image": "Images/ChatGPT Image Oct 8, 2026, 02_28_31 PM.jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_28_31 PM.jpg"]},
       {"name": "Grey Floral", "image": "Images/ChatGPT Image Oct 8, 2026, 02_29_01 PM (1).jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_29_01 PM (1).jpg", "Images/ChatGPT Image Oct 8, 2026, 02_29_11 PM.jpg"]}
     ]
+  },
+  {
+    "id": "p44",
+    "name": "Drawstring Bag",
+    "price": 15,
+    "category": "Bags",
+    "images": ["Images/IMG_6471.jpeg", "Images/IMG_6473.jpeg", "Images/ChatGPT Image Oct 8, 2026, 02_29_49 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_29_22 PM (1).jpg", "Images/IMG_6474.jpeg"],
+    "description": "Handbag with a drawstring opening. Choose your pattern.",
+    "size": "Width 25 cm · Height 18 cm · Handle length 25 cm",
+    "variants": [
+      {"name": "Yellow with Pink Polka Dots", "image": "Images/IMG_6471.jpeg", "images": ["Images/IMG_6471.jpeg", "Images/IMG_6473.jpeg", "Images/ChatGPT Image Oct 8, 2026, 02_29_49 PM.jpg", "Images/IMG_6474.jpeg"]},
+      {"name": "Navy Denim Blue with White Floral Pattern", "image": "Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_29_22 PM (1).jpg", "Images/IMG_6471.jpeg", "Images/IMG_6474.jpeg"]}
+    ]
+  },
+  {
+    "id": "p45",
+    "name": "Light Pink Japanese Chrysanthemum Tote Bag",
+    "price": 40,
+    "category": "Bags",
+    "images": ["Images/ChatGPT Image Oct 8, 2026, 02_30_48 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_30_55 PM.jpg", "Images/IMG_6409.jpeg"],
+    "description": "Tote bag in light pink fabric with a Japanese chrysanthemum print.",
+    "size": "Width 53 cm · Height 43 cm · Depth 10 cm"
   }
 ];
