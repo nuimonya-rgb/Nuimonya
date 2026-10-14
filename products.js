@@ -422,11 +422,15 @@ const products = [
     "price": 15,
     "category": "Outlet",
     "images": [
-      "Images/IMG_6495.jpeg"
-      
+      "Images/IMG_6495.jpeg",
+      "Images/IMG_6459.jpeg"
     ],
-    "description": "Blue checks and green geometric variations.",
-    "size": "Width 24 cm · Height 24 cm · Depth 13 cm"
+    "description": "Blue checks and green geometric variations. Choose your pattern.",
+    "size": "Width 24 cm · Height 24 cm · Depth 13 cm",
+    "variants": [
+      {"name": "Blue Check", "image": "Images/IMG_6495.jpeg"},
+      {"name": "Green Diamond", "image": "Images/IMG_6459.jpeg"}
+    ]
   },
   {
     "id": "p28",
