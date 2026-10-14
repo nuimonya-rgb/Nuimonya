@@ -84,7 +84,8 @@ const products = [
     "images": [
       "Images/added-bag-0.jpg",
       "Images/added-bag-6.jpg",
-      "Images/added-bag-7.jpg"
+      "Images/added-bag-7.jpg",
+      "Images/beauty_1790953174269.JPEG"
     ],
     "description": "Colourful Japanese print sling bag with a front zip pocket and adjustable shoulder strap.",
     "size": ""
@@ -307,7 +308,8 @@ const products = [
     "images": [
       "Images/15-53.jpg",
       "Images/15-54.jpg",
-      "Images/15-55.jpg"
+      "Images/15-55.jpg",
+      "Images/beauty_1765650653470.JPEG"
     ],
     "description": "Fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm"
@@ -358,7 +360,9 @@ const products = [
     "category": "Bags",
     "images": [
       "Images/20-67.jpg",
-      "Images/20-68.jpg"
+      "Images/20-68.jpg",
+      "Images/beauty_1765650653470.JPEG",
+      "Images/beauty_1765650669159.JPEG"
     ],
     "description": "Brown bird fabric and fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm"
