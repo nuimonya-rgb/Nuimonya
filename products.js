@@ -57,7 +57,7 @@ const products = [
   {
     "id": "p38",
     "name": "Baguette bag",
-    "price": 40,
+    "price": 30,
     "category": "Bags",
     "images": [
       "Images/added-bag-1.jpg",
@@ -65,8 +65,12 @@ const products = [
       "Images/added-bag-3.jpg",
       "Images/added-bag-9.jpg"
     ],
-    "description": "Handmade baguette bag with a drawstring opening. Large and small sizes: €40 each.",
-    "size": "Large: Height 70 cm · Width 20 cm · Depth 10 cm. Small: Height 60 cm · Width 20 cm · Depth 10 cm."
+    "description": "Handmade baguette bag with a drawstring opening. Choose your pattern.",
+    "size": "Height 70 cm · Width 20 cm · Depth 10 cm",
+    "variants": [
+      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.jpg", "size": "Height 70 cm · Width 20 cm · Depth 10 cm"},
+      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.jpg", "size": "Height 60 cm · Width 20 cm · Depth 10 cm"}
+    ]
   },
   {
     "id": "p39",
