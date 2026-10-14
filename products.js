@@ -402,7 +402,6 @@ const products = [
     "price": 7,
     "category": "Outlet",
     "images": [
-      "Images/ChatGPT Image Oct 8, 2026, 02_24_50 PM.jpg",
       "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.jpg",
       "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.jpg"
     ],
@@ -420,17 +419,6 @@ const products = [
     ],
     "description": "Blue checks and green geometric variations.",
     "size": "Width 24 cm · Height 24 cm · Depth 13 cm"
-  },
-  {
-    "id": "p27",
-    "name": "Check drawstring bag",
-    "price": 15,
-    "category": "Outlet",
-    "images": [
-      "Images/IMG_6458.jpeg"
-    ],
-    "description": "Red checks with a spotted lining.",
-    "size": "Opening width 33 cm · Height 28 cm · Depth 14 cm"
   },
   {
     "id": "p28",
