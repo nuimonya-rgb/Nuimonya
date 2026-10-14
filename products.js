@@ -37,22 +37,26 @@ const products = [
   },
   {
     "id": "p37",
-    "name": "3-way bag",
+    "name": "3way Pebble Sling Bag",
     "price": 65,
     "category": "Bags",
     "images": [
       "Images/3way-7.jpg",
       "Images/3way-8.jpg",
+      "Images/3way-9.jpg",
+      "Images/3way-10.jpg",
       "Images/3way-11.jpg",
       "Images/3way-12.jpg",
       "Images/3way-13.jpg",
       "Images/3way-14.jpg",
-      "Images/3way-15.jpg",
-      "Images/3way-9.jpg",
-      "Images/3way-10.jpg"
+      "Images/3way-15.jpg"
     ],
-    "description": "Wear as a backpack, shoulder bag or crossbody bag. Blue and cream Japanese print variations.",
-    "size": "Strap length 127 cm"
+    "description": "Wear as a backpack, shoulder bag or crossbody bag. Choose your pattern.",
+    "size": "Strap length 127 cm",
+    "variants": [
+      {"name": "Hydrangea", "image": "Images/3way-7.jpg", "images": ["Images/3way-7.jpg", "Images/3way-8.jpg", "Images/3way-9.jpg", "Images/3way-10.jpg"]},
+      {"name": "Floral Check", "image": "Images/3way-11.jpg", "images": ["Images/3way-11.jpg", "Images/3way-12.jpg", "Images/3way-13.jpg", "Images/3way-14.jpg", "Images/3way-15.jpg"]}
+    ]
   },
   {
     "id": "p38",
