@@ -3,6 +3,7 @@ const products = [
     "id": "p19",
     "name": "Floral apron",
     "price": 45,
+    "sold": true,
     "category": "Clothing",
     "images": [
       "Images/floral-apron.jpg"
