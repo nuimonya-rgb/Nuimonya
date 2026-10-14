@@ -391,8 +391,7 @@ const products = [
       "Images/beauty_1765230819282 (1)のコピー.JPEG",
       "Images/beauty_1765230832164.JPEG",
       "Images/beauty_1765230890906のコピー.JPEG",
-      "Images/22-oct3-02.jpg",
-      "Images/22-oct3-03.jpg"
+      "Images/22-oct3-02.jpg"
     ],
     "description": "Cream and yellow variations with shoulder strap and charm.",
     "size": ""
