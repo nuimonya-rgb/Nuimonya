@@ -419,7 +419,7 @@ const products = [
   {
     "id": "p26",
     "name": "Check bag",
-    "price": 15,
+    "price": 10,
     "category": "Outlet",
     "images": [
       "Images/IMG_6495.jpeg",
