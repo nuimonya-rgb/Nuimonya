@@ -399,15 +399,9 @@ const products = [
     "price": 7,
     "category": "Outlet",
     "images": [
-      "Images/ChatGPT Image Oct 8, 2026, 02_24_12 PM.jpg",
-      "Images/ChatGPT Image Oct 8, 2026, 02_24_12 PM.jpg",
-      "Images/ChatGPT Image Oct 8, 2026, 02_24_37 PM.jpg",
       "Images/ChatGPT Image Oct 8, 2026, 02_24_50 PM.jpg",
-      "Images/ChatGPT Image Oct 8, 2026, 02_24_57 PM.jpg",
       "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.jpg",
-      "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.jpg",
-      "Images/ChatGPT Image Oct 8, 2026, 02_25_21 PM.jpg"
-
+      "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.jpg"
     ],
     "description": "Check and fleece variations.",
     "size": ""
@@ -445,76 +439,6 @@ const products = [
       ],
     "description": "Front pocket with lace.",
     "size": "Width 28 cm · Height 30 cm · Depth 7 cm · Handle length 54 cm"
-  },
-  {
-    "id": "p29",
-    "name": "Box zip pouch",
-    "price": 7,
-    "category": "Outlet",
-    "images": [
-      "Images/IMG_6492.jpeg",
-      "Images/IMG_6494.jpeg"
-    ],
-    "description": "Blue and burgundy floral variations.",
-    "size": "Width 15 cm · Height 7 cm · Depth 7 cm"
-  },
-  {
-    "id": "p30",
-    "name": "Bottle pouch",
-    "price": 4,
-    "category": "Outlet",
-    "images": [
-      "Images/IMG_6487.jpeg"
-    ],
-    "description": "Pink floral fabric.",
-    "size": "Height 10 cm · Circumference 30 cm"
-  },
-  {
-    "id": "p31",
-    "name": "Mobile phone pochette",
-    "price": 5,
-    "category": "Outlet",
-    "images": [
-      "Images/31-oct3-48.jpg",
-      "Images/31-oct3-58.jpg"
-    ],
-    "description": "Japanese print and blue fleece detail.",
-    "size": "Width 13 cm · Height 22 cm · Depth 2 cm"
-  },
-  {
-    "id": "p32",
-    "name": "Mobile phone pouch",
-    "price": 5,
-    "category": "Outlet",
-    "images": [
-      "Images/IMG_6491.jpeg",
-      "Images/IMG_6492.jpeg"
-    ],
-    "description": "Mint and pink floral variations.",
-    "size": "Width 9.5 cm · Height 15 cm · Depth 1 cm"
-  },
-  {
-    "id": "p33",
-    "name": "Flat floral pouch",
-    "price": 7,
-    "category": "Outlet",
-    "images": [
-      "Images/IMG_6489.jpeg",
-      "Images/IMG_6488.jpeg"
-    ],
-    "description": "Blue and yellow floral fabric.",
-    "size": ""
-  },
-  {
-    "id": "p34",
-    "name": "Purple flat pouch",
-    "price": 7,
-    "category": "Outlet",
-    "images": [
-      "Images/IMG_6496.jpeg"
-    ],
-    "description": "Purple fabric with white tulip motifs.",
-    "size": ""
   },
   {
     "id": "p42",
