@@ -555,5 +555,16 @@ const products = [
     "images": ["Images/IMG_6478.jpeg", "Images/IMG_6479.jpeg"],
     "description": "Japanese fabric case for glasses or a smartphone.",
     "size": "Width 9 cm · Height 19 cm"
+  },
+  {
+    "id": "p51",
+    "name": "Tartan Faux Fur Handbag",
+    "price": 10,
+    "category": "Outlet",
+    "images": [
+      "Images/IMG_6460.jpeg"
+    ],
+    "description": "Tartan handbag with a faux fur trim and leather handles.",
+    "size": "Width 33 cm · Height 20 cm · Depth 10 cm · Leather handle length 32 cm"
   }
 ];
