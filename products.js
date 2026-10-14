@@ -281,7 +281,7 @@ const products = [
   {
     "id": "p14",
     "name": "Tool bag",
-    "price": 30,
+    "price": 15,
     "category": "Bags",
     "images": [
       "Images/14-50.jpg",
@@ -293,7 +293,7 @@ const products = [
   },
   {
     "id": "p15",
-    "name": "Japanese fabric BOdycross bag",
+    "name": "Japanese fabric Bodycross bag",
     "price": 60,
     "category": "Bags",
     "images": [
