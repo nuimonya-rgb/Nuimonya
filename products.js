@@ -162,6 +162,7 @@ const products = [
     "id": "p05",
     "name": "Triangle pouch",
     "price": 8,
+    "sold": true,
     "category": "Pouches",
     "images": [
       "Images/05-17.jpg",
@@ -215,6 +216,7 @@ const products = [
     "id": "p09",
     "name": "Pencil case",
     "price": 10,
+    "sold": true,
     "category": "Pouches",
     "images": [
       "Images/09-35.jpg",
@@ -354,7 +356,7 @@ const products = [
   },
   {
     "id": "p21",
-    "name": "Checkbook case",
+    "name": "Ikebana/Bonsai Tools Roll Case",
     "price": 25,
     "category": "Pouches",
     "images": [
