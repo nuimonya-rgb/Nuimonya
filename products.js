@@ -493,5 +493,19 @@ const products = [
     "images": ["Images/ChatGPT Image Oct 8, 2026, 02_30_48 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_30_55 PM.jpg", "Images/IMG_6409.jpeg"],
     "description": "Tote bag in light pink fabric with a Japanese chrysanthemum print.",
     "size": "Width 53 cm · Height 43 cm · Depth 10 cm"
+  },
+  {
+    "id": "p46",
+    "name": "Hip Hang Scissor Case",
+    "price": 45,
+    "category": "Bags",
+    "images": ["Images/IMG_6465 Copy.JPG", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.jpg", "Images/IMG_6467 Copy.JPG", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).jpg", "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.jpg"],
+    "description": "Hip bag for scissors and tools with 3 pockets and 1 zip pocket. Adjustable strap. Choose your pattern.",
+    "size": "Width 48 cm · Height 26 cm · Pocket depth 4 cm · Strap 58–89 cm",
+    "variants": [
+      {"name": "Light Purple with Bird", "image": "Images/IMG_6465 Copy.JPG", "images": ["Images/IMG_6465 Copy.JPG", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.jpg"]},
+      {"name": "Navy with Gold Pattern", "image": "Images/IMG_6467 Copy.JPG", "images": ["Images/IMG_6467 Copy.JPG", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).jpg"]},
+      {"name": "Black with Floral Pattern", "image": "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.jpg"]}
+    ]
   }
 ];
