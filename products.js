@@ -356,7 +356,7 @@ const products = [
   },
   {
     "id": "p21",
-    "name": "Ikebana/Bonsai Tools Roll Case",
+    "name": "Checkbook case",
     "price": 25,
     "category": "Pouches",
     "images": [
