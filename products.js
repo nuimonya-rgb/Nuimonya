@@ -507,5 +507,18 @@ const products = [
       {"name": "Navy with Gold Pattern", "image": "Images/IMG_6467 Copy.JPG", "images": ["Images/IMG_6467 Copy.JPG", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).jpg"]},
       {"name": "Black with Floral Pattern", "image": "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.jpg", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.jpg"]}
     ]
+  },
+  {
+    "id": "p47",
+    "name": "One Shoulder Bag",
+    "price": 45,
+    "category": "Bags",
+    "images": ["Images/beauty_1764930926064.JPEG", "Images/beauty_1764931461165.JPEG", "Images/beauty_1764789523711.JPEG", "Images/beauty_1764789570866 (1).JPEG", "Images/beauty_1764789587234.JPEG"],
+    "description": "Rounded one-shoulder bag in Japanese floral fabric. Choose your pattern.",
+    "size": "Width 30 cm · Height 32 cm · Depth 7 cm · Handle length 42 cm",
+    "variants": [
+      {"name": "Silver with Purple Floral", "image": "Images/beauty_1764930926064.JPEG", "images": ["Images/beauty_1764930926064.JPEG", "Images/beauty_1764931461165.JPEG"]},
+      {"name": "Emerald Green with Floral", "image": "Images/beauty_1764789523711.JPEG", "images": ["Images/beauty_1764789523711.JPEG", "Images/beauty_1764789570866 (1).JPEG", "Images/beauty_1764789587234.JPEG"]}
+    ]
   }
 ];
