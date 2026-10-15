@@ -286,7 +286,11 @@ const products = [
       "Images/13-47.jpg"
     ],
     "description": "Leather flap, shoulder and wrist straps, and belt attachment.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Brown & Floral", "image": "Images/13-48.jpg", "images": ["Images/13-48.jpg", "Images/13-49.jpg"]},
+      {"name": "Green & Floral", "image": "Images/13-43.jpg", "images": ["Images/13-43.jpg", "Images/13-44.jpg", "Images/13-45.jpg", "Images/13-46.jpg", "Images/13-47.jpg"]}
+    ]
   },
   {
     "id": "p14",
