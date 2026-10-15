@@ -38,4 +38,4 @@
   header .brand small {
     font-size: 11px;
   }
-}@media(max-width:370px){header{gap:8px}header .brand{gap:8px}header .brand img{width:34px;height:34px}header .brand small{font-size:9px;letter-spacing:.04em}}
+}@media(max-width:340px){header{gap:8px}header .brand{gap:8px}header .brand img{width:34px;height:34px}header .brand small{font-size:9px;letter-spacing:.04em}}
