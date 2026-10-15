@@ -23,6 +23,8 @@ const news = [
       "Images/news/bonsai-event-2026-4.jpg",
       "Images/news/bonsai-event-2026-2.jpg",
       "Images/news/bonsai-event-2026-3.jpg"
-    ]
+    ],
+    "video": "Images/news/bonsai-event-2026.mp4",
+    "poster": "Images/news/bonsai-event-2026-poster.jpg"
   }
 ];
