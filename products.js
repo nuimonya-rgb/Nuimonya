@@ -453,8 +453,12 @@ const products = [
       "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.jpg",
       "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.jpg"
     ],
-    "description": "Check and fleece variations.",
-    "size": ""
+    "description": "Check and fleece variations. Choose your number.",
+    "size": "",
+    "variants": [
+      {"name": "No.1", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.jpg"},
+      {"name": "No.2", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.jpg"}
+    ]
   },
   {
     "id": "p26",
