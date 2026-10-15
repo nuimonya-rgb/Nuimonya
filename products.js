@@ -145,7 +145,11 @@ const products = [
       "Images/02-09.jpg"
     ],
     "description": "Retractable reel and cherry blossom charm.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Blue", "image": "Images/02-06.jpg", "images": ["Images/02-06.jpg", "Images/02-07.jpg"]},
+      {"name": "Purple", "image": "Images/02-08.jpg", "images": ["Images/02-08.jpg", "Images/02-09.jpg"]}
+    ]
   },
   {
     "id": "p03",
