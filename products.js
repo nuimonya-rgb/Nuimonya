@@ -273,7 +273,13 @@ const products = [
       "Images/ChatGPT Image Oct 8, 2026, 01_50_26 PM.jpg"
     ],
     "description": "Japanese wrapping cloth.",
-    "size": "70 × 70 cm"
+    "size": "70 × 70 cm",
+    "variants": [
+      {"name": "Blue Sakura", "image": "Images/11-37.jpg"},
+      {"name": "Pink Sakura", "image": "Images/11-37.jpg"},
+      {"name": "Mustard Masks", "image": "Images/11-37.jpg"},
+      {"name": "Beige Masks", "image": "Images/11-37.jpg", "images": ["Images/11-37.jpg", "Images/ChatGPT Image Oct 8, 2026, 01_50_26 PM.jpg"]}
+    ]
   },
   {
     "id": "p12",
@@ -427,7 +433,7 @@ const products = [
   },
   {
     "id": "p23",
-    "name": "Mini cushion",
+    "name": "Mini Zabuton",
     "price": 10,
     "category": "Others",
     "images": [
@@ -567,7 +573,11 @@ const products = [
     "category": "Others",
     "images": ["Images/IMG_6475 (1).jpeg"],
     "description": "Necklace with a handmade mini leather boot.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Dark Brown", "image": "Images/IMG_6475 (1).jpeg"},
+      {"name": "Tan", "image": "Images/IMG_6475 (1).jpeg"}
+    ]
   },
   {
     "id": "p49",
@@ -601,6 +611,7 @@ const products = [
     "id": "p50",
     "name": "Glasses / Smartphone Case",
     "price": 15,
+    "sold": true,
     "category": "Others",
     "images": ["Images/IMG_6478.jpeg", "Images/IMG_6479.jpeg"],
     "description": "Japanese fabric case for glasses or a smartphone.",
