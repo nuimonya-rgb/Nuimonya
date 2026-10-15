@@ -553,15 +553,30 @@ const products = [
   },
   {
     "id": "p49",
-    "name": "Shoulder Strap",
+    "name": "Faux Leather Strap",
     "price": 15,
     "category": "Others",
-    "images": ["Images/IMG_6476のコピー.jpeg"],
-    "description": "Bag shoulder strap with antique gold hardware. Choose your material.",
+    "images": ["Images/straps-numbered.jpg"],
+    "description": "Faux leather bag shoulder strap with antique gold hardware. Choose your number (see photo).",
     "size": "",
     "variants": [
-      {"name": "Faux Leather", "price": 15, "image": "Images/IMG_6476のコピー.jpeg"},
-      {"name": "Cotton", "price": 10, "image": "Images/IMG_6476のコピー.jpeg"}
+      {"name": "A-1", "image": "Images/straps-numbered.jpg"},
+      {"name": "A-2", "image": "Images/straps-numbered.jpg"},
+      {"name": "A-3", "image": "Images/straps-numbered.jpg"},
+      {"name": "A-4", "image": "Images/straps-numbered.jpg"}
+    ]
+  },
+  {
+    "id": "p53",
+    "name": "Cotton Strap",
+    "price": 10,
+    "category": "Others",
+    "images": ["Images/straps-numbered.jpg"],
+    "description": "Cotton bag shoulder strap with antique gold hardware. Choose your number (see photo).",
+    "size": "",
+    "variants": [
+      {"name": "B-1", "image": "Images/straps-numbered.jpg"},
+      {"name": "B-2", "image": "Images/straps-numbered.jpg"}
     ]
   },
   {
