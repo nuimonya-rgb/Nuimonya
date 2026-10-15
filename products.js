@@ -234,10 +234,16 @@ const products = [
       "Images/08-26.jpg",
       "Images/08-27.jpg",
       "Images/08-28.jpg",
-      "Images/08-33.jpg"
+      "Images/08-33.jpg",
+      "Images/08-grey.jpg"
     ],
     "description": "Wear on a belt, across the body or at the wrist. Accessories included.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Light Blue Floral", "image": "Images/08-23.jpg", "images": ["Images/08-23.jpg", "Images/08-24.jpg", "Images/08-25.jpg", "Images/08-26.jpg", "Images/08-27.jpg", "Images/08-28.jpg"]},
+      {"name": "Dark Green", "image": "Images/08-33.jpg"},
+      {"name": "Grey", "image": "Images/08-grey.jpg"}
+    ]
   },
   {
     "id": "p09",
