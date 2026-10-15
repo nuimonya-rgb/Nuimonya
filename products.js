@@ -389,12 +389,15 @@ const products = [
     "category": "Bags",
     "images": [
       "Images/beauty_1765230819282 (1)のコピー.JPEG",
-      "Images/beauty_1765230832164.JPEG",
       "Images/beauty_1765230890906のコピー.JPEG",
-      "Images/22-oct3-02.jpg"
+      "Images/beauty_1765230832164.JPEG"
     ],
-    "description": "Cream and yellow variations with shoulder strap and charm.",
-    "size": ""
+    "description": "Flap shoulder bag with shoulder strap and charm. Choose your colour.",
+    "size": "",
+    "variants": [
+      {"name": "Beige", "image": "Images/beauty_1765230819282 (1)のコピー.JPEG", "images": ["Images/beauty_1765230819282 (1)のコピー.JPEG", "Images/beauty_1765230890906のコピー.JPEG", "Images/beauty_1765230832164.JPEG"]},
+      {"name": "Mustard", "image": "Images/beauty_1765230819282 (1)のコピー.JPEG", "images": ["Images/beauty_1765230819282 (1)のコピー.JPEG", "Images/beauty_1765230832164.JPEG"]}
+    ]
   },
   {
     "id": "p23",
@@ -500,7 +503,7 @@ const products = [
     "name": "Light Pink Japanese Chrysanthemum Tote Bag",
     "price": 40,
     "category": "Bags",
-    "images": ["Images/ChatGPT Image Oct 8, 2026, 02_30_48 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_30_55 PM.jpg", "Images/IMG_6409.jpeg"],
+    "images": ["Images/IMG_6409.jpeg", "Images/ChatGPT Image Oct 8, 2026, 02_30_55 PM.jpg", "Images/ChatGPT Image Oct 8, 2026, 02_30_48 PM.jpg"],
     "description": "Tote bag in light pink fabric with a Japanese chrysanthemum print.",
     "size": "Width 53 cm · Height 43 cm · Depth 10 cm"
   },
