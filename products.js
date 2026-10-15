@@ -125,7 +125,13 @@ const products = [
       "Images/01-04.jpg"
     ],
     "description": "Bonsai key charm included.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Crimson", "image": "Images/01-00.jpg"},
+      {"name": "Mustard", "image": "Images/01-03.jpg"},
+      {"name": "Blue & Black", "image": "Images/01-04.jpg"},
+      {"name": "Green", "image": "Images/01-01.jpg"}
+    ]
   },
   {
     "id": "p02",
