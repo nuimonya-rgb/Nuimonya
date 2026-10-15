@@ -378,13 +378,16 @@ const products = [
     "price": 25,
     "category": "Pouches",
     "images": [
+      "Images/beauty_1765056892265.JPEG",
       "Images/CheckbookJPEG.JPEG",
-      "Images/beauty_1765057233554.JPEG",
-      "Images/Images_6464.JPEG",
-      "Images/beauty_1765056892265.JPEG"
+      "Images/beauty_1765057233554.JPEG"
     ],
-    "description": "Cord fastening and charm.",
-    "size": ""
+    "description": "Cord fastening and charm. Choose your colour.",
+    "size": "",
+    "variants": [
+      {"name": "Light Blue", "image": "Images/beauty_1765056892265.JPEG", "images": ["Images/beauty_1765056892265.JPEG", "Images/CheckbookJPEG.JPEG", "Images/beauty_1765057233554.JPEG"]},
+      {"name": "Pink", "image": "Images/beauty_1765057233554.JPEG", "images": ["Images/beauty_1765057233554.JPEG", "Images/beauty_1765056892265.JPEG", "Images/CheckbookJPEG.JPEG"]}
+    ]
   },
   {
     "id": "p22",
