@@ -443,12 +443,26 @@ const products = [
     "price": 10,
     "category": "Others",
     "images": [
+      "Images/zabuton-no1.jpg",
+      "Images/zabuton-no2.jpg",
+      "Images/zabuton-no3.jpg",
+      "Images/zabuton-no4.jpg",
+      "Images/zabuton-no5.jpg",
+      "Images/zabuton-no6.jpg",
       "Images/23-oct3-07.jpg",
       "Images/23-oct3-08.jpg",
       "Images/23-oct3-35.jpg"
     ],
-    "description": "Small handmade cushion. Set of three: €28.",
-    "size": ""
+    "description": "Small handmade zabuton cushion. Set of three: €28. Choose a group, then write the cushion number (e.g. 3-2) in your message.",
+    "size": "",
+    "variants": [
+      {"name": "No.1", "image": "Images/zabuton-no1.jpg"},
+      {"name": "No.2", "image": "Images/zabuton-no2.jpg"},
+      {"name": "No.3", "image": "Images/zabuton-no3.jpg"},
+      {"name": "No.4", "image": "Images/zabuton-no4.jpg"},
+      {"name": "No.5", "image": "Images/zabuton-no5.jpg"},
+      {"name": "No.6", "image": "Images/zabuton-no6.jpg"}
+    ]
   },
   {
     "id": "p25",
