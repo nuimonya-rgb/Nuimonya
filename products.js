@@ -179,7 +179,11 @@ const products = [
       "Images/04-16.jpg"
     ],
     "description": "Floral fabric case with holder.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Purple Floral", "image": "Images/04-15.jpg"},
+      {"name": "Black Floral", "image": "Images/04-16.jpg"}
+    ]
   },
   {
     "id": "p05",
