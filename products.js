@@ -163,7 +163,11 @@ const products = [
       "Images/03-13.jpg"
     ],
     "description": "Fabric bracelet with metal charm.",
-    "size": ""
+    "size": "",
+    "variants": [
+      {"name": "Red Glass Bead", "image": "Images/03-11.jpg", "images": ["Images/03-11.jpg", "Images/03-12.jpg", "Images/03-14.jpg"]},
+      {"name": "Clear Glass Bead with Red Floral", "image": "Images/03-13.jpg", "images": ["Images/03-13.jpg", "Images/03-14.jpg"]}
+    ]
   },
   {
     "id": "p04",
