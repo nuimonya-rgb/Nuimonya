@@ -22,8 +22,8 @@ function sizeGuideSVG(g){
    <path d="M${cx-17*S} ${Y(90)} Q${cx} ${Y(92)} ${cx+17*S} ${Y(90)}" stroke-dasharray="2 4"/>`;
   const bag=`<path class="sgbag" d="M${bx} ${by+bh} L${bx} ${by+r} Q${bx} ${by} ${bx+r} ${by} L${bx+bw-r} ${by} Q${bx+bw} ${by} ${bx+bw} ${by+r} L${bx+bw} ${by+bh-r*.6} Q${bx+bw} ${by+bh} ${bx+bw-r*.6} ${by+bh} L${bx+r*.6} ${by+bh} Q${bx} ${by+bh} ${bx} ${by+bh-r*.6} Z"/>
    ${cross?`<path class="sgstrap" d="M${bx+bw*.5} ${by} L${cx-15*S} ${Y(28.5)}"/>`:""}`;
-  const ax=cross?cx+27*S:bx+bw+16,ay=by+bh+16;
-  const W=cross?cx*2+40:Math.max(540,ax+110),H=Math.max(Y(99),ay+45);
+  const ax=cross?Math.max(cx+27*S,bx+bw+16):bx+bw+16,ay=by+bh+16;
+  const W=cross?Math.max(cx*2+40,ax+100):Math.max(540,ax+110),H=Math.max(Y(99),ay+45);
   const dims=`
    <path class="sglead" d="M${bx+bw} ${by} H${ax+6} M${bx+bw} ${by+bh} H${ax+6}"/>
    <path class="sgdim" d="M${ax} ${by} V${by+bh} M${ax-5} ${by+6} L${ax} ${by} L${ax+5} ${by+6} M${ax-5} ${by+bh-6} L${ax} ${by+bh} L${ax+5} ${by+bh-6}"/>
@@ -33,7 +33,7 @@ function sizeGuideSVG(g){
    <text class="sgnum" x="${bx+bw/2}" y="${ay+20}" text-anchor="middle">${f(g.width)} cm</text>
    <text x="${bx+bw/2}" y="${ay+35}" text-anchor="middle">Width</text>`;
   const bx0=cross?20:W-60,bar=`<path class="sgdim" d="M${bx0} ${Y(93)} H${bx0+10*S} M${bx0} ${Y(93)-5} V${Y(93)+5} M${bx0+10*S} ${Y(93)-5} V${Y(93)+5}"/><text x="${bx0+5*S}" y="${Y(93)+(cross?18:22)}" text-anchor="middle">10 cm</text>`;
-  return `<svg class="sgsvg${cross?"":" wide"}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Size comparison: item ${f(g.width)} by ${f(g.height)} cm next to a 165 cm tall person"><g class="sgbody">${body}</g>${bag}${dims}${bar}</svg>`;
+  return `<svg class="sgsvg${cross&&W<=cx*2+40?"":" wide"}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Size comparison: item ${f(g.width)} by ${f(g.height)} cm next to a 165 cm tall person"><g class="sgbody">${body}</g>${bag}${dims}${bar}</svg>`;
 }
 (function(){
 const id=document.body.dataset.item;
@@ -42,6 +42,7 @@ const box=document.getElementById("item");
 if(!p){box.innerHTML='<p class="itemmissing">This item is no longer available. <a href="/#collection">Back to the collection</a></p>';return}
 const abs=f=>f.startsWith("data:")||f.startsWith("/")||f.startsWith("http")?f:"/"+f;
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const sgHTML=g=>g?`<section class="sizeguide"><p class="cap">SIZE GUIDE</p>${sizeGuideSVG(g)}<ul class="sglist">${[["Width",g.width],["Height",g.height],["Depth"+(g.depthBase?" (base)":""),g.depth],["Strap",g.strap],["Handle",g.handle]].filter(x=>x[1]!=null).map(x=>`<li>${x[0]} <b>${esc(x[1])} cm</b></li>`).join("")}${(g.extra||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="sgnote">Approximate sizes. Drawn to scale next to a 165 cm tall person${g.style==="crossbody"?"":" (not shown as worn)"}.</p></section>`:"";   // サイズ比較（柄ごとにサイズが違う商品は柄の sizeGuide を使う）
 const CAT={Bags:"Bags",Pouches:"Pouches",Clothing:"Clothing",Others:"Others",Outlet:"Outlet"};
 let vi=Math.min(Math.max(+new URLSearchParams(location.search).get("v")||0,0),(p.variants?.length||1)-1),k=0;
 const photos=()=>list(p,vi).map(abs);
@@ -64,7 +65,7 @@ box.innerHTML=`
       ${p.material?`<div><dt>Material</dt><dd>${esc(p.material)}</dd></div>`:""}
     </dl>
     <p class="idesc">${esc(p.description)}</p>
-    ${p.sizeGuide?`<section class="sizeguide"><p class="cap">SIZE GUIDE</p>${sizeGuideSVG(p.sizeGuide)}<ul class="sglist">${[["Width",p.sizeGuide.width],["Height",p.sizeGuide.height],["Depth"+(p.sizeGuide.depthBase?" (base)":""),p.sizeGuide.depth],["Strap",p.sizeGuide.strap],["Handle",p.sizeGuide.handle]].filter(x=>x[1]!=null).map(x=>`<li>${x[0]} <b>${esc(x[1])} cm</b></li>`).join("")}${(p.sizeGuide.extra||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="sgnote">Approximate sizes. Drawn to scale next to a 165 cm tall person${p.sizeGuide.style==="crossbody"?"":" (not shown as worn)"}.</p></section>`:""}
+    <div class="sgwrap"></div>
     <a class="ask iask" href="#">ASK ABOUT THIS ITEM</a>
     <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only.</p></div>
     <a class="iback" href="${back}">‹ Back to ${p.category==="Outlet"?"Outlet":"the collection"}</a>
@@ -84,6 +85,7 @@ function drawInfo(){let v=p.variants?.[vi];
   box.querySelector(".iprice").innerHTML=priceHTML(p,v)+(p.sold?' <span class="isold">SOLD</span>':"");
   let size=v?.size||p.size;box.querySelector(".isize").hidden=!size;box.querySelector(".isize dd").textContent=size||"";
   box.querySelector(".iask").href=mail(p,v);
+  box.querySelector(".sgwrap").innerHTML=sgHTML(v?.sizeGuide||p.sizeGuide);
   if(v){box.querySelector(".vname").textContent=v.name;box.querySelectorAll(".swatches button").forEach((b,j)=>b.classList.toggle("active",j===vi))}}
 function step(d){let n=photos().length;k=((k+d)%n+n)%n;drawPhoto()}
 function setVar(j){vi=j;k=0;drawPhoto();drawInfo();history.replaceState(null,"",j?"?v="+j:location.pathname)}

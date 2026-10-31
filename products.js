@@ -75,8 +75,8 @@ const products = [
     "description": "Handmade baguette bag with a drawstring opening. Choose your pattern.",
     "size": "Height 70 cm · Width 20 cm · Depth 10 cm",
     "variants": [
-      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.webp", "images": ["Images/added-bag-1.webp"], "size": "Height 70 cm · Width 20 cm · Depth 10 cm"},
-      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.webp", "images": ["Images/added-bag-4.webp", "Images/added-bag-3.webp", "Images/added-bag-9.webp"], "size": "Height 60 cm · Width 20 cm · Depth 10 cm"}
+      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.webp", "images": ["Images/added-bag-1.webp"], "size": "Height 70 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"width": 20, "height": 70, "depth": 10}},
+      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.webp", "images": ["Images/added-bag-4.webp", "Images/added-bag-3.webp", "Images/added-bag-9.webp"], "size": "Height 60 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"width": 20, "height": 60, "depth": 10}}
     ]
   },
   {
@@ -358,7 +358,7 @@ const products = [
     ],
     "description": "Fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
-    "sizeGuide": {"width": 52, "height": 18, "depth": 12}
+    "sizeGuide": {"style": "crossbody", "width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p16",
@@ -388,7 +388,7 @@ const products = [
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
-    "sizeGuide": {"width": 36, "height": 20, "depth": 10}
+    "sizeGuide": {"style": "crossbody", "width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p18",
@@ -403,7 +403,7 @@ const products = [
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
-    "sizeGuide": {"width": 36, "height": 20, "depth": 10}
+    "sizeGuide": {"style": "crossbody", "width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p20",
@@ -418,7 +418,7 @@ const products = [
     ],
     "description": "Brown bird fabric and fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
-    "sizeGuide": {"width": 52, "height": 18, "depth": 12}
+    "sizeGuide": {"style": "crossbody", "width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p21",
