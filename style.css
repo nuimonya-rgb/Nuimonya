@@ -135,3 +135,25 @@
 .sgsvg.wide{max-width:520px}
 .sgsvg.wide text{font-size:17px}
 .sgsvg.wide .sgnum{font-size:20px}
+/* ===== サイズガイド（後ろ姿・試作）===== */
+.sg2{padding:0;overflow:hidden;background:#fff}
+.sg2 .sghead{padding:14px 16px 10px;text-align:center}
+.sg2 .sghead .cap{margin:0 0 4px}
+.sg2 .sghead h3{margin:0;font:20px Georgia,serif}
+.sg2 .sghead h3 span{font:12px Arial,sans-serif;letter-spacing:.06em;color:#686257}
+.sg-moon .sghead{background:#f8e4e4}.sg-drop .sghead{background:#e3ecf6}.sg-square .sghead{background:#f3e9dc}
+.sg2 .sgpanel{padding:12px 16px;border-top:1px solid #eee6da}
+.sgback{display:block;width:100%;max-width:300px;margin:0 auto}
+.sgflat{display:block;width:100%;max-width:340px;margin:0 auto}
+.sgback .sgfig *{fill:none;stroke:#a59d8f;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sgback .sgfig .sghair{fill:#e6ded1;stroke:#a59d8f}
+.sgbag2{stroke:#282722;stroke-width:2;stroke-linejoin:round}
+.sg-moon .sgbag2{fill:#f3cfcf}.sg-drop .sgbag2{fill:#cfdcec}.sg-square .sgbag2{fill:#eadcc8}
+.sgback .sgstrap,.sgflat .sgstrap{fill:none;stroke:#5a4a3a;stroke-width:4;stroke-linecap:round}
+.sgflat .sgdim{fill:none;stroke:#c62828;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sgflat .sglead{fill:none;stroke:#c62828;stroke-width:1;stroke-dasharray:3 3}
+.sgflat .sgnum{font:bold 15px Arial,sans-serif;fill:#c62828}
+.sgtable{width:calc(100% - 32px);margin:4px 16px 0;border-collapse:collapse;font-size:13px}
+.sgtable th,.sgtable td{padding:7px 4px;border-bottom:1px solid #eee6da;text-align:left}
+.sgtable th{width:45%;font-weight:normal;color:#686257}
+.sg2 .sgnote{margin:10px 16px 16px}

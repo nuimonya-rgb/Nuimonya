@@ -55,7 +55,7 @@ const products = [
     ],
     "description": "Wear as a backpack, shoulder bag or crossbody bag. Choose your pattern.",
     "size": "Strap length 127 cm",
-    "sizeGuide": {"style": "crossbody", "width": 17.8, "height": 22.9, "depth": 6.4, "depthBase": true, "strap": 127},
+    "sizeGuide": {"style": "crossbody", "shape": "square", "width": 17.8, "height": 22.9, "depth": 6.4, "depthBase": true, "strap": 127},
     "variants": [
       {"name": "Hydrangea", "image": "Images/3way-7.webp", "images": ["Images/3way-7.webp", "Images/3way-8.webp", "Images/3way-9.webp", "Images/3way-10.webp"]},
       {"name": "Floral Check", "image": "Images/3way-11.webp", "images": ["Images/3way-11.webp", "Images/3way-12.webp", "Images/3way-13.webp", "Images/3way-14.webp", "Images/3way-15.webp"]}
