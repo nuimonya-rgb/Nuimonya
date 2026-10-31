@@ -197,3 +197,11 @@
 .lightbox.iszoomed .lbphoto .nav,.lightbox.iszoomed .lbphoto .count{display:none}
 .lbhint{position:absolute;left:50%;top:16px;transform:translateX(-50%);z-index:3;padding:6px 14px;border-radius:20px;background:#282722cc;color:#fff;font-size:12px;letter-spacing:.04em;white-space:nowrap;pointer-events:none}
 @media(max-width:700px){.lbhint{top:auto;bottom:52px}}
+
+/* ===== 一覧カード（シンプル）：写真・商品名・価格・SOLD ===== */
+.card.simple .photo{display:block}
+.card.simple .copy{padding:12px 14px 16px}
+.card.simple h3{font-size:16px;line-height:1.35;margin:0 0 6px}
+.card.simple .copy strong{float:none;display:block;margin:0;font-size:15px}
+.card.simple .copy strong:has(.off){margin-left:0}
+.card.simple:hover h3 .itemlink{text-decoration:underline}
