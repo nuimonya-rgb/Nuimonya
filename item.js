@@ -1,5 +1,35 @@
 /* ===== 商品詳細ページ（items/商品ID/index.html から読み込む）=====
    商品データは products.js の1か所だけ。このファイルは表示と動きだけを担当する。 */
+
+/* ===== サイズ比較の線画（products.js の sizeGuide の実寸を使う）=====
+   1cm = 4px の縮尺。人は身長165cmの上半身（頭〜太もも上）。バッグは斜めがけで腰の位置に描く。 */
+function sizeGuideSVG(g){
+  const S=4,cx=170,top=12,Y=cm=>top+cm*S;           // 頭のてっぺんから cm 下の位置
+  const bw=g.width*S,bh=g.height*S,bx=cx+18-g.width*S/2,by=Y(63); // バッグ：ウエストの少し下から
+  const r=Math.min(bw,bh)*0.32,f=n=>String(n).replace(/\.0$/,"");
+  const body=`
+   <ellipse cx="${cx}" cy="${Y(11)}" rx="${7.5*S}" ry="${11*S}"/>
+   <path d="M${cx-5.5*S} ${Y(21)} L${cx-5.5*S} ${Y(26)} Q${cx-10*S} ${Y(27.5)} ${cx-18*S} ${Y(29)} Q${cx-20.5*S} ${Y(31)} ${cx-20*S} ${Y(36)}
+            L${cx-21.5*S} ${Y(58)} Q${cx-22.5*S} ${Y(72)} ${cx-21*S} ${Y(80)} Q${cx-19.5*S} ${Y(84)} ${cx-18*S} ${Y(80)} L${cx-18*S} ${Y(62)} Q${cx-18*S} ${Y(48)} ${cx-16.5*S} ${Y(36)}"/>
+   <path d="M${cx+5.5*S} ${Y(21)} L${cx+5.5*S} ${Y(26)} Q${cx+10*S} ${Y(27.5)} ${cx+18*S} ${Y(29)} Q${cx+20.5*S} ${Y(31)} ${cx+20*S} ${Y(36)}
+            L${cx+21.5*S} ${Y(58)} Q${cx+22.5*S} ${Y(72)} ${cx+21*S} ${Y(80)} Q${cx+19.5*S} ${Y(84)} ${cx+18*S} ${Y(80)} L${cx+18*S} ${Y(62)} Q${cx+18*S} ${Y(48)} ${cx+16.5*S} ${Y(36)}"/>
+   <path d="M${cx-16.5*S} ${Y(36)} Q${cx-15*S} ${Y(50)} ${cx-13.5*S} ${Y(60)} Q${cx-17.5*S} ${Y(72)} ${cx-17*S} ${Y(90)}"/>
+   <path d="M${cx+16.5*S} ${Y(36)} Q${cx+15*S} ${Y(50)} ${cx+13.5*S} ${Y(60)} Q${cx+17.5*S} ${Y(72)} ${cx+17*S} ${Y(90)}"/>
+   <path d="M${cx-17*S} ${Y(90)} Q${cx} ${Y(92)} ${cx+17*S} ${Y(90)}" stroke-dasharray="2 4"/>`;
+  const bag=`<path class="sgbag" d="M${bx} ${by+bh} L${bx} ${by+r} Q${bx} ${by} ${bx+r} ${by} L${bx+bw-r} ${by} Q${bx+bw} ${by} ${bx+bw} ${by+r} L${bx+bw} ${by+bh-r*.6} Q${bx+bw} ${by+bh} ${bx+bw-r*.6} ${by+bh} L${bx+r*.6} ${by+bh} Q${bx} ${by+bh} ${bx} ${by+bh-r*.6} Z"/>
+   <path class="sgstrap" d="M${bx+bw*.5} ${by} L${cx-15*S} ${Y(28.5)}"/>`;
+  const ax=cx+27*S,ay=by+bh+16;
+  const dims=`
+   <path class="sglead" d="M${bx+bw} ${by} H${ax+6} M${bx+bw} ${by+bh} H${ax+6}"/>
+   <path class="sgdim" d="M${ax} ${by} V${by+bh} M${ax-5} ${by+6} L${ax} ${by} L${ax+5} ${by+6} M${ax-5} ${by+bh-6} L${ax} ${by+bh} L${ax+5} ${by+bh-6}"/>
+   <text x="${ax+12}" y="${by+bh/2-4}">Height</text><text class="sgnum" x="${ax+12}" y="${by+bh/2+14}">${f(g.height)} cm</text>
+   <path class="sgdim" d="M${bx} ${ay} H${bx+bw} M${bx+6} ${ay-5} L${bx} ${ay} L${bx+6} ${ay+5} M${bx+bw-6} ${ay-5} L${bx+bw} ${ay} L${bx+bw-6} ${ay+5}"/>
+   <path class="sglead" d="M${bx} ${by+bh} V${ay+6} M${bx+bw} ${by+bh} V${ay+6}"/>
+   <text class="sgnum" x="${bx+bw/2}" y="${ay+20}" text-anchor="middle">${f(g.width)} cm</text>
+   <text x="${bx+bw/2}" y="${ay+35}" text-anchor="middle">Width</text>`;
+  const bar=`<path class="sgdim" d="M20 ${Y(93)} H${20+10*S} M20 ${Y(93)-5} V${Y(93)+5} M${20+10*S} ${Y(93)-5} V${Y(93)+5}"/><text x="${20+5*S}" y="${Y(93)+18}" text-anchor="middle">10 cm</text>`;
+  return `<svg class="sgsvg" viewBox="0 0 ${cx*2+40} ${Y(99)}" role="img" aria-label="Size comparison: bag ${f(g.width)} by ${f(g.height)} cm on a 165 cm tall person"><g class="sgbody">${body}</g>${bag}${dims}${bar}</svg>`;
+}
 (function(){
 const id=document.body.dataset.item;
 const p=products.find(x=>x.id===id);
@@ -29,6 +59,7 @@ box.innerHTML=`
       ${p.material?`<div><dt>Material</dt><dd>${esc(p.material)}</dd></div>`:""}
     </dl>
     <p class="idesc">${esc(p.description)}</p>
+    ${p.sizeGuide?`<section class="sizeguide"><p class="cap">SIZE GUIDE</p>${sizeGuideSVG(p.sizeGuide)}<ul class="sglist"><li>Width <b>${p.sizeGuide.width} cm</b></li><li>Height <b>${p.sizeGuide.height} cm</b></li>${p.sizeGuide.depth?`<li>Depth (base) <b>${p.sizeGuide.depth} cm</b></li>`:""}${p.sizeGuide.strap?`<li>Strap <b>${p.sizeGuide.strap} cm</b></li>`:""}</ul><p class="sgnote">Approximate sizes. Illustration drawn to scale on a 165 cm tall person.</p></section>`:""}
     <a class="ask iask" href="#">ASK ABOUT THIS ITEM</a>
     <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only.</p></div>
     <a class="iback" href="${back}">‹ Back to ${p.category==="Outlet"?"Outlet":"the collection"}</a>
