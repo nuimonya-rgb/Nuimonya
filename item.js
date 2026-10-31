@@ -9,7 +9,8 @@ function sizeGuideSVG(g){
   const cross=g.style==="crossbody",S=4,cx=cross?170:95,top=12,Y=cm=>top+cm*S;           // 頭のてっぺんから cm 下の位置
   const bw=g.width*S,bh=g.height*S;
   const bx=cross?cx+18-g.width*S/2:cx+27*S;                          // 斜めがけ：体の前／それ以外：人の右横
-  const by=cross?Y(63):Math.max(Y(30),Y(72)-bh/2);                    // 斜めがけ：ウエストの少し下／それ以外：腰の高さが中心
+  const moon=g.shape==="crescent",drop=g.shape==="teardrop";             // 形：三日月（ボディクロス）／しずく（スリング）／角丸の四角
+  const by=cross?(moon?Y(42):drop?Y(33):Y(63)):Math.max(Y(30),Y(72)-bh/2);                    // 斜めがけ：ウエストの少し下／それ以外：腰の高さが中心
   const r=Math.min(bw,bh)*(cross?0.32:0.08),f=n=>String(n).replace(/\.0$/,"");
   const body=`
    <ellipse cx="${cx}" cy="${Y(11)}" rx="${7.5*S}" ry="${11*S}"/>
@@ -20,9 +21,13 @@ function sizeGuideSVG(g){
    <path d="M${cx-16.5*S} ${Y(36)} Q${cx-15*S} ${Y(50)} ${cx-13.5*S} ${Y(60)} Q${cx-17.5*S} ${Y(72)} ${cx-17*S} ${Y(90)}"/>
    <path d="M${cx+16.5*S} ${Y(36)} Q${cx+15*S} ${Y(50)} ${cx+13.5*S} ${Y(60)} Q${cx+17.5*S} ${Y(72)} ${cx+17*S} ${Y(90)}"/>
    <path d="M${cx-17*S} ${Y(90)} Q${cx} ${Y(92)} ${cx+17*S} ${Y(90)}" stroke-dasharray="2 4"/>`;
-  const bag=`<path class="sgbag" d="M${bx} ${by+bh} L${bx} ${by+r} Q${bx} ${by} ${bx+r} ${by} L${bx+bw-r} ${by} Q${bx+bw} ${by} ${bx+bw} ${by+r} L${bx+bw} ${by+bh-r*.6} Q${bx+bw} ${by+bh} ${bx+bw-r*.6} ${by+bh} L${bx+r*.6} ${by+bh} Q${bx} ${by+bh} ${bx} ${by+bh-r*.6} Z"/>
-   ${cross?`<path class="sgstrap" d="M${bx+bw*.5} ${by} L${cx-15*S} ${Y(28.5)}"/>`:""}`;
-  const ax=cross?Math.max(cx+27*S,bx+bw+16):bx+bw+16,ay=by+bh+16;
+  const shapeD=moon?`M${bx} ${by} C${bx+bw*.3} ${by+bh*.55} ${bx+bw*.7} ${by+bh*.55} ${bx+bw} ${by} C${bx+bw*.85} ${by+bh*1.33} ${bx+bw*.15} ${by+bh*1.33} ${bx} ${by} Z`
+    :drop?`M${bx+bw*.5} ${by} C${bx+bw*.2} ${by+bh*.3} ${bx} ${by+bh*.6} ${bx} ${by+bh*.8} Q${bx} ${by+bh} ${bx+bw*.5} ${by+bh} Q${bx+bw} ${by+bh} ${bx+bw} ${by+bh*.8} C${bx+bw} ${by+bh*.6} ${bx+bw*.8} ${by+bh*.3} ${bx+bw*.5} ${by} Z`
+    :`M${bx} ${by+bh} L${bx} ${by+r} Q${bx} ${by} ${bx+r} ${by} L${bx+bw-r} ${by} Q${bx+bw} ${by} ${bx+bw} ${by+r} L${bx+bw} ${by+bh-r*.6} Q${bx+bw} ${by+bh} ${bx+bw-r*.6} ${by+bh} L${bx+r*.6} ${by+bh} Q${bx} ${by+bh} ${bx} ${by+bh-r*.6} Z`;
+  const strapFrom=moon?[bx+bw,by]:[bx+bw*.5,by];
+  const bag=`<path class="sgbag" d="${shapeD}"/>
+   ${cross?`<path class="sgstrap" d="M${strapFrom[0]} ${strapFrom[1]} L${cx-15*S} ${Y(28.5)}"/>`:""}`;
+  const ax=cross?Math.max(cx+27*S,bx+bw+16):bx+bw+16,ay=drop?Math.max(by+bh+16,Y(92)+8):by+bh+16;
   const W=cross?Math.max(cx*2+40,ax+100):Math.max(540,ax+110),H=Math.max(Y(99),ay+45);
   const dims=`
    <path class="sglead" d="M${bx+bw} ${by} H${ax+6} M${bx+bw} ${by+bh} H${ax+6}"/>

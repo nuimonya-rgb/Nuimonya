@@ -92,7 +92,8 @@ const products = [
       "Images/beauty_1790953174269.webp"
     ],
     "description": "Colourful Japanese print sling bag with a front zip pocket and adjustable shoulder strap.",
-    "size": ""
+    "size": "Width 18 cm · Height 52 cm",
+    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
   },
   {
     "id": "p40",
@@ -105,7 +106,8 @@ const products = [
       "Images/added-bag-5.webp"
     ],
     "description": "Navy Japanese geometric fabric with a front zip pocket and cream shoulder strap.",
-    "size": ""
+    "size": "Width 18 cm · Height 52 cm",
+    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
   },
   {
     "id": "p41",
@@ -117,7 +119,8 @@ const products = [
       "Images/added-bag-8.webp"
     ],
     "description": "Mint Japanese geometric fabric with a front zip pocket and grey shoulder strap.",
-    "size": ""
+    "size": "Width 18 cm · Height 52 cm",
+    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
   },
   {
     "id": "p01",
@@ -358,7 +361,7 @@ const products = [
     ],
     "description": "Fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
-    "sizeGuide": {"style": "crossbody", "width": 52, "height": 18, "depth": 12}
+    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p16",
@@ -388,7 +391,7 @@ const products = [
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
-    "sizeGuide": {"style": "crossbody", "width": 36, "height": 20, "depth": 10}
+    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p18",
@@ -403,7 +406,7 @@ const products = [
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
-    "sizeGuide": {"style": "crossbody", "width": 36, "height": 20, "depth": 10}
+    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p20",
@@ -418,7 +421,7 @@ const products = [
     ],
     "description": "Brown bird fabric and fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
-    "sizeGuide": {"style": "crossbody", "width": 52, "height": 18, "depth": 12}
+    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p21",
