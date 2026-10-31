@@ -92,8 +92,8 @@ const products = [
       "Images/beauty_1790953174269.webp"
     ],
     "description": "Colourful Japanese print sling bag with a front zip pocket and adjustable shoulder strap.",
-    "size": "Width 18 cm · Height 52 cm",
-    "sizeGuide": {"wearImage": "Images/size/wear-sling.webp", "style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
+    "size": "Width 18 cm · Height 32.5 cm · Depth 8 cm",
+    "sizeGuide": {"wearImage": "Images/size/wear-sling.webp", "style": "crossbody", "shape": "teardrop", "width": 18, "height": 32.5, "depth": 8}
   },
   {
     "id": "p40",
