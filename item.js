@@ -73,20 +73,20 @@ function sgBack(g,shape){                      // 後ろ姿の人＋身につけ
    <path class="sgstrap" d="M${sgRot(strap,rot)} L${sh[0]} ${sh[1]}"/>
   </svg>`}
 function sgRot(p,rot){if(!rot)return p.join(" ");let m=rot.match(/rotate\(([-\d.]+) ([-\d.]+) ([-\d.]+)\)/),a=m[1]*Math.PI/180,ox=+m[2],oy=+m[3],dx=p[0]-ox,dy=p[1]-oy;return `${(ox+dx*Math.cos(a)-dy*Math.sin(a)).toFixed(1)} ${(oy+dx*Math.sin(a)+dy*Math.cos(a)).toFixed(1)}`}
-function sgFlat(g,shape){                      // 寸法図：正面＋（マチがあれば）点線で囲んだ「横から見た図」
-  const f=n=>String(n).replace(/\.0$/,""),k=Math.min(220/g.width,170/g.height);   // 図の中だけの縮尺（正面と横は同じ縮尺）
-  const fw=g.width*k,fh=g.height*k,x0=96,y0=44,d=g.depth?Math.max(g.depth*k,10):0;
-  const ax=x0-16;                                                                     // 高さの矢印（左側）
-  const fx=x0+fw+56,fwid=d?Math.max(d+90,g.depthBase?170:130):0,fy=18,fhgt=fh+96;                         // 拡大図の枠
-  const W=Math.max(360,d?fx+fwid+12:x0+fw+40),H=Math.max(y0+fh+(g.strap?140:64),d?fy+fhgt+10:0);
-  // 全体図の中で「マチが見える場所」：ここを点線の丸で囲んで拡大図につなぐ
-  const P=shape==="crescent"?[x0+fw-8,y0+fh*.12]:shape==="teardrop"?[x0+fw-2,y0+fh*.78]:[x0+fw,y0+fh*.55];
-  const sx=fx+(fwid-d)/2,sy=y0;                                                       // 横から見た図
-  const sidePath=shape==="teardrop"?bagPath("teardrop",sx,sy,d,fh):(()=>{let r=shape==="crescent"?d/2:Math.min(d,fh)*.2;return `M${sx+r} ${sy} H${sx+d-r} Q${sx+d} ${sy} ${sx+d} ${sy+r} V${sy+fh-r} Q${sx+d} ${sy+fh} ${sx+d-r} ${sy+fh} H${sx+r} Q${sx} ${sy+fh} ${sx} ${sy+fh-r} V${sy+r} Q${sx} ${sy} ${sx+r} ${sy} Z`})();
+function sgFlat(g,shape){                      // 寸法図：正面 →（下側を点線の丸で囲む）→ 下側の拡大図（横向き）でマチを見せる
+  const f=n=>String(n).replace(/\.0$/,""),k=Math.min(220/g.width,170/g.height);   // 図の中だけの縮尺
+  const fw=g.width*k,fh=g.height*k,x0=96,y0=44,ax=x0-16,cxm=x0+fw/2;
+  const dl="Depth"+(g.depthBase?" (base)":"");
   const arrowH=(x1,x2,y)=>`M${x1} ${y} H${x2} M${x1+6} ${y-5} L${x1} ${y} L${x1+6} ${y+5} M${x2-6} ${y-5} L${x2} ${y} L${x2-6} ${y+5}`;
   const arrowV=(x,y1,y2)=>`M${x} ${y1} V${y2} M${x-5} ${y1+6} L${x} ${y1} L${x+5} ${y1+6} M${x-5} ${y2-6} L${x} ${y2} L${x+5} ${y2-6}`;
-  const dl="Depth"+(g.depthBase?" (base)":"");
-  const sy2=y0+fh+(g.strap?62:0);
+  // 拡大図（バッグを下から見た図・横向き）：横幅はバッグの幅、たてがマチ
+  const zx=1.25,bw=fw*zx,bd=g.depth?Math.max(g.depth*k*zx,14):0;
+  const fy=y0+fh+74,fx=Math.max(14,cxm-bw/2-30),fwid=bw+60+110,fhgt=bd+86;
+  const bx=fx+30,by=fy+40,dx=bx+bw+18;
+  const bottom=shape==="square"?`<rect class="sgbag2" x="${bx}" y="${by}" width="${bw}" height="${bd}" rx="${Math.min(bd/2,10)}"/>`:`<ellipse class="sgbag2" cx="${bx+bw/2}" cy="${by+bd/2}" rx="${bw/2}" ry="${bd/2}"/>`;
+  const cy=y0+fh-(shape==="crescent"?2:6);                                           // 丸で囲む位置：バッグの下側（底）
+  const sy2=g.depth?fy+fhgt+22:y0+fh+62;
+  const W=Math.max(360,x0+fw+40,g.depth?fx+fwid+10:0),H=sy2+(g.strap?78:0)+(g.depth?0:4);
   return `<svg class="sgflat" viewBox="0 0 ${W} ${H}" role="img" aria-label="Measurements: width ${f(g.width)} cm, height ${f(g.height)} cm${g.depth?`, ${dl.toLowerCase()} ${f(g.depth)} cm`:""}">
    <text class="sglabel" x="${x0}" y="${y0-18}">FRONT</text>
    <path class="sgbag2" d="${bagPath(shape,x0,y0,fw,fh)}"/>
@@ -95,16 +95,15 @@ function sgFlat(g,shape){                      // 寸法図：正面＋（マチ
    <text class="sglabel" x="${ax-8}" y="${y0+fh/2-4}" text-anchor="end">Height</text><text class="sgnum" x="${ax-8}" y="${y0+fh/2+14}" text-anchor="end">${f(g.height)} cm</text>
    <path class="sglead" d="M${x0} ${y0+fh} V${y0+fh+26} M${x0+fw} ${y0+fh} V${y0+fh+26}"/>
    <path class="sgdim" d="${arrowH(x0,x0+fw,y0+fh+20)}"/>
-   <text class="sgnum" x="${x0+fw/2}" y="${y0+fh+42}" text-anchor="middle"><tspan class="sglabel">Width </tspan>${f(g.width)} cm</text>
-   ${d?`<circle class="sgcall" cx="${P[0]}" cy="${P[1]}" r="17"/>
-   <path class="sgcallline" d="M${P[0]+17} ${P[1]} L${fx} ${fy+fhgt/2}"/><path class="sgcallhead" d="M${fx-8} ${fy+fhgt/2-5} L${fx} ${fy+fhgt/2} L${fx-8} ${fy+fhgt/2+5}"/>
+   <text class="sgnum" x="${x0+fw+10}" y="${y0+fh+25}"><tspan class="sglabel">Width </tspan>${f(g.width)} cm</text>
+   ${g.depth?`<ellipse class="sgcall" cx="${cxm}" cy="${cy}" rx="34" ry="15"/>
+   <path class="sgcallline" d="M${cxm} ${cy+15} V${fy-2}"/><path class="sgcallhead" d="M${cxm-5} ${fy-9} L${cxm} ${fy-1} L${cxm+5} ${fy-9}"/>
    <rect class="sgframe" x="${fx}" y="${fy}" width="${fwid}" height="${fhgt}" rx="10"/>
-   <text class="sglabel" x="${fx+fwid/2}" y="${fy+18}" text-anchor="middle">SIDE VIEW</text>
-   <path class="sgbag2" d="${sidePath}"/>
-   <path class="sglead" d="M${sx} ${sy+fh} V${sy+fh+26} M${sx+d} ${sy+fh} V${sy+fh+26}"/>
-   <path class="sgdim" d="${arrowH(sx-(d<30?14:0),sx+d+(d<30?14:0),sy+fh+20)}"/>
-   ${d<30?`<path class="sgdim" d="M${sx-14} ${sy+fh+20} H${sx} M${sx+d} ${sy+fh+20} H${sx+d+14}"/>`:""}
-   <text class="sgnum" x="${fx+fwid/2}" y="${sy+fh+42}" text-anchor="middle"><tspan class="sglabel">${dl} </tspan>${f(g.depth)} cm</text>`:""}
+   <text class="sglabel" x="${fx+14}" y="${fy+22}">BOTTOM — seen from below (enlarged)</text>
+   ${bottom}
+   <path class="sglead" d="M${bx+bw} ${by} H${dx+6} M${bx+bw} ${by+bd} H${dx+6}"/>
+   <path class="sgdim" d="${bd<30?`M${dx} ${by-14} V${by+bd+14} M${dx-5} ${by-6} L${dx} ${by} L${dx+5} ${by-6} M${dx-5} ${by+bd+6} L${dx} ${by+bd} L${dx+5} ${by+bd+6}`:arrowV(dx,by,by+bd)}"/>
+   <text class="sglabel" x="${dx+10}" y="${by+bd/2-4}">${dl}</text><text class="sgnum" x="${dx+10}" y="${by+bd/2+14}">${f(g.depth)} cm</text>`:""}
    ${g.strap?`<text class="sglabel" x="${x0-60}" y="${sy2+8}">STRAP</text>
    <path class="sgstrapline" d="M${x0-52} ${sy2+26} H${x0+202}"/><rect class="sgclip" x="${x0-60}" y="${sy2+21}" width="10" height="10" rx="2"/><rect class="sgclip" x="${x0+200}" y="${sy2+21}" width="10" height="10" rx="2"/>
    <path class="sgdim" d="${arrowH(x0-60,x0+210,sy2+44)}"/>
