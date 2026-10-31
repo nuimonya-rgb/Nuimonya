@@ -91,9 +91,10 @@ function sgFlat(g,shape){                      // バッグ単体（正面＋マ
 function sgCard(g){
   const shape=g.shape||"square",[en,form,cls]=SGKIND[shape],rows=[["横幅","Width",g.width],["高さ","Height",g.height],["マチ","Depth"+(g.depthBase?" (base)":""),g.depth],["ストラップ","Strap",g.strap],["持ち手","Handle",g.handle]].filter(r=>r[2]!=null);
   return `<section class="sizeguide sg2 sg-${cls}"><div class="sghead"><p class="cap">SIZE GUIDE</p><h3>${en} <span>(${form})</span></h3></div>
-   <div class="sgpanel">${sgBack(g,shape)}</div><div class="sgpanel sgflatwrap">${sgFlat(g,shape)}</div>
+   <div class="sgpanel">${g.wearImage?`<figure class="sgwear"><img src="/${g.wearImage}" alt="Illustration of how the bag is worn" loading="lazy"><figcaption>Wearing image</figcaption></figure>`:sgBack(g,shape)}</div>${g.wearImage?`<div class="sgabout"><p><b>📏 About sizes</b></p><p>The illustration shows how the bag is worn. The actual size and shape of the bag may differ from the illustration.</p><p>Before purchasing, we recommend checking the measurements below with a tape measure and comparing them with a bag or everyday item you already have.</p></div>`:""}<div class="sgpanel sgflatwrap">${sgFlat(g,shape)}</div>
    <table class="sgtable">${rows.map(r=>`<tr><th>${r[1]}</th><td>${r[2]} cm</td></tr>`).join("")}${(g.extra||[]).map(x=>`<tr><td colspan="2">${x}</td></tr>`).join("")}</table>
-   <p class="sgnote">Approximate sizes. The person (165 cm tall) and the bag are drawn to the same scale. Fabric pattern not shown — see the photos above.</p></section>`}
+   ${g.wearImage?"":`<p class="sgnote">Approximate sizes. The person (165 cm tall) and the bag are drawn to the same scale. Fabric pattern not shown — see the photos above.</p>`}
+   </section>`}
 (function(){
 const id=document.body.dataset.item;
 const p=products.find(x=>x.id===id);

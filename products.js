@@ -55,7 +55,7 @@ const products = [
     ],
     "description": "Wear as a backpack, shoulder bag or crossbody bag. Choose your pattern.",
     "size": "Strap length 127 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "square", "width": 17.8, "height": 22.9, "depth": 6.4, "depthBase": true, "strap": 127},
+    "sizeGuide": {"wearImage": "Images/size/wear-p37.webp", "style": "crossbody", "shape": "square", "width": 17.8, "height": 22.9, "depth": 6.4, "depthBase": true, "strap": 127},
     "variants": [
       {"name": "Hydrangea", "image": "Images/3way-7.webp", "images": ["Images/3way-7.webp", "Images/3way-8.webp", "Images/3way-9.webp", "Images/3way-10.webp"]},
       {"name": "Floral Check", "image": "Images/3way-11.webp", "images": ["Images/3way-11.webp", "Images/3way-12.webp", "Images/3way-13.webp", "Images/3way-14.webp", "Images/3way-15.webp"]}
@@ -93,7 +93,7 @@ const products = [
     ],
     "description": "Colourful Japanese print sling bag with a front zip pocket and adjustable shoulder strap.",
     "size": "Width 18 cm · Height 52 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
+    "sizeGuide": {"wearImage": "Images/size/wear-sling.webp", "style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
   },
   {
     "id": "p40",
@@ -361,7 +361,7 @@ const products = [
     ],
     "description": "Fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 52, "height": 18, "depth": 12}
+    "sizeGuide": {"wearImage": "Images/size/wear-bodycross.webp", "style": "crossbody", "shape": "crescent", "width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p16",
