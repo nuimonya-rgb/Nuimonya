@@ -106,8 +106,8 @@ const products = [
       "Images/added-bag-5.webp"
     ],
     "description": "Navy Japanese geometric fabric with a front zip pocket and cream shoulder strap.",
-    "size": "Width 18 cm · Height 52 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
+    "size": "Width 18 cm · Height 32.5 cm · Depth 8 cm",
+    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 32.5, "depth": 8}
   },
   {
     "id": "p41",
@@ -119,8 +119,8 @@ const products = [
       "Images/added-bag-8.webp"
     ],
     "description": "Mint Japanese geometric fabric with a front zip pocket and grey shoulder strap.",
-    "size": "Width 18 cm · Height 52 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 52}
+    "size": "Width 18 cm · Height 32.5 cm · Depth 8 cm",
+    "sizeGuide": {"style": "crossbody", "shape": "teardrop", "width": 18, "height": 32.5, "depth": 8}
   },
   {
     "id": "p01",
