@@ -44,7 +44,7 @@ function sizeGuideSVG(g){
 /* ===== サイズガイド（後ろ姿・試作）=====
    レン君のイラストを参考にしたデザイン。数字は products.js の sizeGuide だけを使い、
    人とバッグは同じ縮尺（1cm = 4px）で描く。柄は描かない（本物は上の写真で見られる）。 */
-const SG2=new Set(["p15","p17","p18","p20","p39","p37"]);   // 試作中：この商品だけ新しいデザイン
+const SG2=new Set(["p15","p17","p18","p20","p37","p39","p40","p41"]);   // 試作中：この商品だけ新しいデザイン
 const SGKIND={crescent:["Body Cross Bag","Crescent","moon"],teardrop:["Sling Bag","Teardrop","drop"],square:["Shoulder Bag","Square","square"]};
 function bagPath(shape,x,y,w,h){
   if(shape==="crescent")return `M${x} ${y} C${x+w*.3} ${y+h*.55} ${x+w*.7} ${y+h*.55} ${x+w} ${y} C${x+w*.85} ${y+h*1.33} ${x+w*.15} ${y+h*1.33} ${x} ${y} Z`;
