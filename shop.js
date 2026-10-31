@@ -9,6 +9,5 @@ function mail(p,v){let n=p.name+(v?" – "+v.name:""),pr=onSale(p)?p.salePrice:(
 const bad=new Set();
 function list(p,vi){let v=p.variants?.[vi];let l=v?(v.images||[v.image]):(p.images||[]);l=[...new Set(l)].filter(f=>!bad.has(f));return l.length?l:[fb]}
 /* ===== 商品詳細ページ =====
-   ここに商品IDを入れた商品だけ、一覧から詳細ページへ移動する（試作中は p37 だけ） */
-const ITEM_PAGES=new Set(["p37"]);
-const itemURL=p=>ITEM_PAGES.has(p.id)?"items/"+p.id+"/":null;
+   すべての商品に詳細ページ（items/商品ID/）がある。ページは tools/build-items.py で products.js から作る。 */
+const itemURL=p=>"items/"+p.id+"/";

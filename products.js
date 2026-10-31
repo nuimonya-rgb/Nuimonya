@@ -55,7 +55,7 @@ const products = [
     ],
     "description": "Wear as a backpack, shoulder bag or crossbody bag. Choose your pattern.",
     "size": "Strap length 127 cm",
-    "sizeGuide": {"width": 17.8, "height": 22.9, "depth": 6.4, "strap": 127},
+    "sizeGuide": {"style": "crossbody", "width": 17.8, "height": 22.9, "depth": 6.4, "depthBase": true, "strap": 127},
     "variants": [
       {"name": "Hydrangea", "image": "Images/3way-7.webp", "images": ["Images/3way-7.webp", "Images/3way-8.webp", "Images/3way-9.webp", "Images/3way-10.webp"]},
       {"name": "Floral Check", "image": "Images/3way-11.webp", "images": ["Images/3way-11.webp", "Images/3way-12.webp", "Images/3way-13.webp", "Images/3way-14.webp", "Images/3way-15.webp"]}
@@ -357,7 +357,8 @@ const products = [
       "Images/beauty_1765650653470.webp"
     ],
     "description": "Fabric shoulder strap.",
-    "size": "Width 52 cm · Height 18 cm · Depth 12 cm"
+    "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
+    "sizeGuide": {"width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p16",
@@ -370,7 +371,8 @@ const products = [
       "Images/16-57.webp"
     ],
     "description": "Insulated lining.",
-    "size": "Width 40 cm · Height 23 cm · Depth 33 cm"
+    "size": "Width 40 cm · Height 23 cm · Depth 33 cm",
+    "sizeGuide": {"width": 40, "height": 23, "depth": 33}
   },
   {
     "id": "p17",
@@ -385,7 +387,8 @@ const products = [
       "Images/beauty_1766071035280.webp"
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
-    "size": "Width 36 cm · Height 20 cm · Depth 10 cm"
+    "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
+    "sizeGuide": {"width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p18",
@@ -399,7 +402,8 @@ const products = [
       "Images/18-63.webp"
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
-    "size": "Width 36 cm · Height 20 cm · Depth 10 cm"
+    "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
+    "sizeGuide": {"width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p20",
@@ -413,7 +417,8 @@ const products = [
       "Images/beauty_1765650669159.webp"
     ],
     "description": "Brown bird fabric and fabric shoulder strap.",
-    "size": "Width 52 cm · Height 18 cm · Depth 12 cm"
+    "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
+    "sizeGuide": {"width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p21",
@@ -506,6 +511,7 @@ const products = [
     ],
     "description": "Blue checks and green geometric variations. Choose your pattern.",
     "size": "Width 24 cm · Height 24 cm · Depth 13 cm",
+    "sizeGuide": {"width": 24, "height": 24, "depth": 13},
     "variants": [
       {"name": "Blue Check", "image": "Images/IMG_6495.webp"},
       {"name": "Green Diamond", "image": "Images/IMG_6459.webp"}
@@ -521,7 +527,8 @@ const products = [
       "Images/ChatGPT Image Oct 8, 2026, 02_23_33 PM.webp"
     ],
     "description": "Front pocket with lace.",
-    "size": "Width 28 cm · Height 30 cm · Depth 7 cm · Handle length 54 cm"
+    "size": "Width 28 cm · Height 30 cm · Depth 7 cm · Handle length 54 cm",
+    "sizeGuide": {"width": 28, "height": 30, "depth": 7, "extra": ["Handle length 54 cm"]}
   },
   {
     "id": "p42",
@@ -534,7 +541,8 @@ const products = [
       "Images/19-65.webp"
     ],
     "description": "Goldfish print tote bag with an interior bottle holder and key hook.",
-    "size": "Width 42 cm · Height 39 cm · Depth 18 cm · Handle length 55 cm"
+    "size": "Width 42 cm · Height 39 cm · Depth 18 cm · Handle length 55 cm",
+    "sizeGuide": {"width": 42, "height": 39, "depth": 18, "extra": ["Handle length 55 cm"]}
   },
   {
     "id": "p43",
@@ -566,6 +574,7 @@ const products = [
     "images": ["Images/IMG_6471.webp", "Images/IMG_6473.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_49 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_22 PM (1).webp", "Images/IMG_6474.webp"],
     "description": "Handbag with a drawstring opening. Choose your pattern.",
     "size": "Width 25 cm · Height 18 cm · Handle length 25 cm",
+    "sizeGuide": {"width": 25, "height": 18, "extra": ["Handle length 25 cm"]},
     "variants": [
       {"name": "Yellow with Pink Polka Dots", "image": "Images/IMG_6471.webp", "images": ["Images/IMG_6471.webp", "Images/IMG_6473.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_49 PM.webp", "Images/IMG_6474.webp"]},
       {"name": "Navy Denim Blue with White Floral Pattern", "image": "Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.webp", "images": ["Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_22 PM (1).webp", "Images/IMG_6471.webp", "Images/IMG_6474.webp"]}
@@ -579,7 +588,8 @@ const products = [
     "category": "Bags",
     "images": ["Images/IMG_6409.webp", "Images/ChatGPT Image Oct 8, 2026, 02_30_55 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_30_48 PM.webp"],
     "description": "Tote bag in light pink fabric with a Japanese chrysanthemum print.",
-    "size": "Width 53 cm · Height 43 cm · Depth 10 cm"
+    "size": "Width 53 cm · Height 43 cm · Depth 10 cm",
+    "sizeGuide": {"width": 53, "height": 43, "depth": 10}
   },
   {
     "id": "p46",
@@ -589,6 +599,7 @@ const products = [
     "images": ["Images/IMG_6465 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.webp", "Images/IMG_6467 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.webp"],
     "description": "Hip bag for scissors and tools with 3 pockets and 1 zip pocket. Adjustable strap. Choose your pattern.",
     "size": "Width 48 cm · Height 26 cm · Pocket depth 4 cm · Strap 58–89 cm",
+    "sizeGuide": {"width": 48, "height": 26, "extra": ["Pocket depth 4 cm", "Strap 58–89 cm"]},
     "variants": [
       {"name": "Light Purple with Bird", "image": "Images/IMG_6465 Copy.webp", "images": ["Images/IMG_6465 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.webp"]},
       {"name": "Navy with Gold Pattern", "image": "Images/IMG_6467 Copy.webp", "images": ["Images/IMG_6467 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).webp"]},
@@ -604,6 +615,7 @@ const products = [
     "images": ["Images/beauty_1764930926064.webp", "Images/beauty_1764931461165.webp", "Images/beauty_1764789523711.webp", "Images/beauty_1764789570866 (1).webp", "Images/beauty_1764789587234.webp"],
     "description": "Rounded one-shoulder bag in Japanese floral fabric. Choose your pattern.",
     "size": "Width 30 cm · Height 32 cm · Depth 7 cm · Handle length 42 cm",
+    "sizeGuide": {"width": 30, "height": 32, "depth": 7, "extra": ["Handle length 42 cm"]},
     "variants": [
       {"name": "Silver with Purple Floral", "image": "Images/beauty_1764930926064.webp", "images": ["Images/beauty_1764930926064.webp", "Images/beauty_1764931461165.webp"]},
       {"name": "Emerald Green with Floral", "image": "Images/beauty_1764789523711.webp", "images": ["Images/beauty_1764789523711.webp", "Images/beauty_1764789570866 (1).webp", "Images/beauty_1764789587234.webp"]}
@@ -630,7 +642,8 @@ const products = [
     "category": "Others",
     "images": ["Images/IMG_6478.webp", "Images/IMG_6479.webp"],
     "description": "Japanese fabric case for glasses or a smartphone.",
-    "size": "Width 9 cm · Height 19 cm"
+    "size": "Width 9 cm · Height 19 cm",
+    "sizeGuide": {"width": 9, "height": 19}
   },
   {
     "id": "p51",
@@ -641,7 +654,8 @@ const products = [
       "Images/IMG_6460.webp"
     ],
     "description": "Tartan handbag with a faux fur trim and leather handles.",
-    "size": "Width 33 cm · Height 20 cm · Depth 10 cm · Leather handle length 32 cm"
+    "size": "Width 33 cm · Height 20 cm · Depth 10 cm · Leather handle length 32 cm",
+    "sizeGuide": {"width": 33, "height": 20, "depth": 10, "extra": ["Leather handle length 32 cm"]}
   },
   {
     "id": "p52",
@@ -651,6 +665,7 @@ const products = [
     "images": ["Images/IMG_6491.webp", "Images/IMG_6490.webp"],
     "description": "Floral smartphone case or pouch with a fluffy lining and wrist strap. Choose your pattern.",
     "size": "Width 9 cm · Height 10 cm · Depth 2 cm",
+    "sizeGuide": {"width": 9, "height": 10, "depth": 2},
     "variants": [
       {"name": "Pink with Floral Pattern", "image": "Images/IMG_6491.webp"},
       {"name": "Emerald Green with Red Floral Pattern", "image": "Images/IMG_6490.webp"}

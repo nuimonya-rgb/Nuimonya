@@ -6,7 +6,8 @@
 
 - 商品データは products.js の1か所だけ。このページには、検索や Pinterest 用の
   タイトル・説明・写真の設定と、共通のヘッダー・フッターだけを書き出す。
-- どの商品のページを作るかは shop.js の ITEM_PAGES で決める。
+- products.js にあるすべての商品のページを作る。
+- products.js から消えた商品のフォルダが残っていたら知らせる（自動では消さない）。
 - ヘッダーとフッターは index.html からそのまま写すので、デザインがずれない。
 """
 import html, json, os, re, sys
@@ -23,11 +24,6 @@ def read(name):
 def load_products():
     s = read("products.js")
     return json.loads(s[s.index("["):s.rindex("]") + 1])
-
-
-def item_ids():
-    m = re.search(r"const ITEM_PAGES=new Set\(\[(.*?)\]\)", read("shop.js"))
-    return re.findall(r'"([^"]+)"', m.group(1)) if m else []
 
 
 def site_parts():
@@ -74,16 +70,17 @@ def page(p, header, footer, analytics):
 def main():
     products = {p["id"]: p for p in load_products()}
     header, footer, analytics = site_parts()
-    ids = item_ids()
-    missing = [i for i in ids if i not in products]
-    if missing:
-        sys.exit(f"products.js にない商品IDがあります: {missing}")
+    ids = list(products)
     for i in ids:
         d = os.path.join(ROOT, "items", i)
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
             f.write(page(products[i], header, footer, analytics))
-        print("作成:", f"items/{i}/index.html")
+    print(f"作成: {len(ids)} ページ（items/商品ID/index.html）")
+    d = os.path.join(ROOT, "items")
+    stale = sorted(x for x in os.listdir(d) if os.path.isdir(os.path.join(d, x)) and x not in products)
+    if stale:
+        print("products.js にない古いページ（確認して不要なら削除）:", stale)
 
 
 if __name__ == "__main__":

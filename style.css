@@ -108,7 +108,8 @@
 @media(max-width:800px){
 .itempage main{padding:8px 0 50px}
 .crumbs{padding:0 4vw;margin-bottom:8px;font-size:10px}
-.itemwrap{grid-template-columns:1fr;gap:16px}
+.itemwrap{grid-template-columns:minmax(0,1fr);gap:16px}
+.gallery,.itemcopy{min-width:0}
 .gallery{display:block}
 .gallery .main{height:auto;min-height:0;max-height:none;aspect-ratio:3/4}
 .gallery .nav{width:42px;height:42px;font-size:24px}
@@ -131,3 +132,6 @@
 .sgsvg .sgnum{font-weight:bold;fill:#c62828;font-size:14px}
 .sglist{display:flex;flex-wrap:wrap;gap:6px 16px;margin:10px 0 0;padding:0;list-style:none;font-size:12px;color:#4a463f}
 .sgnote{margin:8px 0 0;font-size:11px;color:#686257}
+.sgsvg.wide{max-width:520px}
+.sgsvg.wide text{font-size:17px}
+.sgsvg.wide .sgnum{font-size:20px}

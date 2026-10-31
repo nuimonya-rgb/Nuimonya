@@ -2,11 +2,15 @@
    商品データは products.js の1か所だけ。このファイルは表示と動きだけを担当する。 */
 
 /* ===== サイズ比較の線画（products.js の sizeGuide の実寸を使う）=====
-   1cm = 4px の縮尺。人は身長165cmの上半身（頭〜太もも上）。バッグは斜めがけで腰の位置に描く。 */
+   1cm = 4px の縮尺。人は身長165cmの上半身（頭〜太もも上）。
+   style:"crossbody" … 斜めがけで腰の位置に描く（かけ方を確認済みの商品だけ）
+   それ以外          … 身につけた位置は描かず、人の横に同じ縮尺で並べる */
 function sizeGuideSVG(g){
-  const S=4,cx=170,top=12,Y=cm=>top+cm*S;           // 頭のてっぺんから cm 下の位置
-  const bw=g.width*S,bh=g.height*S,bx=cx+18-g.width*S/2,by=Y(63); // バッグ：ウエストの少し下から
-  const r=Math.min(bw,bh)*0.32,f=n=>String(n).replace(/\.0$/,"");
+  const cross=g.style==="crossbody",S=4,cx=cross?170:95,top=12,Y=cm=>top+cm*S;           // 頭のてっぺんから cm 下の位置
+  const bw=g.width*S,bh=g.height*S;
+  const bx=cross?cx+18-g.width*S/2:cx+27*S;                          // 斜めがけ：体の前／それ以外：人の右横
+  const by=cross?Y(63):Math.max(Y(30),Y(72)-bh/2);                    // 斜めがけ：ウエストの少し下／それ以外：腰の高さが中心
+  const r=Math.min(bw,bh)*(cross?0.32:0.08),f=n=>String(n).replace(/\.0$/,"");
   const body=`
    <ellipse cx="${cx}" cy="${Y(11)}" rx="${7.5*S}" ry="${11*S}"/>
    <path d="M${cx-5.5*S} ${Y(21)} L${cx-5.5*S} ${Y(26)} Q${cx-10*S} ${Y(27.5)} ${cx-18*S} ${Y(29)} Q${cx-20.5*S} ${Y(31)} ${cx-20*S} ${Y(36)}
@@ -17,8 +21,9 @@ function sizeGuideSVG(g){
    <path d="M${cx+16.5*S} ${Y(36)} Q${cx+15*S} ${Y(50)} ${cx+13.5*S} ${Y(60)} Q${cx+17.5*S} ${Y(72)} ${cx+17*S} ${Y(90)}"/>
    <path d="M${cx-17*S} ${Y(90)} Q${cx} ${Y(92)} ${cx+17*S} ${Y(90)}" stroke-dasharray="2 4"/>`;
   const bag=`<path class="sgbag" d="M${bx} ${by+bh} L${bx} ${by+r} Q${bx} ${by} ${bx+r} ${by} L${bx+bw-r} ${by} Q${bx+bw} ${by} ${bx+bw} ${by+r} L${bx+bw} ${by+bh-r*.6} Q${bx+bw} ${by+bh} ${bx+bw-r*.6} ${by+bh} L${bx+r*.6} ${by+bh} Q${bx} ${by+bh} ${bx} ${by+bh-r*.6} Z"/>
-   <path class="sgstrap" d="M${bx+bw*.5} ${by} L${cx-15*S} ${Y(28.5)}"/>`;
-  const ax=cx+27*S,ay=by+bh+16;
+   ${cross?`<path class="sgstrap" d="M${bx+bw*.5} ${by} L${cx-15*S} ${Y(28.5)}"/>`:""}`;
+  const ax=cross?cx+27*S:bx+bw+16,ay=by+bh+16;
+  const W=cross?cx*2+40:Math.max(540,ax+110),H=Math.max(Y(99),ay+45);
   const dims=`
    <path class="sglead" d="M${bx+bw} ${by} H${ax+6} M${bx+bw} ${by+bh} H${ax+6}"/>
    <path class="sgdim" d="M${ax} ${by} V${by+bh} M${ax-5} ${by+6} L${ax} ${by} L${ax+5} ${by+6} M${ax-5} ${by+bh-6} L${ax} ${by+bh} L${ax+5} ${by+bh-6}"/>
@@ -27,8 +32,8 @@ function sizeGuideSVG(g){
    <path class="sglead" d="M${bx} ${by+bh} V${ay+6} M${bx+bw} ${by+bh} V${ay+6}"/>
    <text class="sgnum" x="${bx+bw/2}" y="${ay+20}" text-anchor="middle">${f(g.width)} cm</text>
    <text x="${bx+bw/2}" y="${ay+35}" text-anchor="middle">Width</text>`;
-  const bar=`<path class="sgdim" d="M20 ${Y(93)} H${20+10*S} M20 ${Y(93)-5} V${Y(93)+5} M${20+10*S} ${Y(93)-5} V${Y(93)+5}"/><text x="${20+5*S}" y="${Y(93)+18}" text-anchor="middle">10 cm</text>`;
-  return `<svg class="sgsvg" viewBox="0 0 ${cx*2+40} ${Y(99)}" role="img" aria-label="Size comparison: bag ${f(g.width)} by ${f(g.height)} cm on a 165 cm tall person"><g class="sgbody">${body}</g>${bag}${dims}${bar}</svg>`;
+  const bx0=cross?20:W-60,bar=`<path class="sgdim" d="M${bx0} ${Y(93)} H${bx0+10*S} M${bx0} ${Y(93)-5} V${Y(93)+5} M${bx0+10*S} ${Y(93)-5} V${Y(93)+5}"/><text x="${bx0+5*S}" y="${Y(93)+(cross?18:22)}" text-anchor="middle">10 cm</text>`;
+  return `<svg class="sgsvg${cross?"":" wide"}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Size comparison: item ${f(g.width)} by ${f(g.height)} cm next to a 165 cm tall person"><g class="sgbody">${body}</g>${bag}${dims}${bar}</svg>`;
 }
 (function(){
 const id=document.body.dataset.item;
@@ -59,7 +64,7 @@ box.innerHTML=`
       ${p.material?`<div><dt>Material</dt><dd>${esc(p.material)}</dd></div>`:""}
     </dl>
     <p class="idesc">${esc(p.description)}</p>
-    ${p.sizeGuide?`<section class="sizeguide"><p class="cap">SIZE GUIDE</p>${sizeGuideSVG(p.sizeGuide)}<ul class="sglist"><li>Width <b>${p.sizeGuide.width} cm</b></li><li>Height <b>${p.sizeGuide.height} cm</b></li>${p.sizeGuide.depth?`<li>Depth (base) <b>${p.sizeGuide.depth} cm</b></li>`:""}${p.sizeGuide.strap?`<li>Strap <b>${p.sizeGuide.strap} cm</b></li>`:""}</ul><p class="sgnote">Approximate sizes. Illustration drawn to scale on a 165 cm tall person.</p></section>`:""}
+    ${p.sizeGuide?`<section class="sizeguide"><p class="cap">SIZE GUIDE</p>${sizeGuideSVG(p.sizeGuide)}<ul class="sglist">${[["Width",p.sizeGuide.width],["Height",p.sizeGuide.height],["Depth"+(p.sizeGuide.depthBase?" (base)":""),p.sizeGuide.depth],["Strap",p.sizeGuide.strap],["Handle",p.sizeGuide.handle]].filter(x=>x[1]!=null).map(x=>`<li>${x[0]} <b>${esc(x[1])} cm</b></li>`).join("")}${(p.sizeGuide.extra||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="sgnote">Approximate sizes. Drawn to scale next to a 165 cm tall person${p.sizeGuide.style==="crossbody"?"":" (not shown as worn)"}.</p></section>`:""}
     <a class="ask iask" href="#">ASK ABOUT THIS ITEM</a>
     <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only.</p></div>
     <a class="iback" href="${back}">‹ Back to ${p.category==="Outlet"?"Outlet":"the collection"}</a>
@@ -70,9 +75,10 @@ box.innerHTML=`
 const main=box.querySelector(".gallery .main"),thumbs=box.querySelector(".thumbs"),lb=box.querySelector(".lightbox");
 function nav(n){return n>1?`<button type="button" class="nav prev" aria-label="Previous photo">‹</button><button type="button" class="nav next" aria-label="Next photo">›</button><span class="count">${k+1} / ${n}</span>`:""}
 function drawPhoto(){let l=photos();if(k>=l.length)k=0;
-  main.innerHTML=`${p.sold?'<span class="soldtag">SOLD</span>':""}<img src="${l[k]}" alt="${esc(p.name)}${p.variants?" – "+esc(p.variants[vi].name):""}" decoding="async">${nav(l.length)}<span class="zoom">TAP TO ZOOM</span>`;
-  thumbs.innerHTML=l.length>1?l.map((f,j)=>`<button type="button" class="${j===k?"active":""}" data-k="${j}" aria-label="Photo ${j+1}"><img src="${f}" alt="" loading="lazy"></button>`).join(""):"";
+  main.innerHTML=`${p.sold?'<span class="soldtag">SOLD</span>':""}<img src="${l[k]}" alt="${esc(p.name)}${p.variants?" – "+esc(p.variants[vi].name):""}" decoding="async" onerror="itemMiss(this)">${nav(l.length)}<span class="zoom">TAP TO ZOOM</span>`;
+  thumbs.innerHTML=l.length>1?l.map((f,j)=>`<button type="button" class="${j===k?"active":""}" data-k="${j}" aria-label="Photo ${j+1}"><img src="${f}" alt="" loading="lazy" onerror="itemMiss(this)"></button>`).join(""):"";
   thumbs.querySelector(".active")?.scrollIntoView({block:"nearest",inline:"nearest"});if(!lb.hidden)drawLB()}
+window.itemMiss=im=>{let f=im.getAttribute("src");im.onerror=null;if(f.startsWith("data:"))return;bad.add(f.replace(/^\//,""));drawPhoto();drawInfo()};   // 見つからない写真は飛ばす（一覧と同じ）
 function drawLB(){let l=photos();lb.querySelector(".lbphoto").innerHTML=`<img src="${l[k]}" alt="${esc(p.name)}">${nav(l.length)}`}
 function drawInfo(){let v=p.variants?.[vi];
   box.querySelector(".iprice").innerHTML=priceHTML(p,v)+(p.sold?' <span class="isold">SOLD</span>':"");
