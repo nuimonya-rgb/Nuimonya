@@ -164,3 +164,12 @@
 .sgabout p{margin:0 0 6px}.sgabout p:last-child{margin:0}
 .sg2 .sgabout{margin:0 16px 4px}
 .sg2 .sgtable{margin-bottom:16px}
+/* 寸法図：点線の丸と拡大図（横から見た図） */
+.sgflat{max-width:560px}
+.sgflat .sglabel{font:12px Arial,sans-serif;letter-spacing:.08em;fill:#686257;font-weight:normal}
+.sgflat .sgcall{fill:none;stroke:#c62828;stroke-width:1.6;stroke-dasharray:4 3}
+.sgflat .sgcallline{fill:none;stroke:#c62828;stroke-width:1.3;stroke-dasharray:4 3}
+.sgflat .sgcallhead{fill:none;stroke:#c62828;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.sgflat .sgframe{fill:#fbf9f5;stroke:#a59d8f;stroke-width:1.3;stroke-dasharray:5 4}
+.sgflat .sgstrapline{fill:none;stroke:#5a4a3a;stroke-width:5;stroke-linecap:round}
+.sgflat .sgclip{fill:#c9b79c;stroke:#5a4a3a;stroke-width:1.2}

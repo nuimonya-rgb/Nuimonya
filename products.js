@@ -391,7 +391,7 @@ const products = [
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 36, "height": 20, "depth": 10}
+    "sizeGuide": {"wearImage": "Images/size/wear-bodycross.webp", "style": "crossbody", "shape": "crescent", "width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p18",
@@ -406,7 +406,7 @@ const products = [
     ],
     "description": "Front pocket, back zip pocket and bonsai key charm.",
     "size": "Width 36 cm · Height 20 cm · Depth 10 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 36, "height": 20, "depth": 10}
+    "sizeGuide": {"wearImage": "Images/size/wear-bodycross.webp", "style": "crossbody", "shape": "crescent", "width": 36, "height": 20, "depth": 10}
   },
   {
     "id": "p20",
@@ -421,7 +421,7 @@ const products = [
     ],
     "description": "Brown bird fabric and fabric shoulder strap.",
     "size": "Width 52 cm · Height 18 cm · Depth 12 cm",
-    "sizeGuide": {"style": "crossbody", "shape": "crescent", "width": 52, "height": 18, "depth": 12}
+    "sizeGuide": {"wearImage": "Images/size/wear-bodycross.webp", "style": "crossbody", "shape": "crescent", "width": 52, "height": 18, "depth": 12}
   },
   {
     "id": "p21",
