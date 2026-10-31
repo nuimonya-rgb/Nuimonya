@@ -26,6 +26,7 @@ const products = [
     "id": "p36",
     "name": "Jinbei top",
     "price": 70,
+    "salePrice": 50,
     "category": "Clothing",
     "images": [
       "Images/jinbei-top.webp",
@@ -39,6 +40,7 @@ const products = [
     "id": "p37",
     "name": "3way Pebble Sling Bag",
     "price": 65,
+    "salePrice": 55,
     "category": "Bags",
     "images": [
       "Images/3way-7.webp",
@@ -80,6 +82,7 @@ const products = [
     "id": "p39",
     "name": "Japanese print sling bag",
     "price": 65,
+    "salePrice": 50,
     "category": "Bags",
     "images": [
       "Images/added-bag-0.webp",
@@ -94,6 +97,7 @@ const products = [
     "id": "p40",
     "name": "Navy Asanoha sling bag",
     "price": 65,
+    "salePrice": 50,
     "category": "Bags",
     "images": [
       "Images/added-bag-5.webp",
@@ -106,6 +110,7 @@ const products = [
     "id": "p41",
     "name": "Mint Asanoha sling bag",
     "price": 65,
+    "salePrice": 50,
     "category": "Bags",
     "images": [
       "Images/added-bag-8.webp"
@@ -201,8 +206,8 @@ const products = [
   {
     "id": "p06",
     "name": "Mini handled bag",
-    "price": 15,
-    "category": "Bags",
+    "price": 10,
+    "category": "Outlet",
     "images": [
       "Images/06-19.webp",
       "Images/06-20.webp"
@@ -213,8 +218,8 @@ const products = [
   {
     "id": "p07",
     "name": "Bottle holder",
-    "price": 15,
-    "category": "Others",
+    "price": 10,
+    "category": "Outlet",
     "images": [
       "Images/07-21.webp",
       "Images/07-22.webp"
@@ -226,6 +231,7 @@ const products = [
     "id": "p08",
     "name": "4 way Mobile phone case",
     "price": 45,
+    "salePrice": 38,
     "category": "Pouches",
     "images": [
       "Images/08-23.webp",
@@ -261,8 +267,8 @@ const products = [
   {
     "id": "p10",
     "name": "Patchwork drawstring bag",
-    "price": 12,
-    "category": "Pouches",
+    "price": 10,
+    "category": "Outlet",
     "images": [
       "Images/10-36.webp"
     ],
@@ -291,6 +297,7 @@ const products = [
     "id": "p12",
     "name": "Double zip pouch",
     "price": 20,
+    "salePrice": 15,
     "category": "Pouches",
     "images": [
       "Images/12-40.webp",
@@ -305,6 +312,7 @@ const products = [
     "id": "p13",
     "name": "4-way Japanese pouch",
     "price": 45,
+    "salePrice": 40,
     "category": "Pouches",
     "images": [
       "Images/13-48.webp",
@@ -339,6 +347,7 @@ const products = [
     "id": "p15",
     "name": "Japanese fabric Bodycross bag",
     "price": 60,
+    "salePrice": 50,
     "category": "Bags",
     "images": [
       "Images/15-53.webp",
@@ -353,6 +362,7 @@ const products = [
     "id": "p16",
     "name": "Insulated shopping basket bag",
     "price": 55,
+    "salePrice": 50,
     "category": "Bags",
     "images": [
       "Images/16-56.webp",
@@ -365,6 +375,7 @@ const products = [
     "id": "p17",
     "name": "Koi Bodycross bag",
     "price": 65,
+    "salePrice": 58,
     "category": "Bags",
     "images": [
       "Images/17-58.webp",
@@ -379,6 +390,7 @@ const products = [
     "id": "p18",
     "name": "Crane Bodycross bag",
     "price": 65,
+    "salePrice": 58,
     "category": "Bags",
     "images": [
       "Images/18-61.webp",
@@ -406,6 +418,7 @@ const products = [
     "id": "p21",
     "name": "Checkbook case",
     "price": 25,
+    "salePrice": 20,
     "category": "Pouches",
     "images": [
       "Images/IMG_6464.webp",
@@ -424,6 +437,7 @@ const products = [
     "id": "p22",
     "name": "Flap shoulder bag",
     "price": 40,
+    "salePrice": 35,
     "category": "Bags",
     "images": [
       "Images/beauty_1765230819282 (1)のコピー.webp",
@@ -499,7 +513,7 @@ const products = [
   {
     "id": "p28",
     "name": "Floral bag",
-    "price": 12,
+    "price": 10,
     "category": "Outlet",
     "images": [
       "Images/28-oct3-49.webp",
@@ -512,6 +526,7 @@ const products = [
     "id": "p42",
     "name": "Goldfish tote bag",
     "price": 45,
+    "salePrice": 38,
     "category": "Bags",
     "images": [
       "Images/19-64.webp",
@@ -545,6 +560,7 @@ const products = [
     "id": "p44",
     "name": "Drawstring Bag",
     "price": 15,
+    "salePrice": 12,
     "category": "Bags",
     "images": ["Images/IMG_6471.webp", "Images/IMG_6473.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_49 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_31 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_29_22 PM (1).webp", "Images/IMG_6474.webp"],
     "description": "Handbag with a drawstring opening. Choose your pattern.",
@@ -558,6 +574,7 @@ const products = [
     "id": "p45",
     "name": "Light Pink Japanese Chrysanthemum Tote Bag",
     "price": 40,
+    "salePrice": 35,
     "category": "Bags",
     "images": ["Images/IMG_6409.webp", "Images/ChatGPT Image Oct 8, 2026, 02_30_55 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_30_48 PM.webp"],
     "description": "Tote bag in light pink fabric with a Japanese chrysanthemum print.",
@@ -581,6 +598,7 @@ const products = [
     "id": "p47",
     "name": "One Shoulder Bag",
     "price": 45,
+    "salePrice": 35,
     "category": "Bags",
     "images": ["Images/beauty_1764930926064.webp", "Images/beauty_1764931461165.webp", "Images/beauty_1764789523711.webp", "Images/beauty_1764789570866 (1).webp", "Images/beauty_1764789587234.webp"],
     "description": "Rounded one-shoulder bag in Japanese floral fabric. Choose your pattern.",
@@ -594,41 +612,13 @@ const products = [
     "id": "p48",
     "name": "Mini Leather Boot Necklace",
     "price": 7,
-    "category": "Others",
+    "category": "Outlet",
     "images": ["Images/IMG_6475 (1).webp"],
     "description": "Necklace with a handmade mini leather boot.",
     "size": "",
     "variants": [
       {"name": "Dark Brown", "image": "Images/IMG_6475 (1).webp"},
       {"name": "Tan", "image": "Images/IMG_6475 (1).webp"}
-    ]
-  },
-  {
-    "id": "p49",
-    "name": "Faux Leather Strap",
-    "price": 15,
-    "category": "Others",
-    "images": ["Images/straps-numbered.webp"],
-    "description": "Faux leather bag shoulder strap with antique gold hardware. Choose your number (see photo).",
-    "size": "",
-    "variants": [
-      {"name": "A-1", "image": "Images/straps-numbered.webp"},
-      {"name": "A-2", "image": "Images/straps-numbered.webp"},
-      {"name": "A-3", "image": "Images/straps-numbered.webp"},
-      {"name": "A-4", "image": "Images/straps-numbered.webp"}
-    ]
-  },
-  {
-    "id": "p53",
-    "name": "Cotton Strap",
-    "price": 10,
-    "category": "Others",
-    "images": ["Images/straps-numbered.webp"],
-    "description": "Cotton bag shoulder strap with antique gold hardware. Choose your number (see photo).",
-    "size": "",
-    "variants": [
-      {"name": "B-1", "image": "Images/straps-numbered.webp"},
-      {"name": "B-2", "image": "Images/straps-numbered.webp"}
     ]
   },
   {
