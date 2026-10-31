@@ -157,11 +157,18 @@ box.innerHTML=`
 const main=box.querySelector(".gallery .main"),thumbs=box.querySelector(".thumbs"),lb=box.querySelector(".lightbox");
 function nav(n){return n>1?`<button type="button" class="nav prev" aria-label="Previous photo">‹</button><button type="button" class="nav next" aria-label="Next photo">›</button><span class="count">${k+1} / ${n}</span>`:""}
 function drawPhoto(){let l=photos();if(k>=l.length)k=0;
-  main.innerHTML=`${p.sold?'<span class="soldtag">SOLD</span>':""}<img src="${l[k]}" alt="${esc(p.name)}${p.variants?" – "+esc(p.variants[vi].name):""}" decoding="async" onerror="itemMiss(this)">${nav(l.length)}<span class="zoom">TAP TO ZOOM</span>`;
+  main.innerHTML=`${p.sold?'<span class="soldtag">SOLD</span>':""}<img src="${l[k]}" alt="${esc(p.name)}${p.variants?" – "+esc(p.variants[vi].name):""}" decoding="async" onerror="itemMiss(this)">${nav(l.length)}<span class="zoom">🔍 ${matchMedia("(hover: none)").matches?"TAP":"CLICK"} TO ENLARGE</span>`;
   thumbs.innerHTML=l.length>1?l.map((f,j)=>`<button type="button" class="${j===k?"active":""}" data-k="${j}" aria-label="Photo ${j+1}"><img src="${f}" alt="" loading="lazy" onerror="itemMiss(this)"></button>`).join(""):"";
   thumbs.querySelector(".active")?.scrollIntoView({block:"nearest",inline:"nearest"});if(!lb.hidden)drawLB()}
 window.itemMiss=im=>{let f=im.getAttribute("src");im.onerror=null;if(f.startsWith("data:"))return;bad.add(f.replace(/^\//,""));drawPhoto();drawInfo()};   // 見つからない写真は飛ばす（一覧と同じ）
-function drawLB(){let l=photos();lb.querySelector(".lbphoto").innerHTML=`<img src="${l[k]}" alt="${esc(p.name)}">${nav(l.length)}`}
+// 拡大表示：写真をクリック（タップ）すると、その場所を2.5倍に拡大。拡大中はマウス／指で動かして布の柄や縫い目を見られる
+let zoomed=false,ox=50,oy=50,tsx=0,tsy=0,tox=50,toy=50;
+const ZOOM=2.5;
+const touchUI=matchMedia("(hover: none)").matches;   // スマホは「Tap」、PCは「Click」
+function lbHint(){lb.querySelector(".lbhint").textContent=zoomed?(touchUI?"Drag to look around · tap to zoom out":"Move to look around · click again to zoom out"):(touchUI?"Tap the photo to zoom in on details":"Click the photo to zoom in on details")}
+function setZoom(on,x,y){zoomed=on;if(x!=null){ox=x;oy=y}let im=lb.querySelector(".lbphoto img");im.style.transformOrigin=`${ox}% ${oy}%`;im.classList.toggle("zoomed",on);lb.classList.toggle("iszoomed",on);lbHint()}
+function drawLB(){let l=photos();zoomed=false;lb.classList.remove("iszoomed");lb.querySelector(".lbphoto").innerHTML=`<img src="${l[k]}" alt="${esc(p.name)}">${nav(l.length)}<span class="lbhint"></span>`;lbHint()}
+function pct(e){let r=lb.querySelector(".lbphoto").getBoundingClientRect();return[Math.min(100,Math.max(0,(e.clientX-r.left)/r.width*100)),Math.min(100,Math.max(0,(e.clientY-r.top)/r.height*100))]}
 function drawInfo(){let v=p.variants?.[vi];
   box.querySelector(".iprice").innerHTML=priceHTML(p,v)+(p.sold?' <span class="isold">SOLD</span>':"");
   let size=v?.size||p.size;box.querySelector(".isize").hidden=!size;box.querySelector(".isize dd").textContent=size||"";
@@ -176,13 +183,18 @@ function closeLB(){lb.hidden=true;document.body.style.overflow="";main.focus()}
 box.addEventListener("click",e=>{
   let n=e.target.closest(".nav");if(n){e.stopPropagation();step(n.classList.contains("next")?1:-1);return}
   if(e.target.closest(".lbclose")||e.target===lb){closeLB();return}
+  let zi=e.target.closest(".lbphoto img");if(zi){if(zoomed)setZoom(false);else{let [x,y]=pct(e);setZoom(true,x,y)}return}
   if(e.target.closest(".lbphoto"))return;
   let t=e.target.closest(".thumbs button");if(t){k=+t.dataset.k;drawPhoto();return}
   let b=e.target.closest(".swatches button");if(b){setVar(+b.dataset.v);return}
   if(e.target.closest(".gallery .main img"))openLB()});
 main.addEventListener("keydown",e=>{if(e.key==="Enter")openLB()});
 document.addEventListener("keydown",e=>{if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1);if(e.key==="Escape"&&!lb.hidden)closeLB()});
-let tx=null;box.addEventListener("touchstart",e=>{tx=e.target.closest(".main,.lbphoto")?e.touches[0].clientX:null},{passive:true});
+lb.addEventListener("mousemove",e=>{if(!zoomed)return;let [x,y]=pct(e);setZoom(true,x,y)});
+lb.addEventListener("touchstart",e=>{if(!zoomed||e.touches.length>1)return;tsx=e.touches[0].clientX;tsy=e.touches[0].clientY;tox=ox;toy=oy},{passive:true});
+lb.addEventListener("touchmove",e=>{if(!zoomed||e.touches.length>1)return;e.preventDefault();let r=lb.querySelector(".lbphoto").getBoundingClientRect();
+  setZoom(true,Math.min(100,Math.max(0,tox-(e.touches[0].clientX-tsx)/r.width*100*1.5)),Math.min(100,Math.max(0,toy-(e.touches[0].clientY-tsy)/r.height*100*1.5)))},{passive:false});
+let tx=null;box.addEventListener("touchstart",e=>{tx=!zoomed&&e.target.closest(".main,.lbphoto")?e.touches[0].clientX:null},{passive:true});
 box.addEventListener("touchend",e=>{if(tx===null)return;let dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>40)step(dx<0?1:-1)},{passive:true});
 
 drawPhoto();drawInfo();

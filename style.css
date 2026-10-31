@@ -52,7 +52,7 @@
 .copy h3 .itemlink:hover{text-decoration:underline}
 /* 一覧：ざっと見られるように小さめ（PC 4列・スマホ 2列）。写真は切らずに商品全体を見せる */
 #regular,#outlets{grid-template-columns:repeat(4,minmax(0,1fr))}
-.grid .photo{aspect-ratio:3/4}
+.grid .photo{aspect-ratio:1}
 .grid .photo img{object-fit:contain}
 @media(max-width:1000px){#regular,#outlets{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){#regular,#outlets{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -189,3 +189,11 @@
 .repairbox .note{font-size:12px;font-style:italic;color:#686257}
 .repairbox .btn{margin-top:4px}
 @media(max-width:700px){.repairsteps{grid-template-columns:1fr}.repairbox{padding:20px 18px}.repair h2{font-size:28px}}
+
+/* 拡大表示の中でさらにズーム（布の柄・縫い目を見る） */
+.lbphoto{overflow:hidden}
+.lbphoto img{cursor:zoom-in;transition:transform .25s ease}
+.lbphoto img.zoomed{transform:scale(2.5);cursor:zoom-out;transition:transform .25s ease,transform-origin 0s}
+.lightbox.iszoomed .lbphoto .nav,.lightbox.iszoomed .lbphoto .count{display:none}
+.lbhint{position:absolute;left:50%;top:16px;transform:translateX(-50%);z-index:3;padding:6px 14px;border-radius:20px;background:#282722cc;color:#fff;font-size:12px;letter-spacing:.04em;white-space:nowrap;pointer-events:none}
+@media(max-width:700px){.lbhint{top:auto;bottom:52px}}
