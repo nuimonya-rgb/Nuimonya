@@ -50,21 +50,23 @@
 .card.haspage .photo img{cursor:pointer}
 .copy h3 .itemlink{color:inherit;text-decoration:none}
 .copy h3 .itemlink:hover{text-decoration:underline}
-.details{display:inline-block;margin:7px 8px 0 0;padding:13px 18px;background:#282722;border:1px solid #282722;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.1em}
-/* 一覧の写真を大きく：PCは3列、写真は縦長（3:4）で商品全体が見えるように */
-#regular,#outlets{grid-template-columns:repeat(3,1fr)}
+/* 一覧：ざっと見られるように小さめ（PC 4列・スマホ 2列）。写真は切らずに商品全体を見せる */
+#regular,#outlets{grid-template-columns:repeat(4,minmax(0,1fr))}
 .grid .photo{aspect-ratio:3/4}
-@media(max-width:700px){#regular,#outlets{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:430px){#regular,#outlets{grid-template-columns:1fr}}
+.grid .photo img{object-fit:contain}
+@media(max-width:1000px){#regular,#outlets{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){#regular,#outlets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* スマホの2列では、価格を商品名の下に（SALE表示が長くても収まるように） */
+@media(max-width:480px){.grid .copy strong{float:none;display:block;margin:0 0 6px}.grid .copy{padding:12px}.grid .ask{padding:11px 10px;font-size:10px}}
 
 /* ===== 商品詳細ページ ===== */
-.itempage main{padding:18px 4vw 70px;max-width:1500px;margin:0 auto}
+.itempage main{padding:18px 3vw 70px;max-width:1700px;margin:0 auto}
 .crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;letter-spacing:.08em;color:#686257;margin-bottom:16px}
 .crumbs a{color:inherit}
 .crumbs b{font-weight:normal;color:#282722}
-.itemwrap{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:40px;align-items:start}
+.itemwrap{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:36px;align-items:start}
 .gallery{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;align-items:start}
-.gallery .main{grid-column:2;grid-row:1;position:relative;height:calc(100vh - 150px);min-height:460px;max-height:1000px;background:#eee9df;overflow:hidden}
+.gallery .main{grid-column:2;grid-row:1;position:relative;height:calc(100vh - 120px);min-height:480px;max-height:1100px;background:#eee9df;overflow:hidden}
 .gallery .main img{width:100%;height:100%;object-fit:contain;display:block;cursor:zoom-in}
 .gallery .nav{width:48px;height:48px;font-size:28px;box-shadow:0 1px 4px #0002}
 .gallery .count{font-size:11px}
