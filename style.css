@@ -45,3 +45,50 @@
 .copy strong .now{color:#c62828}
 .copy strong .off{color:#c62828;font-size:.8em;margin-left:6px}
 .copy strong:has(.off){margin-left:10px}
+
+/* ===== 一覧から商品詳細へ ===== */
+.card.haspage .photo img{cursor:zoom-in}
+.copy h3 .itemlink{color:inherit;text-decoration:none}
+.copy h3 .itemlink:hover{text-decoration:underline}
+.details{display:inline-block;margin:7px 8px 0 0;padding:13px 18px;background:#282722;border:1px solid #282722;color:#fff;text-decoration:none;font-size:11px;letter-spacing:.1em}
+
+/* ===== 商品詳細ページ ===== */
+.itempage main{padding:22px 6vw 70px;max-width:1300px;margin:0 auto}
+.crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;letter-spacing:.08em;color:#686257;margin-bottom:22px}
+.crumbs a{color:inherit}
+.crumbs b{font-weight:normal;color:#282722}
+.itemwrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:start}
+.gallery .main{position:relative;aspect-ratio:1;overflow:hidden;background:#eee9df;border:1px solid #ddd5c7}
+.gallery .main img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;display:block}
+.gallery .nav{width:40px;height:40px;font-size:24px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:8px;margin-top:10px}
+.thumbs button{padding:0;aspect-ratio:1;border:1px solid #ddd5c7;background:#eee9df;cursor:pointer;opacity:.7}
+.thumbs button.active{border:2px solid #282722;opacity:1}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.hint{font-size:11px;color:#686257;letter-spacing:.06em;margin:8px 0 0}
+.itemcopy{position:sticky;top:110px}
+.itemcopy h1{font:34px/1.2 Georgia,serif;margin:8px 0 14px}
+.iprice{font-size:22px;font-weight:bold;margin:0 0 20px}
+.iprice .was{font-weight:normal;text-decoration:line-through;text-decoration-color:#c62828;text-decoration-thickness:2px;margin-right:8px}
+.iprice .now{color:#c62828}
+.iprice .off{color:#c62828;font-size:.75em;margin-left:8px}
+.isold{display:inline-block;margin-left:8px;padding:4px 10px;background:#282722;color:#fff;font-size:12px;letter-spacing:.15em;vertical-align:middle}
+.ivars .label{font-size:12px;letter-spacing:.06em;margin:0}
+.ivars .vars button{padding:10px 14px;font-size:11px}
+.specs{margin:18px 0;border-top:1px solid #ddd5c7}
+.specs div{display:flex;gap:16px;padding:11px 0;border-bottom:1px solid #ddd5c7;font-size:13px}
+.specs dt{width:80px;flex:none;color:#686257;letter-spacing:.06em}
+.specs dd{margin:0}
+.idesc{font-size:14px;line-height:1.7;color:#4a463f}
+.iask{margin:6px 0 22px}
+.inote{background:#fff;border:1px solid #ddd5c7;padding:14px 16px;font-size:12px;line-height:1.6}
+.inote p{margin:6px 0 0}
+.iback{display:inline-block;margin-top:22px;font-size:12px;letter-spacing:.08em;color:inherit}
+.itemmissing{text-align:center;padding:60px 0}
+.lightbox{position:fixed;inset:0;z-index:50;background:#141311f2;display:flex;align-items:center;justify-content:center}
+.lightbox[hidden]{display:none}
+.lbphoto{position:relative;width:min(92vw,92vh);height:min(92vw,92vh)}
+.lbphoto img{width:100%;height:100%;object-fit:contain;display:block}
+.lbphoto .count{bottom:-28px;right:0}
+.lbclose{position:absolute;top:12px;right:16px;z-index:3;border:0;background:transparent;color:#fff;font-size:38px;line-height:1;cursor:pointer}
+@media(max-width:800px){.itemwrap{grid-template-columns:1fr;gap:24px}.itemcopy{position:static}.itemcopy h1{font-size:28px}.itempage main{padding:16px 4vw 50px}}
