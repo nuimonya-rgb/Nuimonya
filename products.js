@@ -34,7 +34,7 @@ const products = [
       "Images/jinbei-collar.webp"
     ],
     "description": "Navy jinbei top with a Japanese print collar. Top only.",
-    "size": ""
+    "size": "Shoulder width approx. 55 cm · Sleeve length approx. 30 cm (measured from the shoulder seam to the sleeve opening)"
   },
   {
     "id": "p37",
