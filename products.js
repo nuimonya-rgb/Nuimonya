@@ -93,7 +93,7 @@ const products = [
     ],
     "description": "Colourful Japanese print sling bag with a front zip pocket and adjustable shoulder strap.",
     "size": "Width 18 cm · Height 32.5 cm · Depth 8 cm",
-    "sizeGuide": {"wearImage": "Images/size/wear-sling.webp", "style": "crossbody", "shape": "teardrop", "width": 18, "height": 32.5, "depth": 8}
+    "sizeGuide": {"wearImage": "Images/size/wear-sling-p39.webp", "style": "crossbody", "shape": "teardrop", "width": 18, "height": 32.5, "depth": 8, "features": ["Compact, lightweight one-shoulder sling bag", "Front zip pocket for small items", "Worn across the body, so your hands stay free"], "capacity": [{"icon": "phone", "label": "Phone"}, {"icon": "wallet", "label": "Wallet"}, {"icon": "pouch", "label": "Pouch"}, {"icon": "handkerchief", "label": "Handkerchief"}, {"icon": "bottle", "label": "Small bottle"}]}
   },
   {
     "id": "p40",

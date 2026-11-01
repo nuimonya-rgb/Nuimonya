@@ -205,3 +205,11 @@
 .card.simple .copy strong{float:none;display:block;margin:0;font-size:15px}
 .card.simple .copy strong:has(.off){margin-left:0}
 .card.simple:hover h3 .itemlink{text-decoration:underline}
+/* 特徴・収納の目安 */
+.sgextra{margin:14px 16px 0;padding-top:12px;border-top:1px solid #eee6da}
+.sgxh{margin:0 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#686257}
+.sgfeat{margin:0;padding-left:18px;font-size:13px;line-height:1.7;color:#4a463f}
+.sgcap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:10px;text-align:center}
+.sgcap svg{width:34px;height:34px;fill:none;stroke:#282722;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sgcap span{display:block;margin-top:4px;font-size:11px;color:#4a463f}
+.sgwear img{max-width:420px}

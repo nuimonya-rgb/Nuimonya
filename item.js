@@ -73,20 +73,19 @@ function sgBack(g,shape){                      // 後ろ姿の人＋身につけ
    <path class="sgstrap" d="M${sgRot(strap,rot)} L${sh[0]} ${sh[1]}"/>
   </svg>`}
 function sgRot(p,rot){if(!rot)return p.join(" ");let m=rot.match(/rotate\(([-\d.]+) ([-\d.]+) ([-\d.]+)\)/),a=m[1]*Math.PI/180,ox=+m[2],oy=+m[3],dx=p[0]-ox,dy=p[1]-oy;return `${(ox+dx*Math.cos(a)-dy*Math.sin(a)).toFixed(1)} ${(oy+dx*Math.sin(a)+dy*Math.cos(a)).toFixed(1)}`}
-function sgFlat(g,shape){                      // 寸法図：正面 →（下側を点線の丸で囲む）→ 下側の拡大図（横向き）でマチを見せる
-  const f=n=>String(n).replace(/\.0$/,""),k=Math.min(220/g.width,170/g.height);   // 図の中だけの縮尺
-  const fw=g.width*k,fh=g.height*k,x0=96,y0=44,ax=x0-16,cxm=x0+fw/2;
+function sgFlat(g,shape){                      // 寸法図：正面（高さ・横幅）＋ 底の角を点線で囲んで → 横から見た図（マチは横向きの矢印）
+  const f=n=>String(n).replace(/\.0$/,""),k=Math.min(200/g.width,170/g.height);
+  const fw=g.width*k,fh=g.height*k,x0=96,y0=44,ax=x0-16,zx=1.2;
   const dl="Depth"+(g.depthBase?" (base)":"");
   const arrowH=(x1,x2,y)=>`M${x1} ${y} H${x2} M${x1+6} ${y-5} L${x1} ${y} L${x1+6} ${y+5} M${x2-6} ${y-5} L${x2} ${y} L${x2-6} ${y+5}`;
   const arrowV=(x,y1,y2)=>`M${x} ${y1} V${y2} M${x-5} ${y1+6} L${x} ${y1} L${x+5} ${y1+6} M${x-5} ${y2-6} L${x} ${y2} L${x+5} ${y2-6}`;
-  // 拡大図（バッグを下から見た図・横向き）：横幅はバッグの幅、たてがマチ
-  const zx=1.25,bw=fw*zx,bd=g.depth?Math.max(g.depth*k*zx,14):0;
-  const fy=y0+fh+74,fx=Math.max(14,cxm-bw/2-30),fwid=bw+60+110,fhgt=bd+86;
-  const bx=fx+30,by=fy+40,dx=bx+bw+18;
-  const bottom=shape==="square"?`<rect class="sgbag2" x="${bx}" y="${by}" width="${bw}" height="${bd}" rx="${Math.min(bd/2,10)}"/>`:`<ellipse class="sgbag2" cx="${bx+bw/2}" cy="${by+bd/2}" rx="${bw/2}" ry="${bd/2}"/>`;
-  const cy=y0+fh-(shape==="crescent"?2:6);                                           // 丸で囲む位置：バッグの下側（底）
-  const sy2=g.depth?fy+fhgt+22:y0+fh+62;
-  const W=Math.max(360,x0+fw+40,g.depth?fx+fwid+10:0),H=sy2+(g.strap?78:0)+(g.depth?0:4);
+  const d=g.depth?Math.max(g.depth*k*zx,14):0,sh=fh*zx;                            // 横から見た図（少し拡大）
+  const fx=x0+fw+64,fy=14,fwid=d?Math.max(d+110,150):0,fhgt=sh+96,sx=fx+(fwid-d)/2,sy=fy+34;
+  const P=[x0+fw*(shape==="crescent"?.78:.82),y0+fh-(shape==="crescent"?fh*.1:7)];      // 点線の丸：底の角（マチが見える所）
+  const sidePath=shape==="teardrop"?bagPath("teardrop",sx,sy,d,sh):(()=>{let r=shape==="crescent"?d/2:Math.min(d,sh)*.2;return `M${sx+r} ${sy} H${sx+d-r} Q${sx+d} ${sy} ${sx+d} ${sy+r} V${sy+sh-r} Q${sx+d} ${sy+sh} ${sx+d-r} ${sy+sh} H${sx+r} Q${sx} ${sy+sh} ${sx} ${sy+sh-r} V${sy+r} Q${sx} ${sy} ${sx+r} ${sy} Z`})();
+  const sy2=Math.max(y0+fh+62,d?fy+fhgt+22:0);
+  const W=Math.max(360,d?fx+fwid+10:x0+fw+120),H=sy2+(g.strap?78:4);
+  const narrow=d<34;
   return `<svg class="sgflat" viewBox="0 0 ${W} ${H}" role="img" aria-label="Measurements: width ${f(g.width)} cm, height ${f(g.height)} cm${g.depth?`, ${dl.toLowerCase()} ${f(g.depth)} cm`:""}">
    <text class="sglabel" x="${x0}" y="${y0-18}">FRONT</text>
    <path class="sgbag2" d="${bagPath(shape,x0,y0,fw,fh)}"/>
@@ -95,25 +94,39 @@ function sgFlat(g,shape){                      // 寸法図：正面 →（下�
    <text class="sglabel" x="${ax-8}" y="${y0+fh/2-4}" text-anchor="end">Height</text><text class="sgnum" x="${ax-8}" y="${y0+fh/2+14}" text-anchor="end">${f(g.height)} cm</text>
    <path class="sglead" d="M${x0} ${y0+fh} V${y0+fh+26} M${x0+fw} ${y0+fh} V${y0+fh+26}"/>
    <path class="sgdim" d="${arrowH(x0,x0+fw,y0+fh+20)}"/>
-   <text class="sgnum" x="${x0+fw+10}" y="${y0+fh+25}"><tspan class="sglabel">Width </tspan>${f(g.width)} cm</text>
-   ${g.depth?`<ellipse class="sgcall" cx="${cxm}" cy="${cy}" rx="34" ry="15"/>
-   <path class="sgcallline" d="M${cxm} ${cy+15} V${fy-2}"/><path class="sgcallhead" d="M${cxm-5} ${fy-9} L${cxm} ${fy-1} L${cxm+5} ${fy-9}"/>
+   <text class="sgnum" x="${x0+fw/2}" y="${y0+fh+44}" text-anchor="middle"><tspan class="sglabel">Width </tspan>${f(g.width)} cm</text>
+   ${d?`<ellipse class="sgcall" cx="${P[0]}" cy="${P[1]}" rx="18" ry="14"/>
+   <path class="sgcallline" d="M${P[0]+18} ${P[1]} L${fx} ${fy+fhgt*.62}"/><path class="sgcallhead" d="M${fx-8} ${fy+fhgt*.62-6} L${fx} ${fy+fhgt*.62} L${fx-9} ${fy+fhgt*.62+3}"/>
    <rect class="sgframe" x="${fx}" y="${fy}" width="${fwid}" height="${fhgt}" rx="10"/>
-   <text class="sglabel" x="${fx+14}" y="${fy+22}">BOTTOM — seen from below (enlarged)</text>
-   ${bottom}
-   <path class="sglead" d="M${bx+bw} ${by} H${dx+6} M${bx+bw} ${by+bd} H${dx+6}"/>
-   <path class="sgdim" d="${bd<30?`M${dx} ${by-14} V${by+bd+14} M${dx-5} ${by-6} L${dx} ${by} L${dx+5} ${by-6} M${dx-5} ${by+bd+6} L${dx} ${by+bd} L${dx+5} ${by+bd+6}`:arrowV(dx,by,by+bd)}"/>
-   <text class="sglabel" x="${dx+10}" y="${by+bd/2-4}">${dl}</text><text class="sgnum" x="${dx+10}" y="${by+bd/2+14}">${f(g.depth)} cm</text>`:""}
+   <text class="sglabel" x="${fx+fwid/2}" y="${fy+20}" text-anchor="middle">SIDE VIEW</text>
+   <path class="sgbag2" d="${sidePath}"/>
+   <path class="sglead" d="M${sx} ${sy+sh} V${sy+sh+26} M${sx+d} ${sy+sh} V${sy+sh+26}"/>
+   <path class="sgdim" d="${narrow?`M${sx-16} ${sy+sh+20} H${sx+d+16} M${sx-6} ${sy+sh+15} L${sx} ${sy+sh+20} L${sx-6} ${sy+sh+25} M${sx+d+6} ${sy+sh+15} L${sx+d} ${sy+sh+20} L${sx+d+6} ${sy+sh+25}`:arrowH(sx,sx+d,sy+sh+20)}"/>
+   <text class="sgnum" x="${fx+fwid/2}" y="${sy+sh+44}" text-anchor="middle"><tspan class="sglabel">${dl} </tspan>${f(g.depth)} cm</text>`:""}
    ${g.strap?`<text class="sglabel" x="${x0-60}" y="${sy2+8}">STRAP</text>
    <path class="sgstrapline" d="M${x0-52} ${sy2+26} H${x0+202}"/><rect class="sgclip" x="${x0-60}" y="${sy2+21}" width="10" height="10" rx="2"/><rect class="sgclip" x="${x0+200}" y="${sy2+21}" width="10" height="10" rx="2"/>
    <path class="sgdim" d="${arrowH(x0-60,x0+210,sy2+44)}"/>
    <text class="sgnum" x="${x0+75}" y="${sy2+64}" text-anchor="middle"><tspan class="sglabel">Strap </tspan>${f(g.strap)} cm</text>`:""}
   </svg>`}
+/* 収納の目安のアイコン（線画） */
+const CAPICON={
+  phone:'<rect x="11" y="3" width="18" height="34" rx="3"/><path d="M17 33h6"/>',
+  wallet:'<rect x="4" y="9" width="32" height="22" rx="3"/><path d="M26 16h10v8H26a4 4 0 0 1 0-8z"/>',
+  pouch:'<path d="M5 12h30l-2 20H7z"/><path d="M5 12q15-6 30 0"/>',
+  handkerchief:'<path d="M8 8h24v24H8z"/><path d="M8 8l24 24"/>',
+  bottle:'<path d="M16 4h8v5l3 4v23H13V13l3-4z"/><path d="M13 20h14"/>',
+  keys:'<circle cx="13" cy="14" r="7"/><path d="M18 19l14 14M27 28l4-4M30 31l3-3"/>'};
+function sgExtras(g){
+  let h="";
+  if(g.features?.length)h+=`<div class="sgextra"><p class="sgxh">Features</p><ul class="sgfeat">${g.features.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;
+  if(g.capacity?.length)h+=`<div class="sgextra"><p class="sgxh">What fits (example)</p><ul class="sgcap">${g.capacity.map(c=>`<li><svg viewBox="0 0 40 40" aria-hidden="true">${CAPICON[c.icon]||""}</svg><span>${c.label}</span></li>`).join("")}</ul></div>`;
+  return h}
 function sgCard(g){
   const shape=g.shape||"square",[en,form,cls]=SGKIND[shape],rows=[["横幅","Width",g.width],["高さ","Height",g.height],["マチ","Depth"+(g.depthBase?" (base)":""),g.depth],["ストラップ","Strap",g.strap],["持ち手","Handle",g.handle]].filter(r=>r[2]!=null);
   return `<section class="sizeguide sg2 sg-${cls}"><div class="sghead"><p class="cap">SIZE GUIDE</p><h3>${en} <span>(${form})</span></h3></div>
    <div class="sgpanel">${g.wearImage?`<figure class="sgwear"><img src="/${g.wearImage}" alt="Illustration of how the bag is worn" loading="lazy"><figcaption>Wearing image</figcaption></figure>`:sgBack(g,shape)}</div>${g.wearImage?`<div class="sgabout"><p><b>📏 About sizes</b></p><p>The illustration shows how the bag is worn. The actual size and shape of the bag may differ from the illustration.</p><p>Before purchasing, we recommend checking the measurements below with a tape measure and comparing them with a bag or everyday item you already have.</p></div>`:""}<div class="sgpanel sgflatwrap">${sgFlat(g,shape)}</div>
    <table class="sgtable">${rows.map(r=>`<tr><th>${r[1]}</th><td>${r[2]} cm</td></tr>`).join("")}${(g.extra||[]).map(x=>`<tr><td colspan="2">${x}</td></tr>`).join("")}</table>
+   ${sgExtras(g)}
    ${g.wearImage?"":`<p class="sgnote">Approximate sizes. The person (165 cm tall) and the bag are drawn to the same scale. Fabric pattern not shown — see the photos above.</p>`}
    </section>`}
 (function(){
