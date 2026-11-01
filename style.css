@@ -220,5 +220,7 @@
 .strapnote{margin:0 0 8px;font-size:13px;color:#4a463f}
 .strapgroup{margin:0 0 6px;font-size:13px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .strapgroup b{min-width:90px;font-weight:normal;color:#686257}
-.strapgroup span{padding:3px 9px;border:1px solid #aaa293;font-size:12px;letter-spacing:.05em}
-.strapask{margin:8px 0 0;font-size:12px;font-style:italic;color:#686257}
+.strapgroup button{padding:7px 12px;background:#fff;border:1px solid #aaa293;color:#282722;font-size:12px;letter-spacing:.05em;cursor:pointer}
+.strapgroup button.active{background:#282722;color:#fff;border-color:#282722}
+.strapask{margin:10px 0 0;font-size:13px;color:#686257}
+.strapask b{color:#282722}

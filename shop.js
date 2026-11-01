@@ -5,7 +5,7 @@ const SALE={start:"2026-11-06",end:"2026-12-06"};
 const today=new URLSearchParams(location.search).get("sale-preview")||new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Paris"}).format(new Date());
 const onSale=p=>p.salePrice!=null&&!p.sold&&today>=SALE.start&&today<=SALE.end;
 function priceHTML(p,v){let base=v?.price??p.price;if(!onSale(p))return "€"+base;let off=Math.round((1-p.salePrice/base)*100);return `<s class="was">€${base}</s><span class="now">€${p.salePrice}</span><span class="off">-${off}%</span>`}
-function mail(p,v){let n=p.name+(v?" – "+v.name:""),pr=onSale(p)?p.salePrice:(v?.price??p.price);return "mailto:handmade.emiys@gmail.com?subject="+encodeURIComponent("Nuimonya enquiry: "+n)+"&body="+encodeURIComponent("Hello Emi,\n\nI am interested in: "+n+" (€"+pr+").\nCould you please confirm availability?\n\nThank you.")}
+function mail(p,v,strap){let n=p.name+(v?" – "+v.name:"")+(strap?" – Strap "+strap:""),pr=onSale(p)?p.salePrice:(v?.price??p.price);return "mailto:handmade.emiys@gmail.com?subject="+encodeURIComponent("Nuimonya enquiry: "+n)+"&body="+encodeURIComponent("Hello Emi,\n\nI am interested in: "+n+" (€"+pr+").\nCould you please confirm availability?\n\nThank you.")}
 const bad=new Set();
 function list(p,vi){let v=p.variants?.[vi];let l=v?(v.images||[v.image]):(p.images||[]);l=[...new Set(l)].filter(f=>!bad.has(f));return l.length?l:[fb]}
 /* ===== 商品詳細ページ =====

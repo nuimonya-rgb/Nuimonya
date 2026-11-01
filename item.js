@@ -138,7 +138,7 @@ const abs=f=>f.startsWith("data:")||f.startsWith("/")||f.startsWith("http")?f:"/
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const sgHTML=g=>g?`<section class="sizeguide"><p class="cap">SIZE GUIDE</p>${sizeGuideSVG(g)}<ul class="sglist">${[["Width",g.width],["Height",g.height],["Depth"+(g.depthBase?" (base)":""),g.depth],["Strap",g.strap],["Handle",g.handle]].filter(x=>x[1]!=null).map(x=>`<li>${x[0]} <b>${esc(x[1])} cm</b></li>`).join("")}${(g.extra||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="sgnote">Approximate sizes. Drawn to scale next to a 165 cm tall person${g.style==="crossbody"?"":" (not shown as worn)"}.</p></section>`:"";   // サイズ比較（柄ごとにサイズが違う商品は柄の sizeGuide を使う）
 const CAT={Bags:"Bags",Pouches:"Pouches",Clothing:"Clothing",Others:"Others",Outlet:"Outlet"};
-let vi=Math.min(Math.max(+new URLSearchParams(location.search).get("v")||0,0),(p.variants?.length||1)-1),k=0;
+let strapSel=null,vi=Math.min(Math.max(+new URLSearchParams(location.search).get("v")||0,0),(p.variants?.length||1)-1),k=0;
 const photos=()=>list(p,vi).map(abs);
 const back=p.category==="Outlet"?"/#outlet":"/#collection";
 
@@ -159,7 +159,7 @@ box.innerHTML=`
       ${p.material?`<div><dt>Material</dt><dd>${esc(p.material)}</dd></div>`:""}
     </dl>
     <p class="idesc">${esc(p.description)}</p>
-    ${p.strapOptions?`<section class="straps"><p class="cap">STRAP OPTIONS</p><img src="${abs(p.strapOptions.image)}" alt="Strap options with numbers" loading="lazy"><p class="strapnote">${esc(p.strapOptions.note)}</p>${p.strapOptions.groups.map(g=>`<p class="strapgroup"><b>${esc(g.name)}</b> ${g.items.map(x=>`<span>${esc(x)}</span>`).join("")}</p>`).join("")}<p class="strapask">Please write your strap number (e.g. A-2) in your message.</p></section>`:""}
+    ${p.strapOptions?`<section class="straps"><p class="cap">STRAP OPTIONS</p><img src="${abs(p.strapOptions.image)}" alt="Strap options with numbers" loading="lazy"><p class="strapnote">${esc(p.strapOptions.note)}</p>${p.strapOptions.groups.map(g=>`<p class="strapgroup"><b>${esc(g.name)}</b> ${g.items.map(x=>`<button type="button" data-strap="${esc(x)}">${esc(x)}</button>`).join("")}</p>`).join("")}<p class="strapask">Selected strap: <b class="strapsel">none yet — choose one above</b></p></section>`:""}
     <div class="sgwrap"></div>
     <a class="ask iask" href="#">ASK ABOUT THIS ITEM</a>
     <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only. Shipping: Mondial Relay only (or hand delivery in person).</p></div>
@@ -186,7 +186,7 @@ function pct(e){let r=lb.querySelector(".lbphoto").getBoundingClientRect();retur
 function drawInfo(){let v=p.variants?.[vi];
   box.querySelector(".iprice").innerHTML=priceHTML(p,v)+(p.sold?' <span class="isold">SOLD</span>':"");
   let size=v?.size||p.size;box.querySelector(".isize").hidden=!size;box.querySelector(".isize dd").textContent=size||"";
-  box.querySelector(".iask").href=mail(p,v);
+  box.querySelector(".iask").href=mail(p,v,strapSel);
   {let g=v?.sizeGuide||p.sizeGuide;box.querySelector(".sgwrap").innerHTML=g&&SG2.has(p.id)?sgCard(g):sgHTML(g)}
   if(v){box.querySelector(".vname").textContent=v.name;box.querySelectorAll(".swatches button").forEach((b,j)=>b.classList.toggle("active",j===vi))}}
 function step(d){let n=photos().length;k=((k+d)%n+n)%n;drawPhoto()}
@@ -200,6 +200,7 @@ box.addEventListener("click",e=>{
   let zi=e.target.closest(".lbphoto img");if(zi){if(zoomed)setZoom(false);else{let [x,y]=pct(e);setZoom(true,x,y)}return}
   if(e.target.closest(".lbphoto"))return;
   let t=e.target.closest(".thumbs button");if(t){k=+t.dataset.k;drawPhoto();return}
+  let sb=e.target.closest(".straps button");if(sb){strapSel=sb.dataset.strap;box.querySelectorAll(".straps button").forEach(x=>x.classList.toggle("active",x===sb));box.querySelector(".strapsel").textContent=strapSel;drawInfo();return}   // ストラップを選ぶと、問い合わせメールにも番号が入る
   let b=e.target.closest(".swatches button");if(b){setVar(+b.dataset.v);return}
   if(e.target.closest(".gallery .main img"))openLB()});
 main.addEventListener("keydown",e=>{if(e.key==="Enter")openLB()});
