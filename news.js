@@ -2,10 +2,10 @@ const news = [
   {
     "id": "christmas-sale-2026",
     "date": "2026-10-31",
-    "label": "Christmas Sale · November 7 – December 13, 2026",
+    "label": "Christmas Sale · November 6 – December 6, 2026",
     "title_en": "🎄 Christmas Sale at Nuimonya! 🎁",
     "title_ja": "",
-    "body_en": "Celebrate the festive season with special prices on selected handmade bags and accessories!<br>Discover unique creations inspired by Japanese fabrics, lovingly handmade with care.<br><br><b>Sale period: November 7 – December 13, 2026</b><br><br>We recommend ordering early to allow enough time for delivery before Christmas. As availability is confirmed before payment, please allow a few extra days. Delivery before Christmas cannot be guaranteed for late orders.<br><br>Find your favourite piece and enjoy the Christmas season with Nuimonya!",
+    "body_en": "Celebrate the festive season with special prices on selected handmade bags and accessories!<br>Discover unique creations inspired by Japanese fabrics, lovingly handmade with care.<br><br><b>Sale period: November 6 – December 6, 2026</b><br><br>We recommend ordering early to allow enough time for delivery before Christmas. As availability is confirmed before payment, please allow a few extra days. Delivery before Christmas cannot be guaranteed for late orders.<br><br>Find your favourite piece and enjoy the Christmas season with Nuimonya!",
     "body_ja": "",
     "images": []
   },
