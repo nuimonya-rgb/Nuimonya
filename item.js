@@ -159,6 +159,7 @@ box.innerHTML=`
       ${p.material?`<div><dt>Material</dt><dd>${esc(p.material)}</dd></div>`:""}
     </dl>
     <p class="idesc">${esc(p.description)}</p>
+    ${p.strapOptions?`<section class="straps"><p class="cap">STRAP OPTIONS</p><img src="${abs(p.strapOptions.image)}" alt="Strap options with numbers" loading="lazy"><p class="strapnote">${esc(p.strapOptions.note)}</p>${p.strapOptions.groups.map(g=>`<p class="strapgroup"><b>${esc(g.name)}</b> ${g.items.map(x=>`<span>${esc(x)}</span>`).join("")}</p>`).join("")}<p class="strapask">Please write your strap number (e.g. A-2) in your message.</p></section>`:""}
     <div class="sgwrap"></div>
     <a class="ask iask" href="#">ASK ABOUT THIS ITEM</a>
     <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only. Shipping: Mondial Relay only (or hand delivery in person).</p></div>

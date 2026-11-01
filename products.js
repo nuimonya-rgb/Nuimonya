@@ -250,6 +250,7 @@ const products = [
     ],
     "description": "A versatile mobile phone holder designed for four different ways of use. The leather strap is available in a choice of colours. Wear on a belt, across the body or at the wrist. Accessories included.",
     "size": "Height 20 cm · Width 11 cm · Depth 4 cm · Leather strap 114 cm",
+    "strapOptions": {"image": "Images/straps-numbered.webp", "note": "Choose from 6 straps: 4 faux leather and 2 cotton.", "groups": [{"name": "Faux leather", "items": ["A-1", "A-2", "A-3", "A-4"]}, {"name": "Cotton", "items": ["B-1", "B-2"]}]},
     "sizeGuide": {"width": 11, "height": 20, "depth": 4, "extra": ["Leather strap 114 cm"]},
     "variants": [
       {"name": "Light Blue Floral", "image": "Images/08-23.webp", "images": ["Images/08-23.webp", "Images/08-24.webp", "Images/08-25.webp", "Images/08-26.webp", "Images/08-27.webp", "Images/08-28.webp"]},
