@@ -12,6 +12,7 @@
 - Google 用のサイトマップ（sitemap.xml：トップページ＋全商品ページ）もいっしょに作る。
 """
 import html, json, os, re, sys
+from urllib.parse import quote
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://nuimonya.com"
@@ -51,7 +52,7 @@ def page(p, header, footer, analytics):
     if p.get("variants"):
         desc += " Patterns: " + ", ".join(v["name"] for v in p["variants"]) + "."
     img = first_image(p)
-    og_img = f'<meta property="og:image" content="{SITE}/{e(img)}">' if img else ""
+    og_img = f'<meta property="og:image" content="{SITE}/{e(quote(img, safe='/'))}">' if img else ""   # Pinterest 用の写真も同じく変換
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -74,7 +75,8 @@ def sitemap(products):
     rows = [f"  <url>\n    <loc>{SITE}/</loc>\n  </url>"]
     for p in products:
         img = first_image(p)
-        im = (f"\n    <image:image>\n      <image:loc>{SITE}/{e(img)}</image:loc>\n    </image:image>" if img else "")
+        # スペースや日本語を含むファイル名は、Google が読めるように %20 などの形に変換する
+        im = (f"\n    <image:image>\n      <image:loc>{SITE}/{e(quote(img, safe='/'))}</image:loc>\n    </image:image>" if img else "")
         rows.append(f"  <url>\n    <loc>{SITE}/items/{e(p['id'])}/</loc>{im}\n  </url>")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
