@@ -250,7 +250,7 @@ const products = [
     ],
     "description": "A versatile mobile phone holder designed for four different ways of use. The leather strap is available in a choice of colours. Wear on a belt, across the body or at the wrist. Accessories included.",
     "size": "Height 20 cm · Width 11 cm · Depth 4 cm · Strap 114 cm × 1 cm (faux leather or cotton)",
-    "strapOptions": {"image": "Images/straps-numbered.webp", "note": "Choose from 6 straps (114 cm long, 1 cm wide): 4 faux leather and 2 cotton.", "groups": [{"name": "Faux leather", "items": ["A-1", "A-2", "A-3", "A-4"]}, {"name": "Cotton", "items": ["B-1", "B-2"]}]},
+    "strapOptions": {"image": "Images/straps-numbered.webp", "note": "Choose from 6 straps (114 cm long, 1 cm wide): 4 faux leather and 2 cotton. The strap is included in the price.", "groups": [{"name": "Faux leather", "items": ["A-1", "A-2", "A-3", "A-4"]}, {"name": "Cotton", "items": ["B-1", "B-2"]}]},
     "sizeGuide": {"width": 11, "height": 20, "depth": 4, "extra": ["Strap 114 cm × 1 cm (faux leather or cotton)"]},
     "variants": [
       {"name": "Light Blue Floral", "image": "Images/08-23.webp", "images": ["Images/08-23.webp", "Images/08-24.webp", "Images/08-25.webp", "Images/08-26.webp", "Images/08-27.webp", "Images/08-28.webp"]},
@@ -508,8 +508,8 @@ const products = [
     "description": "A cosy neck warmer designed to help keep you warm in colder weather. Available in two sizes to suit different preferences. Check and fleece variations. Choose your number.",
     "size": "Size 1: Height 33 cm × Half-circumference 40 cm · Size 2: Height 20 cm × Half-circumference 30 cm",
     "variants": [
-      {"name": "No.1", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.webp"},
-      {"name": "No.2", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.webp"}
+      {"name": "No.1", "size": "Size 1: Height 33 cm × Half-circumference 40 cm", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.webp"},
+      {"name": "No.2", "size": "Size 2: Height 20 cm × Half-circumference 30 cm", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.webp"}
     ]
   },
   {
