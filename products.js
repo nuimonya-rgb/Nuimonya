@@ -133,8 +133,8 @@ const products = [
       "Images/01-03.webp",
       "Images/01-04.webp"
     ],
-    "description": "Bonsai key charm included.",
-    "size": "",
+    "description": "A versatile strap that can be used to carry or attach compatible accessories. The length is measured when fully extended. Bonsai key charm included.",
+    "size": "Width 1.5 cm · Length 145 cm (fully extended)",
     "variants": [
       {"name": "Crimson", "image": "Images/01-00.webp"},
       {"name": "Mustard", "image": "Images/01-03.webp"},
@@ -153,8 +153,8 @@ const products = [
       "Images/02-08.webp",
       "Images/02-09.webp"
     ],
-    "description": "Retractable reel and cherry blossom charm.",
-    "size": "",
+    "description": "A convenient retractable strap that keeps small essentials within easy reach. The cord extends up to 33 cm, making it practical for everyday use. Retractable reel and cherry blossom charm.",
+    "size": "Retractable cord: up to 33 cm · Strap: 96 cm circumference × 8 mm width",
     "variants": [
       {"name": "Blue", "image": "Images/02-06.webp", "images": ["Images/02-06.webp", "Images/02-07.webp"]},
       {"name": "Purple", "image": "Images/02-08.webp", "images": ["Images/02-08.webp", "Images/02-09.webp"]}
@@ -171,8 +171,8 @@ const products = [
       "Images/03-12.webp",
       "Images/03-13.webp"
     ],
-    "description": "Fabric bracelet with metal charm.",
-    "size": "",
+    "description": "A simple bracelet-style accessory that can be worn around the wrist. Lightweight and easy to wear. Fabric bracelet with metal charm.",
+    "size": "24 cm circumference × 8 mm width",
     "variants": [
       {"name": "Red Glass Bead", "image": "Images/03-11.webp", "images": ["Images/03-11.webp", "Images/03-12.webp", "Images/03-14.webp"]},
       {"name": "Clear Glass Bead with Red Floral", "image": "Images/03-13.webp", "images": ["Images/03-13.webp", "Images/03-14.webp"]}
@@ -187,8 +187,9 @@ const products = [
       "Images/04-15.webp",
       "Images/04-16.webp"
     ],
-    "description": "Floral fabric case with holder.",
-    "size": "",
+    "description": "A practical pouch for carrying dog waste bags, with an additional holder for attaching a used waste bag. Handy for dog walks and everyday outings. Floral fabric case with holder.",
+    "size": "Width 12 cm · Height 7 cm · Depth 5 cm",
+    "sizeGuide": {"width": 12, "height": 7, "depth": 5},
     "variants": [
       {"name": "Purple Floral", "image": "Images/04-15.webp"},
       {"name": "Black Floral", "image": "Images/04-16.webp"}
@@ -247,8 +248,9 @@ const products = [
       "Images/08-33.webp",
       "Images/08-grey.webp"
     ],
-    "description": "Wear on a belt, across the body or at the wrist. Accessories included.",
-    "size": "",
+    "description": "A versatile mobile phone holder designed for four different ways of use. The leather strap is available in a choice of colours. Wear on a belt, across the body or at the wrist. Accessories included.",
+    "size": "Height 20 cm · Width 11 cm · Depth 4 cm · Leather strap 114 cm",
+    "sizeGuide": {"width": 11, "height": 20, "depth": 4, "extra": ["Leather strap 114 cm"]},
     "variants": [
       {"name": "Light Blue Floral", "image": "Images/08-23.webp", "images": ["Images/08-23.webp", "Images/08-24.webp", "Images/08-25.webp", "Images/08-26.webp", "Images/08-27.webp", "Images/08-28.webp"]},
       {"name": "Dark Green", "image": "Images/08-33.webp"},
@@ -265,8 +267,9 @@ const products = [
       "Images/09-35.webp",
       "Images/09-34.webp"
     ],
-    "description": "Light blue floral fabric with a cream detail.",
-    "size": ""
+    "description": "A compact case for keeping pens and other small stationery items neatly together. Easy to slip into a handbag or backpack. Light blue floral fabric with a cream detail.",
+    "size": "Width 18 cm · Height 5 cm · Depth 3 cm",
+    "sizeGuide": {"width": 18, "height": 5, "depth": 3}
   },
   {
     "id": "p10",
@@ -309,8 +312,9 @@ const products = [
       "Images/12-41.webp",
       "Images/12-42.webp"
     ],
-    "description": "Green floral fabric, wrist handle and front pocket.",
-    "size": ""
+    "description": "A practical double-zip pouch with six interior pockets to help organise cards, small accessories and everyday essentials. Green floral fabric, wrist handle and front pocket.",
+    "size": "Width 21 cm · Height 14 cm · Depth 2 cm · Interior: 6 pockets",
+    "sizeGuide": {"width": 21, "height": 14, "depth": 2, "extra": ["Interior: 6 pockets"]}
   },
   {
     "id": "p13",
@@ -327,8 +331,9 @@ const products = [
       "Images/13-46.webp",
       "Images/13-47.webp"
     ],
-    "description": "Leather flap, shoulder and wrist straps, and belt attachment.",
-    "size": "",
+    "description": "A versatile accessory designed to be used in four different ways. Its compact shape makes it convenient for everyday use. Leather flap, shoulder and wrist straps, and belt attachment.",
+    "size": "Height 20 cm · Width 13 cm",
+    "sizeGuide": {"width": 13, "height": 20},
     "variants": [
       {"name": "Brown & Floral", "image": "Images/13-48.webp", "images": ["Images/13-48.webp", "Images/13-49.webp"]},
       {"name": "Green & Floral", "image": "Images/13-43.webp", "images": ["Images/13-43.webp", "Images/13-44.webp", "Images/13-45.webp", "Images/13-46.webp", "Images/13-47.webp"]}
@@ -344,8 +349,9 @@ const products = [
       "Images/14-51.webp",
       "Images/14-52.webp"
     ],
-    "description": "Cream fabric with blue leaves. Divided pockets inside and outside.",
-    "size": ""
+    "description": "A practical organiser with multiple pockets on the front, back and inside. Ideal for keeping tools and small accessories neatly organised and easy to find. Cream fabric with blue leaves. Divided pockets inside and outside.",
+    "size": "Width 26 cm · Height 13 cm · Depth 8 cm · Front: 5 pockets · Back: 5 pockets · Interior: 6 pockets on each side",
+    "sizeGuide": {"width": 26, "height": 13, "depth": 8, "extra": ["Front: 5 pockets", "Back: 5 pockets", "Interior: 6 pockets on each side"]}
   },
   {
     "id": "p15",
@@ -435,8 +441,9 @@ const products = [
       "Images/CheckbookJPEG.webp",
       "Images/beauty_1765057233554.webp"
     ],
-    "description": "Cord fastening and charm. Choose your colour.",
-    "size": "",
+    "description": "A convenient holder for keeping a checkbook and cards together. Two zippered compartments and two card pockets help keep everything organised. Cord fastening and charm. Choose your colour.",
+    "size": "Width 22 cm · Height 12 cm · Closure: 2 zippers · 2 card pockets",
+    "sizeGuide": {"width": 22, "height": 12, "extra": ["Closure: 2 zippers", "2 card pockets"]},
     "variants": [
       {"name": "Light Blue", "image": "Images/IMG_6464.webp", "images": ["Images/IMG_6464.webp", "Images/beauty_1765056892265.webp", "Images/CheckbookJPEG.webp", "Images/beauty_1765057233554.webp"]},
       {"name": "Pink", "image": "Images/IMG_6464.webp", "images": ["Images/IMG_6464.webp", "Images/beauty_1765057233554.webp", "Images/beauty_1765056892265.webp", "Images/CheckbookJPEG.webp"]}
@@ -453,8 +460,9 @@ const products = [
       "Images/beauty_1765230890906のコピー.webp",
       "Images/beauty_1765230832164.webp"
     ],
-    "description": "Flap shoulder bag with shoulder strap and charm. Choose your colour.",
-    "size": "",
+    "description": "A compact shoulder bag with a flap closure, ideal for carrying everyday essentials. The 10 cm depth provides useful space for your belongings. Flap shoulder bag with shoulder strap and charm. Choose your colour.",
+    "size": "Width 25 cm · Height 15 cm · Depth 10 cm · Strap length 98 cm",
+    "sizeGuide": {"width": 25, "height": 15, "depth": 10, "extra": ["Strap length 98 cm"]},
     "variants": [
       {"name": "Beige", "image": "Images/beauty_1765230819282 (1)のコピー.webp", "images": ["Images/beauty_1765230819282 (1)のコピー.webp", "Images/beauty_1765230890906のコピー.webp", "Images/beauty_1765230832164.webp"]},
       {"name": "Mustard", "image": "Images/beauty_1765230819282 (1)のコピー.webp", "images": ["Images/beauty_1765230819282 (1)のコピー.webp", "Images/beauty_1765230832164.webp"]}
@@ -476,8 +484,8 @@ const products = [
       "Images/23-oct3-08.webp",
       "Images/23-oct3-35.webp"
     ],
-    "description": "Small handmade zabuton cushion. Set of three: €28. Choose a group, then write the cushion number (e.g. 3-2) in your message.",
-    "size": "",
+    "description": "A small Japanese-style cushion, perfect for adding a touch of comfort to a chair or other seating area. Small handmade zabuton cushion. Set of three: €28. Choose a group, then write the cushion number (e.g. 3-2) in your message.",
+    "size": "Width 18 cm · Height 18 cm · Thickness 3.5 cm",
     "variants": [
       {"name": "No.1", "image": "Images/zabuton-no1.webp"},
       {"name": "No.2", "image": "Images/zabuton-no2.webp"},
@@ -496,8 +504,8 @@ const products = [
       "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.webp",
       "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.webp"
     ],
-    "description": "Check and fleece variations. Choose your number.",
-    "size": "",
+    "description": "A cosy neck warmer designed to help keep you warm in colder weather. Available in two sizes to suit different preferences. Check and fleece variations. Choose your number.",
+    "size": "Size 1: Height 33 cm × Half-circumference 40 cm · Size 2: Height 20 cm × Half-circumference 30 cm",
     "variants": [
       {"name": "No.1", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_03 PM.webp"},
       {"name": "No.2", "image": "Images/ChatGPT Image Oct 8, 2026, 02_25_10 PM.webp"}

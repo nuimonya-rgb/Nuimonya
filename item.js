@@ -148,7 +148,7 @@ box.innerHTML=`
     <p class="idesc">${esc(p.description)}</p>
     <div class="sgwrap"></div>
     <a class="ask iask" href="#">ASK ABOUT THIS ITEM</a>
-    <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only.</p></div>
+    <div class="inote"><b>AVAILABILITY & PAYMENT</b><p>Most items are one-of-a-kind and are also sold at events. Please contact me to confirm availability <b>before payment.</b> Payment: PayPal only. Shipping: Mondial Relay only (or hand delivery in person).</p></div>
     <a class="iback" href="${back}">‹ Back to ${p.category==="Outlet"?"Outlet":"the collection"}</a>
   </div>
 </div>
