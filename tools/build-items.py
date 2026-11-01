@@ -9,6 +9,7 @@
 - products.js にあるすべての商品のページを作る。
 - products.js から消えた商品のフォルダが残っていたら知らせる（自動では消さない）。
 - ヘッダーとフッターは index.html からそのまま写すので、デザインがずれない。
+- Google 用のサイトマップ（sitemap.xml：トップページ＋全商品ページ）もいっしょに作る。
 """
 import html, json, os, re, sys
 
@@ -67,6 +68,20 @@ def page(p, header, footer, analytics):
 """
 
 
+def sitemap(products):
+    """Google Search Console に送る sitemap.xml。商品ページには代表の写真も書いておく（Google 画像検索用）。"""
+    e = lambda s: html.escape(str(s), quote=True)
+    rows = [f"  <url>\n    <loc>{SITE}/</loc>\n  </url>"]
+    for p in products:
+        img = first_image(p)
+        im = (f"\n    <image:image>\n      <image:loc>{SITE}/{e(img)}</image:loc>\n    </image:image>" if img else "")
+        rows.append(f"  <url>\n    <loc>{SITE}/items/{e(p['id'])}/</loc>{im}\n  </url>")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
+            + "\n".join(rows) + "\n</urlset>\n")
+
+
 def main():
     products = {p["id"]: p for p in load_products()}
     header, footer, analytics = site_parts()
@@ -77,6 +92,9 @@ def main():
         with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
             f.write(page(products[i], header, footer, analytics))
     print(f"作成: {len(ids)} ページ（items/商品ID/index.html）")
+    with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write(sitemap(list(products.values())))
+    print(f"作成: sitemap.xml（{len(ids) + 1} ページ）")
     d = os.path.join(ROOT, "items")
     stale = sorted(x for x in os.listdir(d) if os.path.isdir(os.path.join(d, x)) and x not in products)
     if stale:
