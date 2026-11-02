@@ -617,6 +617,7 @@ const products = [
     "category": "Bags",
     "images": ["Images/IMG_6465 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.webp", "Images/IMG_6467 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.webp"],
     "description": "Hip bag for scissors and tools with 3 pockets and 1 zip pocket. Adjustable strap. Choose your pattern.",
+    "howto": {"image": "Images/size/howto-p46.webp", "alt": "A woman gardening with the hip hang scissor case, with close-ups of a water bottle clipped on, a smartphone in the pocket and garden scissors in the pocket", "lead": "A handy waist pouch for gardening and bonsai care.", "points": ["Clip a water bottle on with the silicone bottle holder.", "Your smartphone fits in the pocket.", "Garden scissors and other tools fit too.", "The waist size can be made smaller. Just tell us the size you need."]},
     "size": "Width 48 cm · Height 26 cm · Pocket depth 4 cm · Strap 58–89 cm",
     "sizeGuide": {"width": 48, "height": 26, "extra": ["Pocket depth 4 cm", "Strap 58–89 cm"]},
     "variants": [
