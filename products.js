@@ -323,7 +323,7 @@ const products = [
   },
   {
     "id": "p13",
-    "name": "4-way Japanese Smartphone Pouch",
+    "name": "3-way Japanese Smartphone Pouch",
     "price": 45,
     "salePrice": 40,
     "category": "Pouches",
@@ -336,7 +336,8 @@ const products = [
       "Images/13-46.webp",
       "Images/13-47.webp"
     ],
-    "description": "A versatile accessory designed to be used in four different ways. Its compact shape makes it convenient for everyday use. Leather flap, shoulder and wrist straps, and belt attachment.",
+    "description": "A versatile accessory designed to be used in three different ways. Its compact shape makes it convenient for everyday use. Leather flap, shoulder and wrist straps, and belt attachment.",
+    "howto": {"image": "Images/size/howto-p13.webp", "alt": "The smartphone pouch worn across the body, hung from the wrist and attached to a belt", "points": ["As a crossbody pochette with the shoulder strap.", "Hang it from your wrist with the wrist strap.", "Slide your belt through the belt loop to wear it at your waist."]},
     "size": "Height 20 cm · Width 13 cm",
     "sizeGuide": {"width": 13, "height": 20},
     "variants": [
