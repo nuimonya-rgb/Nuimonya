@@ -229,3 +229,11 @@
 .sgflat .sglabel{font-size:calc(12px*var(--fs,1))}
 .sgflat .sgnum{font-size:calc(15px*var(--fs,1))}
 .sgwear img{width:auto;max-width:100%;max-height:380px}
+
+/* 使い方（HOW TO USE）：挿絵＋番号つきの短い説明 */
+.howto{margin:20px 0;padding:16px;background:#fff;border:1px solid #ddd5c7}
+.howto .cap{margin:0 0 10px}
+.howto img{display:block;width:100%;max-width:440px;margin:0 auto 12px;border-radius:6px}
+.howto ol{margin:0;padding-left:22px;font-size:14px;line-height:1.7;color:#4a463f}
+.howto li{margin-bottom:4px}
+.howto li::marker{font-weight:bold;color:#282722}
