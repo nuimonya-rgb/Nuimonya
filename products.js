@@ -296,6 +296,7 @@ const products = [
       "Images/ChatGPT Image Oct 8, 2026, 01_50_26 PM.webp"
     ],
     "description": "Japanese wrapping cloth.",
+    "howto": {"image": "Images/size/howto-p11.webp", "alt": "A plastic bottle wrapped in a furoshiki, and six ways to use a furoshiki: bag, gift wrapping, bottle wrap, lunch box wrap, carrying things and cover", "points": ["As a bag.", "As gift wrapping.", "To wrap a bottle (see the photo: a plastic bottle wrapped in a furoshiki).", "To wrap a lunch box.", "To carry your things.", "As a cover for a basket or a box."]},
     "size": "70 × 70 cm",
     "variants": [
       {"name": "Blue Sakura", "image": "Images/11-37.webp"},
