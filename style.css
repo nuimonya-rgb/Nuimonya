@@ -224,3 +224,8 @@
 .strapgroup button.active{background:#282722;color:#fff;border-color:#282722}
 .strapask{margin:10px 0 0;font-size:13px;color:#686257}
 .strapask b{color:#282722}
+
+/* 横長の寸法図でも文字の大きさをそろえる／着用イラストは高さを抑える */
+.sgflat .sglabel{font-size:calc(12px*var(--fs,1))}
+.sgflat .sgnum{font-size:calc(15px*var(--fs,1))}
+.sgwear img{width:auto;max-width:100%;max-height:380px}

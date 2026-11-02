@@ -86,7 +86,7 @@ function sgFlat(g,shape){                      // 寸法図：正面（高さ・
   const sy2=Math.max(y0+fh+62,d?fy+fhgt+22:0);
   const W=Math.max(360,d?fx+fwid+10:x0+fw+120),H=sy2+(g.strap?78:4);
   const narrow=d<34;
-  return `<svg class="sgflat" viewBox="0 0 ${W} ${H}" role="img" aria-label="Measurements: width ${f(g.width)} cm, height ${f(g.height)} cm${g.depth?`, ${dl.toLowerCase()} ${f(g.depth)} cm`:""}">
+  return `<svg class="sgflat" style="--fs:${Math.max(1,W/380).toFixed(2)}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Measurements: width ${f(g.width)} cm, height ${f(g.height)} cm${g.depth?`, ${dl.toLowerCase()} ${f(g.depth)} cm`:""}">
    <text class="sglabel" x="${x0}" y="${y0-18}">FRONT</text>
    <path class="sgbag2" d="${bagPath(shape,x0,y0,fw,fh)}"/>
    <path class="sglead" d="M${x0} ${y0} H${ax-6} M${x0} ${y0+fh} H${ax-6}"/>
