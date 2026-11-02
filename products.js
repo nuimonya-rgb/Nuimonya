@@ -319,7 +319,7 @@ const products = [
   },
   {
     "id": "p13",
-    "name": "4-way Japanese pouch",
+    "name": "4-way Japanese Smartphone Pouch",
     "price": 45,
     "salePrice": 40,
     "category": "Pouches",
