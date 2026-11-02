@@ -492,6 +492,7 @@ const products = [
       "Images/23-oct3-35.webp"
     ],
     "description": "A small Japanese-style cushion, perfect for adding a touch of comfort to a chair or other seating area. Small handmade zabuton cushion. Set of three: €28. Choose a group, then write the cushion number (e.g. 3-2) in your message.",
+    "howto": {"image": "Images/size/howto-p23.webp", "alt": "A mini zabuton with cherry blossoms, holding a smartphone, a teacup, a lucky cat, keys and a bracelet", "points": ["A cosy spot for your smartphone.", "A coaster for your cup or teacup.", "A little cushion for a lucky cat or a small ornament.", "A place to keep your keys.", "A tray for jewellery such as bracelets."]},
     "size": "Width 18 cm · Height 18 cm · Thickness 3.5 cm",
     "variants": [
       {"name": "No.1", "image": "Images/zabuton-no1.webp"},
