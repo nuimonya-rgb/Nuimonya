@@ -386,6 +386,7 @@ const products = [
       "Images/16-57.webp"
     ],
     "description": "Insulated lining.",
+    "howto": {"image": "Images/size/howto-p16.webp", "alt": "The shopping basket bag, set in a supermarket basket, filled with groceries, and closed with its drawstring, plus close-ups of the insulated lining, drawstring and outside pocket", "points": ["Open the bag and set it in a shopping basket.", "At the checkout, your shopping goes straight into the bag.", "Lift it out, tie the drawstring and carry it home.", "The insulated lining keeps food cold or warm.", "The drawstring top keeps the contents out of sight.", "Handy outside pocket."]},
     "size": "Width 40 cm · Height 23 cm · Depth 33 cm",
     "sizeGuide": {"width": 40, "height": 23, "depth": 33}
   },
