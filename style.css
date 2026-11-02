@@ -237,3 +237,12 @@
 .howto ol{margin:0;padding-left:22px;font-size:14px;line-height:1.7;color:#4a463f}
 .howto li{margin-bottom:4px}
 .howto li::marker{font-weight:bold;color:#282722}
+.howto .hlead{margin:0 0 12px;font-size:15px;color:#282722}
+.howto .hlink{display:flex;align-items:center;gap:12px;margin-top:14px;padding:12px;border:1px solid #e2c9cc;border-radius:10px;background:#fdf6f6;color:#282722;text-decoration:none}
+.howto .hlink img{width:100px;max-width:none;margin:0;border-radius:4px;flex:none}
+.howto .hlink .hq{width:64px;image-rendering:pixelated;flex:none}
+.howto .hrow{display:flex;align-items:flex-end;gap:8px;margin-top:4px}
+.howto .ht{flex:1;min-width:0;font-size:14px;line-height:1.5}
+.howto .ht b{display:block;font-weight:normal}
+.howto .hu{display:block;flex:1;min-width:0;font-size:12px;color:#8a3b48;text-decoration:underline;overflow-wrap:anywhere}
+@media(max-width:600px){.howto .hlink .hq{display:none}}
