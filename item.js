@@ -80,7 +80,7 @@ function sgFlat(g,shape){                      // 寸法図：正面（高さ・
   const arrowH=(x1,x2,y)=>`M${x1} ${y} H${x2} M${x1+6} ${y-5} L${x1} ${y} L${x1+6} ${y+5} M${x2-6} ${y-5} L${x2} ${y} L${x2-6} ${y+5}`;
   const arrowV=(x,y1,y2)=>`M${x} ${y1} V${y2} M${x-5} ${y1+6} L${x} ${y1} L${x+5} ${y1+6} M${x-5} ${y2-6} L${x} ${y2} L${x+5} ${y2-6}`;
   const d=g.depth?Math.max(g.depth*k*zx,14):0,sh=fh*zx;                            // 横から見た図（少し拡大）
-  const fx=x0+fw+64,fy=14,fwid=d?Math.max(d+110,150):0,fhgt=sh+96,sx=fx+(fwid-d)/2,sy=fy+34;
+  const fx=x0+fw+64,fy=14,fwid=d?Math.max(d+110,g.depthBase?196:150):0,fhgt=sh+96,sx=fx+(fwid-d)/2,sy=fy+34;
   const P=[x0+fw*(shape==="crescent"?.78:.82),y0+fh-(shape==="crescent"?fh*.1:7)];      // 点線の丸：底の角（マチが見える所）
   const sidePath=shape==="teardrop"?bagPath("teardrop",sx,sy,d,sh):(()=>{let r=shape==="crescent"?d/2:Math.min(d,sh)*.2;return `M${sx+r} ${sy} H${sx+d-r} Q${sx+d} ${sy} ${sx+d} ${sy+r} V${sy+sh-r} Q${sx+d} ${sy+sh} ${sx+d-r} ${sy+sh} H${sx+r} Q${sx} ${sy+sh} ${sx} ${sy+sh-r} V${sy+r} Q${sx} ${sy} ${sx+r} ${sy} Z`})();
   const sy2=Math.max(y0+fh+62,d?fy+fhgt+22:0);
@@ -122,9 +122,9 @@ function sgExtras(g){
   if(g.capacity?.length)h+=`<div class="sgextra"><p class="sgxh">What fits (example)</p><ul class="sgcap">${g.capacity.map(c=>`<li><svg viewBox="0 0 40 40" aria-hidden="true">${CAPICON[c.icon]||""}</svg><span>${c.label}</span></li>`).join("")}</ul></div>`;
   return h}
 function sgCard(g){
-  const shape=g.shape||"square",[en,form,cls]=SGKIND[shape],rows=[["横幅","Width",g.width],["高さ","Height",g.height],["マチ","Depth"+(g.depthBase?" (base)":""),g.depth],["ストラップ","Strap",g.strap],["持ち手","Handle",g.handle]].filter(r=>r[2]!=null);
+  const shape=g.shape||"square",[en0,form,cls]=SGKIND[shape],en=g.kind||en0,rows=[["横幅","Width",g.width],["高さ","Height",g.height],["マチ","Depth"+(g.depthBase?" (base)":""),g.depth],["ストラップ","Strap",g.strap],["持ち手","Handle",g.handle]].filter(r=>r[2]!=null);
   return `<section class="sizeguide sg2 sg-${cls}"><div class="sghead"><p class="cap">SIZE GUIDE</p><h3>${en} <span>(${form})</span></h3></div>
-   <div class="sgpanel">${g.wearImage?`<figure class="sgwear"><img src="/${g.wearImage}" alt="Illustration of how the bag is worn" loading="lazy"><figcaption>Wearing image</figcaption></figure>`:sgBack(g,shape)}</div>${g.wearImage?`<div class="sgabout"><p><b>📏 About sizes</b></p><p>The illustration shows how the bag is worn. The actual size and shape of the bag may differ from the illustration.</p><p>Before purchasing, we recommend checking the measurements below with a tape measure and comparing them with a bag or everyday item you already have.</p></div>`:""}<div class="sgpanel sgflatwrap">${sgFlat(g,shape)}</div>
+   <div class="sgpanel">${g.wearImage?`<figure class="sgwear"><img src="/${g.wearImage}" alt="Illustration of how the bag is worn" loading="lazy"><figcaption>${g.wearCaption||"Wearing image"}</figcaption></figure>`:sgBack(g,shape)}</div>${g.wearImage?`<div class="sgabout"><p><b>📏 About sizes</b></p><p>The illustration shows how the bag is worn. The actual size and shape of the bag may differ from the illustration.</p><p>Before purchasing, we recommend checking the measurements below with a tape measure and comparing them with a bag or everyday item you already have.</p></div>`:""}<div class="sgpanel sgflatwrap">${sgFlat(g,shape)}</div>
    <table class="sgtable">${rows.map(r=>`<tr><th>${r[1]}</th><td>${r[2]} cm</td></tr>`).join("")}${(g.extra||[]).map(x=>`<tr><td colspan="2">${x}</td></tr>`).join("")}</table>
    ${sgExtras(g)}
    ${g.wearImage?"":`<p class="sgnote">Approximate sizes. The person (165 cm tall) and the bag are drawn to the same scale. Fabric pattern not shown — see the photos above.</p>`}
