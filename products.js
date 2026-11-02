@@ -386,7 +386,7 @@ const products = [
       "Images/16-57.webp"
     ],
     "description": "Insulated lining.",
-    "howto": {"image": "Images/size/howto-p16.webp", "alt": "The shopping basket bag, set in a supermarket basket, filled with groceries, and closed with its drawstring, plus close-ups of the insulated lining, drawstring and outside pocket", "points": ["Open the bag and set it in a shopping basket.", "At the checkout, your shopping goes straight into the bag.", "Lift it out, tie the drawstring and carry it home.", "The insulated lining keeps food cold or warm.", "The drawstring top keeps the contents out of sight.", "Handy outside pocket."]},
+    "howto": {"image": "Images/size/howto-p16.webp", "alt": "The shopping basket bag, set in a supermarket basket, filled with groceries, and closed with its drawstring, plus close-ups of the insulated lining, drawstring and outside pocket", "points": ["Open the bag and set it in a shopping basket.", "At the checkout, your shopping goes straight into the bag.", "Lift it out, tie the drawstring and carry it home.", "The insulated lining inside keeps food cool.", "The drawstring top keeps the contents out of sight.", "Handy outside pocket."]},
     "size": "Width 40 cm · Height 23 cm · Depth 33 cm",
     "sizeGuide": {"width": 40, "height": 23, "depth": 33}
   },
@@ -491,7 +491,7 @@ const products = [
       "Images/23-oct3-08.webp",
       "Images/23-oct3-35.webp"
     ],
-    "description": "A small Japanese-style cushion, perfect for adding a touch of comfort to a chair or other seating area. Small handmade zabuton cushion. Set of three: €28. Choose a group, then write the cushion number (e.g. 3-2) in your message.",
+    "description": "A small Japanese-style cushion for your little things: a smartphone, a teacup, a lucky cat, keys or jewellery. Small handmade zabuton cushion. Set of three: €28. Choose a group, then write the cushion number (e.g. 3-2) in your message.",
     "howto": {"image": "Images/size/howto-p23.webp", "alt": "A mini zabuton with cherry blossoms, holding a smartphone, a teacup, a lucky cat, keys and a bracelet", "points": ["A cosy spot for your smartphone.", "A coaster for your cup or teacup.", "A little cushion for a lucky cat or a small ornament.", "A place to keep your keys.", "A tray for jewellery such as bracelets."]},
     "size": "Width 18 cm · Height 18 cm · Thickness 3.5 cm",
     "variants": [
