@@ -190,6 +190,7 @@ const products = [
       "Images/04-16.webp"
     ],
     "description": "A practical pouch for carrying dog waste bags, with an additional holder for attaching a used waste bag. Handy for dog walks and everyday outings. Floral fabric case with holder.",
+    "howto": {"image": "Images/size/howto-p04.webp", "alt": "A woman walking her pug with the waste bag pouch on her bag, the steps for using it, and the pouch with its retractable reel", "points": ["Pull out the retractable reel to bring the pouch close to the poop, so you don't have to bend down.", "Take a bag out of the pouch with one hand.", "Pick up the poop with the bag, then tuck the used bag into the holder.", "The holder keeps the used bag in place, so you can carry it neatly.", "The set: a pouch that stores the bags, plus a retractable reel."]},
     "size": "Width 12 cm · Height 7 cm · Depth 5 cm",
     "sizeGuide": {"width": 12, "height": 7, "depth": 5},
     "variants": [
