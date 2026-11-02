@@ -44,7 +44,7 @@ function sizeGuideSVG(g){
 /* ===== サイズガイド（後ろ姿・試作）=====
    レン君のイラストを参考にしたデザイン。数字は products.js の sizeGuide だけを使い、
    人とバッグは同じ縮尺（1cm = 4px）で描く。柄は描かない（本物は上の写真で見られる）。 */
-const SG2=new Set(["p15","p17","p18","p20","p37","p39","p40","p41"]);   // 試作中：この商品だけ新しいデザイン
+const SG2=new Set(["p15","p17","p18","p20","p22","p37","p38","p39","p40","p41"]);   // 試作中：この商品だけ新しいデザイン
 const SGKIND={crescent:["Body Cross Bag","Crescent","moon"],teardrop:["Sling Bag","Teardrop","drop"],square:["Shoulder Bag","Square","square"]};
 function bagPath(shape,x,y,w,h){
   if(shape==="crescent")return `M${x} ${y} C${x+w*.3} ${y+h*.55} ${x+w*.7} ${y+h*.55} ${x+w} ${y} C${x+w*.85} ${y+h*1.33} ${x+w*.15} ${y+h*1.33} ${x} ${y} Z`;
@@ -122,7 +122,7 @@ function sgExtras(g){
   if(g.capacity?.length)h+=`<div class="sgextra"><p class="sgxh">What fits (example)</p><ul class="sgcap">${g.capacity.map(c=>`<li><svg viewBox="0 0 40 40" aria-hidden="true">${CAPICON[c.icon]||""}</svg><span>${c.label}</span></li>`).join("")}</ul></div>`;
   return h}
 function sgCard(g){
-  const shape=g.shape||"square",[en0,form,cls]=SGKIND[shape],en=g.kind||en0,rows=[["横幅","Width",g.width],["高さ","Height",g.height],["マチ","Depth"+(g.depthBase?" (base)":""),g.depth],["ストラップ","Strap",g.strap],["持ち手","Handle",g.handle]].filter(r=>r[2]!=null);
+  const shape=g.shape||"square",[en0,form0,cls]=SGKIND[shape],en=g.kind||en0,form=g.form||form0,rows=[["横幅","Width",g.width],["高さ","Height",g.height],["マチ","Depth"+(g.depthBase?" (base)":""),g.depth],["ストラップ","Strap",g.strap],["持ち手","Handle",g.handle]].filter(r=>r[2]!=null);
   return `<section class="sizeguide sg2 sg-${cls}"><div class="sghead"><p class="cap">SIZE GUIDE</p><h3>${en} <span>(${form})</span></h3></div>
    <div class="sgpanel">${g.wearImage?`<figure class="sgwear"><img src="/${g.wearImage}" alt="Illustration of how the bag is worn" loading="lazy"><figcaption>${g.wearCaption||"Wearing image"}</figcaption></figure>`:sgBack(g,shape)}</div>${g.wearImage?`<div class="sgabout"><p><b>📏 About sizes</b></p><p>The illustration shows how the bag is worn. The actual size and shape of the bag may differ from the illustration.</p><p>Before purchasing, we recommend checking the measurements below with a tape measure and comparing them with a bag or everyday item you already have.</p></div>`:""}<div class="sgpanel sgflatwrap">${sgFlat(g,shape)}</div>
    <table class="sgtable">${rows.map(r=>`<tr><th>${r[1]}</th><td>${r[2]} cm</td></tr>`).join("")}${(g.extra||[]).map(x=>`<tr><td colspan="2">${x}</td></tr>`).join("")}</table>

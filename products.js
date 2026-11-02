@@ -75,8 +75,8 @@ const products = [
     "description": "Handmade baguette bag with a drawstring opening. Choose your pattern.",
     "size": "Height 70 cm · Width 20 cm · Depth 10 cm",
     "variants": [
-      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.webp", "images": ["Images/added-bag-1.webp"], "size": "Height 70 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"width": 20, "height": 70, "depth": 10}},
-      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.webp", "images": ["Images/added-bag-4.webp", "Images/added-bag-3.webp", "Images/added-bag-9.webp"], "size": "Height 60 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"width": 20, "height": 60, "depth": 10}}
+      {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.webp", "images": ["Images/added-bag-1.webp"], "size": "Height 70 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"wearImage": "Images/size/wear-baguette.webp", "wearCaption": "Crossbody · Shoulder bag", "kind": "Baguette Bag", "form": "Drawstring", "shape": "square", "width": 20, "height": 70, "depth": 10}},
+      {"name": "White with Red & Pink Fan Pattern", "image": "Images/added-bag-4.webp", "images": ["Images/added-bag-4.webp", "Images/added-bag-3.webp", "Images/added-bag-9.webp"], "size": "Height 60 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"wearImage": "Images/size/wear-baguette.webp", "wearCaption": "Crossbody · Shoulder bag", "kind": "Baguette Bag", "form": "Drawstring", "shape": "square", "width": 20, "height": 60, "depth": 10}}
     ]
   },
   {
@@ -463,7 +463,7 @@ const products = [
     ],
     "description": "A compact shoulder bag with a flap closure, ideal for carrying everyday essentials. The 10 cm depth provides useful space for your belongings. Flap shoulder bag with shoulder strap and charm. Choose your colour.",
     "size": "Width 25 cm · Height 15 cm · Depth 10 cm · Strap length 98 cm",
-    "sizeGuide": {"width": 25, "height": 15, "depth": 10, "extra": ["Strap length 98 cm"]},
+    "sizeGuide": {"wearImage": "Images/size/wear-flap.webp", "wearCaption": "Shoulder bag", "kind": "Flap Shoulder Bag", "form": "Flap", "shape": "square", "width": 25, "height": 15, "depth": 10, "extra": ["Strap length 98 cm"]},
     "variants": [
       {"name": "Beige", "image": "Images/beauty_1765230819282 (1)のコピー.webp", "images": ["Images/beauty_1765230819282 (1)のコピー.webp", "Images/beauty_1765230890906のコピー.webp", "Images/beauty_1765230832164.webp"]},
       {"name": "Mustard", "image": "Images/beauty_1765230819282 (1)のコピー.webp", "images": ["Images/beauty_1765230819282 (1)のコピー.webp", "Images/beauty_1765230832164.webp"]}
