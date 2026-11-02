@@ -252,6 +252,7 @@ const products = [
       "Images/08-grey.webp"
     ],
     "description": "A versatile mobile phone holder designed for four different ways of use. The leather strap is available in a choice of colours. Wear on a belt, across the body or at the wrist. Accessories included.",
+    "howto": {"image": "Images/size/howto-p08.webp", "alt": "The phone case attached to a backpack strap, worn crossbody, hung from the wrist or clipped to a phone with a TPU pad, and clipped to a jeans belt loop", "points": ["Wrap the hook-and-loop band on the back around a backpack or sling bag strap.", "Wear it crossbody as a pochette with the shoulder strap.", "Hang it from your wrist with the wrist strap. You can also take the wrist strap off and attach it straight to your phone with the TPU pad placed inside your phone case.", "Clip the swivel hook at the top onto a belt loop on your jeans."]},
     "size": "Height 20 cm · Width 11 cm · Depth 4 cm · Strap 114 cm × 1 cm (faux leather or cotton)",
     "strapOptions": {"image": "Images/straps-numbered.webp", "note": "Choose from 6 straps (114 cm long, 1 cm wide): 4 faux leather and 2 cotton. The strap is included in the price.", "groups": [{"name": "Faux leather", "items": ["A-1", "A-2", "A-3", "A-4"]}, {"name": "Cotton", "items": ["B-1", "B-2"]}]},
     "sizeGuide": {"width": 11, "height": 20, "depth": 4, "extra": ["Strap 114 cm × 1 cm (faux leather or cotton)"]},
