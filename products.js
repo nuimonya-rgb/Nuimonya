@@ -155,6 +155,7 @@ const products = [
       "Images/02-09.webp"
     ],
     "description": "A convenient retractable strap that keeps small essentials within easy reach. The cord extends up to 33 cm, making it practical for everyday use. Retractable reel and cherry blossom charm.",
+    "howto": {"image": "Images/size/howto-p02.webp", "alt": "A woman wearing the neck strap with a phone, with a badge, and with both, plus close-ups of the adjuster, the retractable reel and the TPU pad", "points": ["Carry your phone around your neck.", "Use it as a badge reel lanyard for an ID or access card.", "Attach your phone and a badge together.", "Adjust the length with the adjuster at the back of the neck.", "Retractable reel: pull out the cord when you need it.", "TPU pad included: place it inside your phone case, then clip the strap onto it."]},
     "size": "Retractable cord: up to 33 cm · Strap: 96 cm circumference × 8 mm width",
     "variants": [
       {"name": "Blue", "image": "Images/02-06.webp", "images": ["Images/02-06.webp", "Images/02-07.webp"]},
