@@ -241,6 +241,7 @@
 .howto .hlink{display:flex;align-items:center;gap:12px;margin-top:14px;padding:12px;border:1px solid #e2c9cc;border-radius:10px;background:#fdf6f6;color:#282722;text-decoration:none}
 .howto .hlink img{width:100px;max-width:none;margin:0;border-radius:4px;flex:none}
 .howto .hlink .hq{width:64px;image-rendering:pixelated;flex:none}
+.howto img.hband{width:calc(100% + 32px);max-width:none;margin:16px -16px -16px;border-radius:0}
 .howto .hrow{display:flex;align-items:flex-end;gap:8px;margin-top:4px}
 .howto .ht{flex:1;min-width:0;font-size:14px;line-height:1.5}
 .howto .ht b{display:block;font-weight:normal}

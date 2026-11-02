@@ -296,7 +296,7 @@ const products = [
       "Images/ChatGPT Image Oct 8, 2026, 01_50_26 PM.webp"
     ],
     "description": "Japanese wrapping cloth.",
-    "howto": {"image": "Images/size/howto-p11.webp", "alt": "A plastic bottle wrapped in a furoshiki, and six ways to use a furoshiki: bag, gift wrapping, bottle wrap, lunch box wrap, carrying things and cover", "points": ["As a bag.", "As gift wrapping.", "To wrap a bottle (see the photo: a plastic bottle wrapped in a furoshiki).", "To wrap a lunch box.", "To carry your things.", "As a cover for a basket or a box."], "lead": "Did you know? One furoshiki can become a bag, gift wrap, a bottle carrier and more!", "link": {"text": "There are dozens of ways to wrap — discover them all!", "url": "https://www.furoshiki-sanyo.co.jp/furoshiki/recipe/", "image": "Images/size/howto-p11-link.webp", "qr": "Images/size/qr-furoshiki-recipe.png"}},
+    "howto": {"image": "Images/size/howto-p11.webp", "alt": "A plastic bottle wrapped in a furoshiki, and six ways to use a furoshiki: bag, gift wrapping, bottle wrap, lunch box wrap, carrying things and cover", "points": ["As a bag.", "As gift wrapping.", "To wrap a bottle (see the photo: a plastic bottle wrapped in a furoshiki).", "To wrap a lunch box.", "To carry your things.", "As a cover for a basket or a box."], "lead": "Did you know? One furoshiki can become a bag, gift wrap, a bottle carrier and more!", "link": {"text": "There are dozens of ways to wrap — discover them all!", "url": "https://www.furoshiki-sanyo.co.jp/furoshiki/recipe/", "image": "Images/size/howto-p11-link.webp", "qr": "Images/size/qr-furoshiki-recipe.png"}, "band": "Images/size/howto-p11-band.webp"},
     "size": "70 × 70 cm",
     "variants": [
       {"name": "Blue Sakura", "image": "Images/11-37.webp"},
