@@ -124,7 +124,7 @@ const products = [
   },
   {
     "id": "p01",
-    "name": "Japanese shoulder strap",
+    "name": "Japanese smartphone shoulder strap",
     "price": 15,
     "category": "Others",
     "images": [
@@ -133,7 +133,7 @@ const products = [
       "Images/01-03.webp",
       "Images/01-04.webp"
     ],
-    "description": "A versatile strap that can be used to carry or attach compatible accessories. The length is measured when fully extended. Bonsai key charm included.",
+    "description": "A Japanese-fabric shoulder strap for your smartphone. Wear your phone across the body and keep both hands free. The length is measured when fully extended. Bonsai key charm included.",
     "howto": {"image": "Images/size/howto-p01.webp", "alt": "A woman wearing her phone across the body on the strap, with a close-up of the TPU pad and clip", "points": ["Wear your phone across the body and keep both hands free.", "Adjust the length with the buckle on the strap.", "Place the TPU pad inside your phone case, then clip the strap onto it."]},
     "size": "Width 1.5 cm · Length 145 cm (fully extended)",
     "variants": [
