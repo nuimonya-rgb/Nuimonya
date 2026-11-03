@@ -54,6 +54,7 @@ const products = [
       "Images/3way-15.webp"
     ],
     "description": "Wear as a backpack, shoulder bag or crossbody bag. Choose your pattern.",
+    "howto": {"image": "Images/size/howto-p37.webp", "alt": "A man wearing the Pebble bag as a backpack, crossbody and as a chest bag, with close-ups of the clips and the inside", "points": ["Wear it as a small backpack.", "Wear it crossbody.", "Wear it in front as a chest bag.", "Switch easily between the 3 ways with the clips.", "Compact, with room for your phone, wallet and small things."]},
     "size": "Strap length 127 cm",
     "sizeGuide": {"wearImage": "Images/size/wear-p37.webp", "wearCaption": "Backpack · Shoulder bag · Crossbody", "kind": "3-Way Bag", "style": "crossbody", "shape": "square", "width": 17.8, "height": 22.9, "depth": 6.4, "depthBase": true, "strap": 127},
     "variants": [
@@ -73,6 +74,7 @@ const products = [
       "Images/added-bag-9.webp"
     ],
     "description": "Handmade baguette bag with a drawstring opening. Choose your pattern.",
+    "howto": {"image": "Images/size/howto-p38.webp", "alt": "A man carrying the baguette bag crossbody and on the shoulder, with a baguette and ikebana flowers inside", "points": ["Wear it crossbody.", "Carry it on your shoulder.", "Made to carry a baguette.", "Also great for carrying flowers for ikebana."]},
     "size": "Height 70 cm · Width 20 cm · Depth 10 cm",
     "variants": [
       {"name": "Emerald Green Fan Pattern", "image": "Images/added-bag-1.webp", "images": ["Images/added-bag-1.webp"], "size": "Height 70 cm · Width 20 cm · Depth 10 cm", "sizeGuide": {"wearImage": "Images/size/wear-baguette.webp", "wearCaption": "Crossbody · Shoulder bag", "kind": "Baguette Bag", "form": "Drawstring", "shape": "square", "width": 20, "height": 70, "depth": 10}},
@@ -134,7 +136,7 @@ const products = [
       "Images/01-04.webp"
     ],
     "description": "A Japanese-fabric shoulder strap for your smartphone. Wear your phone across the body and keep both hands free. The length is measured when fully extended. Bonsai key charm included.",
-    "howto": {"image": "Images/size/howto-p01.webp", "alt": "A woman wearing her phone across the body on the strap, with a close-up of the TPU pad and clip", "points": ["Wear your phone across the body and keep both hands free.", "Adjust the length with the buckle on the strap.", "Place the TPU pad inside your phone case, then clip the strap onto it."]},
+    "howto": {"image": "Images/size/howto-p01.webp", "alt": "A man wearing his phone across the body on the Japanese-fabric strap, with close-ups of the TPU pad and the length adjuster", "points": ["Place the TPU pad inside your phone case, then clip the strap onto it.", "Wear your phone across the body.", "Adjust the length with the buckle to suit you.", "Keep both hands free and move freely, even with a backpack."]},
     "size": "Width 1.5 cm · Length 145 cm (fully extended)",
     "variants": [
       {"name": "Crimson", "image": "Images/01-00.webp"},
@@ -155,7 +157,7 @@ const products = [
       "Images/02-09.webp"
     ],
     "description": "A convenient retractable strap that keeps small essentials within easy reach. The cord extends up to 33 cm, making it practical for everyday use. Retractable reel and cherry blossom charm.",
-    "howto": {"image": "Images/size/howto-p02.webp", "alt": "A woman wearing the neck strap with a phone, with a badge, and with both, plus close-ups of the adjuster, the retractable reel and the TPU pad", "points": ["Carry your phone around your neck.", "Use it as a badge reel lanyard for an ID or access card.", "Attach your phone and a badge together.", "Adjust the length with the adjuster at the back of the neck.", "Retractable reel: pull out the cord when you need it.", "TPU pad included: place it inside your phone case, then clip the strap onto it."]},
+    "howto": {"image": "Images/size/howto-p02.webp", "alt": "A man wearing the neck strap with a phone, with a badge, and with both, plus close-ups of the adjuster, the retractable reel and the TPU pad", "points": ["Carry your phone around your neck.", "Use it as a badge reel lanyard for an ID or access card, or a trolley token.", "Attach your phone and a badge together.", "Adjust the length with the adjuster at the back of the neck.", "Retractable reel: pull out the cord when you need it.", "TPU pad included: place it inside your phone case, then clip the strap onto it."]},
     "size": "Retractable cord: up to 33 cm · Strap: 96 cm circumference × 8 mm width",
     "variants": [
       {"name": "Blue", "image": "Images/02-06.webp", "images": ["Images/02-06.webp", "Images/02-07.webp"]},
@@ -190,7 +192,7 @@ const products = [
       "Images/04-16.webp"
     ],
     "description": "A practical pouch for carrying dog waste bags, with an additional holder for attaching a used waste bag. Handy for dog walks and everyday outings. Floral fabric case with holder.",
-    "howto": {"image": "Images/size/howto-p04.webp", "alt": "A woman walking her pug with the waste bag pouch on her bag, the steps for using it, and the pouch with its retractable reel", "points": ["Pull out the retractable reel to bring the pouch close to the poop, so you don't have to bend down.", "Take a bag out of the pouch with one hand.", "Pick up the poop with the bag, then tuck the used bag into the holder.", "The holder keeps the used bag in place, so you can carry it neatly.", "The set: a pouch that stores the bags, plus a retractable reel."]},
+    "howto": {"image": "Images/size/howto-p04.webp", "alt": "A man walking his pug with the waste bag pouch on his tote bag, the steps for using it, and the pouch, reel and pink holder", "points": ["Pull out the retractable reel to bring the pouch close to the poop, so you don't have to bend down.", "Take a bag out of the mini pouch with one hand.", "Pick up the poop, tie the bag and push it into the pink holder.", "The holder keeps the tied bag in place, so it's cleaner to carry.", "Included: the mini pouch, the retractable reel and the holder."]},
     "size": "Width 12 cm · Height 7 cm · Depth 5 cm",
     "sizeGuide": {"width": 12, "height": 7, "depth": 5},
     "variants": [
@@ -252,7 +254,7 @@ const products = [
       "Images/08-grey.webp"
     ],
     "description": "A versatile mobile phone holder designed for four different ways of use. The leather strap is available in a choice of colours. Wear on a belt, across the body or at the wrist. Accessories included.",
-    "howto": {"image": "Images/size/howto-p08.webp", "alt": "The phone case attached to a backpack strap, worn crossbody, hung from the wrist or clipped to a phone with a TPU pad, and clipped to a jeans belt loop", "points": ["Wrap the hook-and-loop band on the back around a backpack or sling bag strap.", "Wear it crossbody as a pochette with the shoulder strap.", "Hang it from your wrist with the wrist strap. You can also take the wrist strap off and attach it straight to your phone with the TPU pad placed inside your phone case.", "Clip the swivel hook at the top onto a belt loop on your jeans."]},
+    "howto": {"image": "Images/size/howto-p08.webp", "alt": "A man wearing the phone case on a backpack strap, crossbody, on the wrist or clipped to a phone with a TPU pad, and on a jeans belt loop", "points": ["Wrap the hook-and-loop band on the back around a backpack or sling bag strap.", "Wear it crossbody as a pochette with the shoulder strap.", "Hang it from your wrist with the wrist strap. You can also take the wrist strap off and attach it straight to your phone with the TPU pad placed inside your phone case.", "Clip the swivel hook at the top onto a belt loop on your jeans."]},
     "size": "Height 20 cm · Width 11 cm · Depth 4 cm · Strap 114 cm × 1 cm (faux leather or cotton)",
     "strapOptions": {"image": "Images/straps-numbered.webp", "note": "Choose from 6 straps (114 cm long, 1 cm wide): 4 faux leather and 2 cotton. The strap is included in the price.", "groups": [{"name": "Faux leather", "items": ["A-1", "A-2", "A-3", "A-4"]}, {"name": "Cotton", "items": ["B-1", "B-2"]}]},
     "sizeGuide": {"width": 11, "height": 20, "depth": 4, "extra": ["Strap 114 cm × 1 cm (faux leather or cotton)"]},
@@ -338,7 +340,7 @@ const products = [
       "Images/13-47.webp"
     ],
     "description": "A versatile accessory designed to be used in three different ways. Its compact shape makes it convenient for everyday use. Leather flap, shoulder and wrist straps, and belt attachment.",
-    "howto": {"image": "Images/size/howto-p13.webp", "alt": "The smartphone pouch worn across the body, hung from the wrist and attached to a belt", "points": ["As a crossbody pochette with the shoulder strap.", "Hang it from your wrist with the wrist strap.", "Slide your belt through the belt loop to wear it at your waist."]},
+    "howto": {"image": "Images/size/howto-p13.webp", "alt": "A man wearing the smartphone pouch across the body, hung from the wrist and attached to a belt", "points": ["As a crossbody pochette with the shoulder strap.", "Hang it from your wrist with the wrist strap.", "Slide your belt through the belt loop to wear it at your waist."]},
     "size": "Height 20 cm · Width 13 cm",
     "sizeGuide": {"width": 13, "height": 20},
     "variants": [
@@ -618,7 +620,7 @@ const products = [
     "category": "Bags",
     "images": ["Images/IMG_6465 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.webp", "Images/IMG_6467 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.webp"],
     "description": "Hip bag for scissors and tools with 3 pockets and 1 zip pocket. Adjustable strap. Choose your pattern.",
-    "howto": {"image": "Images/size/howto-p46.webp", "alt": "A woman gardening with the hip hang scissor case, with close-ups of a water bottle clipped on, a smartphone in the pocket and garden scissors in the pocket", "lead": "A handy waist pouch for gardening and bonsai care.", "points": ["Clip a water bottle on with the silicone bottle holder.", "Your smartphone fits in the pocket.", "Garden scissors and other tools fit too.", "The waist size can be made smaller. Just tell us the size you need."]},
+    "howto": {"image": "Images/size/howto-p46.webp", "alt": "A man gardening with the hip hang scissor case, with close-ups of a water bottle clipped on, a smartphone in the pocket and garden scissors in the pocket", "points": ["Clip a water bottle on with the silicone bottle holder.", "Your smartphone fits in the pocket.", "Garden scissors and other tools fit too.", "The waist size can be made smaller. Just tell us the size you need."]},
     "size": "Width 48 cm · Height 26 cm · Pocket depth 4 cm · Strap 58–89 cm",
     "sizeGuide": {"width": 48, "height": 26, "extra": ["Pocket depth 4 cm", "Strap 58–89 cm"]},
     "variants": [
