@@ -428,6 +428,7 @@ const products = [
     "id": "p20",
     "name": "Bird Bodycross bag",
     "price": 60,
+    "salePrice": 50,
     "category": "Bags",
     "images": [
       "Images/20-67.webp",
@@ -617,6 +618,7 @@ const products = [
     "id": "p46",
     "name": "Hip Hang Scissor Case",
     "price": 45,
+    "salePrice": 35,
     "category": "Bags",
     "images": ["Images/IMG_6465 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_22 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_17 PM.webp", "Images/IMG_6467 Copy.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_53 PM (1).webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_03 PM.webp", "Images/ChatGPT Image Oct 8, 2026, 02_31_10 PM.webp"],
     "description": "Hip bag for scissors and tools with 3 pockets and 1 zip pocket. Adjustable strap. Choose your pattern.",
